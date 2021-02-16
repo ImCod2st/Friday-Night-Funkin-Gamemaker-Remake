@@ -1,0 +1,2 @@
+spr = sDownArrowButton;
+enemy = true;

@@ -1,0 +1,1 @@
+if (variable_global_exists("musicSync")) audio_stop_sync_group(global.musicSync);
