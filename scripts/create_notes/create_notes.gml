@@ -4,7 +4,7 @@ function create_notes(noteGrid){
 	for (var h = 0; h < ds_grid_height(noteGrid); ++h) {
 		for (var w = 0; w < ds_grid_width(noteGrid); ++w) {
 			if (ds_grid_get(noteGrid, w, h) != 0) {
-				var noteY = (h * global.noteSpeed) * 13.3333333333;
+				var noteY = (h * global.noteSpeed) * 11.3513513514;
 				var noteX = 745;
 				if (w = 0) noteX = 102;
 				if (w = 1) noteX = 216;

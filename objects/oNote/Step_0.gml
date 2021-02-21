@@ -1,16 +1,25 @@
 y -= curNoteSpeed;
 if (switchTurn) sprite_index = sDebugNotes;
 
-with (instance_place(x, y + 68, oArrowButton)) {
+with (instance_place(x, y + 90, oArrowButton)) {
 	if (enemy) {
-		instance_destroy(other);
-		
 		if (other.switchTurn) exit;
+		
 		var obj = oEnemy;
 		if (global.enemy = 0) obj = oGirlfriend;
 		obj.dir = other.image_index;
-		obj.animationTimer = 60;
-		obj.animationIndex = 0;
+		obj.animationTimer = 60 + other.sliderLength / 8;
+		
+		if (other.sliderLength <= 0) {
+			instance_destroy(other);
+			obj.holdAnimation = false;
+			obj.animationIndex = 0;
+		} else {
+			other.heldAlready = true;
+			other.sliderLength -= global.noteSpeed;
+			other.curNoteSpeed = 0;
+			obj.holdAnimation = true;
+		}
 	}
 }
 
@@ -38,6 +47,6 @@ if (y < 0 - sliderLength - 10) {
 	instance_destroy();
 	
 	if (switchTurn) exit; 
+	if (x < 600) exit;
 	global.hp -= 2 + sliderLength / 80;
-	global.curScore -= 20;
 }

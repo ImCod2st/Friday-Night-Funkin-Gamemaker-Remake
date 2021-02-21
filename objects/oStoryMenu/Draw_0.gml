@@ -14,10 +14,10 @@ if (global.currentDif  = 1) curWeekScore = global.weekScoreNormal[selectedWeek];
 if (global.currentDif  = 2) curWeekScore = global.weekScoreHard[selectedWeek];
 scorDisplay = lerp(scorDisplay, curWeekScore, 0.2);
 
-draw_set_color(c_ltgray);
-draw_text_transformed(5, 0, "WEEK SCORE: " + string(round(scorDisplay)), 2, 2, 0);
+draw_text_transformed(5, 0, "WEEK SCORE: " + string(round(scorDisplay)), 1.5, 1.5, 0);
 draw_set_halign(fa_right);
-draw_text_transformed(1275, 0, weekName[selectedWeek], 2, 2, 0);
+draw_set_color(c_ltgray);
+draw_text_transformed(1275, 0, weekName[selectedWeek], 1.5, 1.5, 0);
 draw_set_halign(fa_left);
 draw_set_color(c_white);
 

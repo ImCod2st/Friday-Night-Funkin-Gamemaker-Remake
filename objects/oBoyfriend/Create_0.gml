@@ -9,6 +9,7 @@ missed = false;
 restartTimer = -1;
 holdAnimation = false;
 animCount = 0;
+bounce = false;
 
 notePlaying = 0;
 singFrame = 0;

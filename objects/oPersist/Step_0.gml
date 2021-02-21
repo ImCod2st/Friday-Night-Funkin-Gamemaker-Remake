@@ -13,7 +13,7 @@ if (hudBopTimer >= (global.bpm / 60) * 16) {
 if (variable_global_exists("musicSync")) {
 	var curTime = audio_sync_group_get_track_pos(global.musicSync);
 	var finalTime = audio_sound_length(global.song);
-	if (curTime >= finalTime - 5) && (room = MainGame) timeUntilMoveOn++;
+	if (curTime >= finalTime - 2) && (room = MainGame) timeUntilMoveOn++;
 }
 
 if (timeUntilMoveOn >= 650) {

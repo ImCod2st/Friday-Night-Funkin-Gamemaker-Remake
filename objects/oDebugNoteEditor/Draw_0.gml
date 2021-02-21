@@ -6,7 +6,7 @@ draw_rectangle_color(selBoxX, selBoxY, selBoxX + gridSize - 1, selBoxY + gridSiz
 draw_editor_notes(global.chart, x, y);
 
 // character heads
-var headLeft = 2;
+var headLeft = 4;
 var headRight = 0;
 
 draw_sprite_ext(sIcons, headLeft, x + 80, y - 30, 0.3, 0.3, 0, c_white, 1);

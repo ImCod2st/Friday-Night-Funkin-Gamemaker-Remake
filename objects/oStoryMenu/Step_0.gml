@@ -42,8 +42,8 @@ if (selectedTimer = 120) {
 		global.nextSong[0] = "n";
 	}
 	if (selectedWeek = 1) {
-		load_chart("Tutorial", global.currentDif);
-		global.nextSong[0] = "Tutorial";
+		load_chart("Bopeebo", global.currentDif);
+		global.nextSong[0] = "Fresh";
 		global.nextSong[1] = "n";
 	}
 }

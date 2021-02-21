@@ -2,6 +2,7 @@ surface_set_target(global.hudSurface);
 
 if !(global.dead) {
 
+global.hp = clamp(global.hp, 0, 100)
 var hpWidth = (global.hp / hpMax) * healthXOff;
 var boyHpLow = (global.hp <= 10);
 var enemyHpLow = (global.hp >= 90);
