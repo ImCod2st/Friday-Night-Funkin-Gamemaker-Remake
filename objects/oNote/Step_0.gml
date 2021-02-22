@@ -1,4 +1,9 @@
-y -= curNoteSpeed;
+actualDelta = delta_time / 1000000;
+deltaMultiplier = actualDelta/targetDelta;
+trueNoteSpeed = curNoteSpeed * deltaMultiplier;
+
+y -= trueNoteSpeed;
+if (yOff != 0) {y -= yOff; yOff = 0;}
 if (switchTurn) sprite_index = sDebugNotes;
 
 with (instance_place(x, y + 90, oArrowButton)) {
@@ -16,7 +21,7 @@ with (instance_place(x, y + 90, oArrowButton)) {
 			obj.animationIndex = 0;
 		} else {
 			other.heldAlready = true;
-			other.sliderLength -= global.noteSpeed;
+			other.sliderLength -= global.noteSpeed * other.deltaMultiplier;
 			other.curNoteSpeed = 0;
 			obj.holdAnimation = true;
 		}
@@ -26,8 +31,8 @@ with (instance_place(x, y + 90, oArrowButton)) {
 if (beingHeld) {
 	heldAlready = true;
 	curNoteSpeed = 0;
-	sliderLength -= global.noteSpeed;
-	global.hp += 0.05;
+	sliderLength -= global.noteSpeed * deltaMultiplier;
+	global.hp += 0.025;
 	with (oArrowButton) if (dir = other.image_index) image_index = 0;
 	oBoyfriend.holdAnimation = true;
 	
@@ -50,3 +55,5 @@ if (y < 0 - sliderLength - 10) {
 	if (x < 600) exit;
 	global.hp -= 2 + sliderLength / 80;
 }
+
+//if (fadeIn) && (image_alpha < 1) image_alpha += 0.1;

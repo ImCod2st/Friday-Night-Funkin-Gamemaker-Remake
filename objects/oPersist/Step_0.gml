@@ -30,14 +30,20 @@ if (timeUntilMoveOn >= 420) {
 		for (var i = 0; i <= global.songOn; ++i) {
 		    totalScore += global.songScore[i];
 		}
-		if (global.currentDif = 0) global.weekScoreEasy[global.weekPlaying] = totalScore;
-		if (global.currentDif =1) global.weekScoreNormal[global.weekPlaying] = totalScore;
-		if (global.currentDif = 2) global.weekScoreHard[global.weekPlaying] = totalScore;
-		save_weekscore(global.weekPlaying);
+		
+		if !(global.freeplay) {
+			if (global.currentDif = 0) global.weekScoreEasy[global.weekPlaying] = totalScore;
+			if (global.currentDif =1) global.weekScoreNormal[global.weekPlaying] = totalScore;
+			if (global.currentDif = 2) global.weekScoreHard[global.weekPlaying] = totalScore;
+			save_weekscore(global.weekPlaying);
+		} else {
+			save_songscore(global.songName, global.currentDif, global.curScore);
+		}
 	}
 	global.songOn++;
 	
-	var o = instance_create_depth(0, 0, -100000, oFade);
+	var o = instance_create_depth(0, 0, -10000, oFade);
+	if (global.freeplay) roomTo = FreePlay;
 	o.roomTo = roomTo;
 	audio_destroy_sync_group(global.musicSync);
 	timeUntilMoveOn = 0;

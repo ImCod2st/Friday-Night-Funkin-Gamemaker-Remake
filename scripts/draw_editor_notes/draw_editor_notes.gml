@@ -9,7 +9,7 @@ function draw_editor_notes(noteGrid, _x, _y) {
 			if (ds_grid_get(noteGrid, gX, gY) != 0) {
 				var sprToDraw = sNotes;
 				var val = ds_grid_get(noteGrid, gX, gY);
-				if (val < 0) sprToDraw = sDebugNotes;
+				if (val <= -1) sprToDraw = sDebugNotes;
 				var sprX = _x + (gX * 40) + 20;
 				var sprY = _y + (gY * 40) + 20;
 				draw_sprite_ext(sprToDraw, gX, sprX, sprY, 0.28, 0.28, 0, c_white, 1);

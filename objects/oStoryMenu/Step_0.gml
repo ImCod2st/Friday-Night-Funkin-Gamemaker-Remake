@@ -32,7 +32,7 @@ if (keyboard_check(vk_right)) rightArrowScaleTo = 0.8; else rightArrowScaleTo = 
 }
 if (selected) selectedTimer++;
 if (selectedTimer = 120) {
-	o = instance_create_depth(x, y, -1000000, oFade);
+	o = instance_create_depth(x, 720, -1000, oFade);
 	o.roomTo = MainGame;
 	
 	// weeks

@@ -24,9 +24,10 @@ if !(enemy) {
 				
 				var distance = point_distance(x, y, other.x, other.y);
 				var scor = 0;
-				if (distance > 18) scor = 1;
-				if (distance > 38) scor = 2;
-				if (distance > 44) scor = 3;
+
+				if (distance > 20) scor = 1;
+				if (distance > 50) scor = 2;
+				if (distance > 60) scor = 3;
 				var o = instance_create_depth(1254, 485, 400 - instance_number(oScoreText), oScoreText);
 				o.image_index = scor;
 				if (scor = 0) global.curScore += 350;

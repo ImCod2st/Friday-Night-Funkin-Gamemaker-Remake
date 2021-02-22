@@ -15,8 +15,11 @@ function create_notes(noteGrid){
 				if (w = 6) noteX = 968;
 				if (w = 7) noteX = 1081;
 				n = instance_create_layer(noteX, 103 + noteY, "Notes", oNote);
-				if (ds_grid_get(noteGrid, w, h) < 0) n.switchTurn = true;
-				if (ds_grid_get(noteGrid, w, h) > 1) n.sliderLength = ds_grid_get(noteGrid, w, h) * 10;
+				
+				var val = ds_grid_get(noteGrid, w, h);
+				if (val > -1) && (val < 1) n.yOff = (1 - val) * 50;
+				if (val <= -1) n.switchTurn = true;
+				if (val > 1) n.sliderLength = val * 10;
 			}
 		}
 	}

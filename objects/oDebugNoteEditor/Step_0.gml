@@ -37,3 +37,15 @@ if (keyboard_check(vk_shift)) {
 		if (curVal > 1) ds_grid_set(selectedList, notePosX, notePosY, curVal - 1);
 	}
 }
+
+// change offset
+if (keyboard_check(vk_tab)) {
+	if (mouse_wheel_down()) {
+		var curVal = ds_grid_get(selectedList, notePosX, notePosY);
+		ds_grid_set(selectedList, notePosX, notePosY, curVal + 0.01);
+	}
+	if (mouse_wheel_up()) {
+		var curVal = ds_grid_get(selectedList, notePosX, notePosY);
+		ds_grid_set(selectedList, notePosX, notePosY, curVal - 0.01);
+	}
+}

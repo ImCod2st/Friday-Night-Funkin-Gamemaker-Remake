@@ -1,0 +1,1 @@
+draw_sprite(sFade, 0, 0, fadeY);

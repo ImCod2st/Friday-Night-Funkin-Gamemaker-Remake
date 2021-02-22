@@ -20,6 +20,7 @@ hudBopTimer = 0;
 hudBopScale = 1;
 hudBopVsp = 0;
 
+global.freeplay = false;
 global.weeks = 1;
 for (var i = 0; i < global.weeks + 1; ++i) {
 	global.weekScoreEasy[i] = 0;

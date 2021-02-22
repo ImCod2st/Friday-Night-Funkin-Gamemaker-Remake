@@ -2,6 +2,7 @@
 var camX = camera_get_view_x(view_camera[0]) + 640;
 var camY = camera_get_view_y(view_camera[0]) + 360;
 
+if !(surface_exists(global.hudSurface)) global.hudSurface = surface_create(1280, 720);
 draw_surface_ext(global.hudSurface, camX - (hudBopScale * 640), camY - (hudBopScale * 360), hudBopScale, hudBopScale, 0, c_white, 1);
 
 surface_set_target(global.hudSurface);

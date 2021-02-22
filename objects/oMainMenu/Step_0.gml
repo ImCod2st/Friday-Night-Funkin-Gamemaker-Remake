@@ -13,13 +13,21 @@ if !(selected) {
 			selected = true;
 			textFlash[1] = 0;
 			textFlash[2] = 0;
+			textFlash[3] = 0;
 		}
 		if (menuSelected = 1) {
 			selected = true;
 			textFlash[0] = 0;
 			textFlash[2] = 0;
+			textFlash[3] = 0;
 		}
 		if (menuSelected = 2) url_open("https://ninja-muffin24.itch.io/funkin");
+		if (menuSelected = 3) {
+			selected = true;
+			textFlash[0] = 0;
+			textFlash[1] = 0;
+			textFlash[2] = 0;
+		}
 	}
 }
 
@@ -37,9 +45,14 @@ if (selectedTimer = 120) {
 		o = instance_create_depth(0, 0, -10000, oFade);
 		o.roomTo = FreePlay;
 	}
+	if (menuSelected = 3) {
+		o = instance_create_depth(0, 0, -10000, oFade);
+		o.roomTo = Options;
+	}
 }
 
 yBgOff = lerp(yBgOff, yBgTo, 0.06);
 if (menuSelected = 0) yBgTo = -10;
 if (menuSelected = 1) yBgTo = 0;
 if (menuSelected = 2) yBgTo = 10;
+if (menuSelected = 3) yBgTo = 20;

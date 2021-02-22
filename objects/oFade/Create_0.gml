@@ -1,7 +1,6 @@
-roomTo = room_next(room);
-
-y = room_height;
-xDif = camera_get_view_x(view_camera[0]);
-yDif = y - camera_get_view_y(view_camera[0]);
-
+y = 0;
+fadeY = 720;
 moved = false;
+
+roomTo = room_next(room);
+image_alpha = 0;

@@ -9,6 +9,10 @@ var spr = sFreeplay;
 if (menuSelected = 1) spr = sFreeplaySelect;
 draw_sprite_ext(spr, image_index, x, y + 160, 1, 1, 0, c_white, round(textFlash[1]));
 
+var spr = sOptions;
+if (menuSelected = 3) spr = sOptionsSelect;
+draw_sprite_ext(spr, image_index, x, y + (160 * 3), 1, 1, 0, c_white, round(textFlash[3]));
+
 var spr = sDonate;
 if (menuSelected = 2) {
 	spr = sDonateSelect;
