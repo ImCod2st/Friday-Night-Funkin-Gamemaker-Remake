@@ -8,7 +8,7 @@ with (instance_place(x, y + 90, oArrowButton)) {
 		var obj = oEnemy;
 		if (global.enemy = 0) obj = oGirlfriend;
 		obj.dir = other.image_index;
-		obj.animationTimer = 60 + other.sliderLength / 8;
+		obj.animationTimer = 70 + other.sliderLength / 8;
 		
 		if (other.sliderLength <= 0) {
 			instance_destroy(other);

@@ -3,7 +3,7 @@ if !(global.dead) image_speed = (global.bpm / 60) / 2;
 function noteCheck(key, dir) {
 	if (keyboard_check_pressed(key)) {
 		notePlaying = dir;
-		animCount = 60;
+		animCount = 70;
 		singFrame = 0;
 	}
 }

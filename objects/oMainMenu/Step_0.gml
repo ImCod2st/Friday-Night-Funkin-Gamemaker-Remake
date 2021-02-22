@@ -35,7 +35,7 @@ if (selectedTimer = 120) {
 	}
 	if (menuSelected = 1) {
 		o = instance_create_depth(0, 0, -10000, oFade);
-		o.roomTo = StoryMenu;
+		o.roomTo = FreePlay;
 	}
 }
 
