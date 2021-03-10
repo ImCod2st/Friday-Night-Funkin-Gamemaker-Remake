@@ -1,2 +1,2 @@
-draw_rectangle_color(0, 680, 230, 720, c_black, c_black, c_black, c_black, false);
-draw_text_transformed(0, 670, "DEV MODE", 3, 3, 0);
+draw_text_transformed(0, 650, "DEV MODE", 3, 3, 0);
+if (global.auto) draw_text_transformed(0, 20, "AUTO MODE", 1, 1, 0);

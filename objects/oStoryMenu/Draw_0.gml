@@ -14,15 +14,19 @@ if (global.currentDif  = 1) curWeekScore = global.weekScoreNormal[selectedWeek];
 if (global.currentDif  = 2) curWeekScore = global.weekScoreHard[selectedWeek];
 scorDisplay = lerp(scorDisplay, curWeekScore, 0.2);
 
-draw_text_transformed(5, 0, "WEEK SCORE: " + string(round(scorDisplay)), 1.5, 1.5, 0);
+draw_text_transformed(5, 0, "WEEK SCORE: " + string(round(scorDisplay)), 1.7, 1.7, 0);
 draw_set_halign(fa_right);
 draw_set_color(c_ltgray);
-draw_text_transformed(1275, 0, weekName[selectedWeek], 1.5, 1.5, 0);
+draw_text_transformed(1275, 0, weekName[selectedWeek], 1.7, 1.7, 0);
 draw_set_halign(fa_left);
 draw_set_color(c_white);
 
 // character outlines
-if (selectedWeek != 0) draw_sprite_ext(sDaddyOutline, animate, 264, 450, 0.4980007, 0.4980007, 0, c_white, 1);
+var enemyOutline = sDaddyOutline;
+if (selectedWeek = 2) enemyOutline = sSpookyOutline;
+if (selectedWeek = 3) enemyOutline = sPicoOutline;
+if (selectedWeek = 4) enemyOutline = sMomOutline;
+if (selectedWeek != 0) draw_sprite_ext(enemyOutline, animate, 264, 450, 0.4980007, 0.4980007, 0, c_white, 1);
 draw_sprite_ext(sGirlfriendOutline, animate * 2, 753, 16, 0.4980007, 0.4980007, 0, c_white, 1);
 
 var bfSprite = sBoyfriendOutline;

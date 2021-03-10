@@ -21,7 +21,8 @@ if (instance_exists(oEnemy)) {
 	enFakeX = oEnemy.x;
 	enFakeY = oEnemy.y;
 	enFakeIndex = oEnemy.image_index;
-	enFakeScale = oEnemy.image_xscale;
+	enFakeScaleX = oEnemy.image_xscale;
+	enFakeScaleY = oEnemy.image_yscale;
 }
 
 yOffset = array_create(array_length(menus))

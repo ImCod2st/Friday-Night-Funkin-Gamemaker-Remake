@@ -5,14 +5,14 @@ if !(afterCreate) {
 	afterCreate = true;	
 }
 
-if !(enemy) {
+if !(enemy) && !(global.auto) {
 	if (keyboard_check_pressed(key)) {
 		image_speed = 1;
 		image_index = 0;
 		
 		oBoyfriend.missed = true;
 		with (instance_place(x, y, oNote)) {
-			if !(switchTurn) {	
+			if !(notRealNote) {	
 				with (other) sprite_index = asset_get_index(sprite_get_name(spr) + "Hit");
 				if (sliderLength <= 0) instance_destroy();
 				else {
@@ -25,25 +25,32 @@ if !(enemy) {
 				var distance = point_distance(x, y, other.x, other.y);
 				var scor = 0;
 
-				if (distance > 20) scor = 1;
-				if (distance > 50) scor = 2;
-				if (distance > 60) scor = 3;
-				var o = instance_create_depth(1254, 485, 400 - instance_number(oScoreText), oScoreText);
+				if (distance > 25) scor = 1;
+				if (distance > 65) scor = 2;
+				if (distance > 75) scor = 3;
+				var scoreX = 1259
+				if (instance_exists(oGirlfriend)) scoreX = oGirlfriend.x + 5;
+				var o = instance_create_depth(scoreX, 485, 400 - instance_number(oScoreText), oScoreText);
 				o.image_index = scor;
 				if (scor = 0) global.curScore += 350;
 				if (scor = 1) global.curScore += 200;
 				if (scor = 2) global.curScore += 100;
 				if (scor = 3) global.curScore += 50;
+			
 				global.combo++;
+				oHealthBar.hitCount += 1;
 				exit;
 			}
 		}
 		
 		if (oBoyfriend.missed) {
 			audio_play_sound(asset_get_index("missnote" + choose("1", "2", "3")), 10, false);
-			global.hp -= 1;	
+			global.hp -= 2;	
 			global.curScore -= 10;
 			global.combo = 0;
+			oHealthBar.missCount += 1;
+			
+			if (global.fragile) global.hp = 0;
 		}
 	}
 

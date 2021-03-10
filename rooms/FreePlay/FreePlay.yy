@@ -15,6 +15,7 @@
   "layers": [
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oFreeplay","path":"objects/oFreeplay/oFreeplay.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_363434A1","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oMods","path":"objects/oMods/oMods.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":928.0,"y":416.0,"resourceVersion":"1.0","name":"inst_68869A10","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"assets":[
         {"spriteId":{"name":"sBackgroundFunk","path":"sprites/sBackgroundFunk/sBackgroundFunk.yy",},"headPosition":2.0,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":0.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":640.0,"y":352.0,"resourceVersion":"1.0","name":"graphic_2AFFEB57","tags":[],"resourceType":"GMRSpriteGraphic",},
@@ -25,6 +26,7 @@
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_363434A1","path":"rooms/FreePlay/FreePlay.yy",},
+    {"name":"inst_68869A10","path":"rooms/FreePlay/FreePlay.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -1,13 +1,16 @@
-hudBopVsp -= 0.001;
+//hudBopVsp -= 0.001;
 
-hudBopScale += hudBopVsp;
-if (hudBopScale < 1) hudBopScale = 1;
+//hudBopScale += hudBopVsp;
+//if (hudBopScale < 1) hudBopScale = 1;
 
-hudBopTimer += 0.1;
-if (hudBopTimer >= (global.bpm / 60) * 16) {
-	hudBopVsp = 0.01;
-	hudBopTimer = 0;
-}
+//hudBopTimer += 0.1;
+//if (hudBopTimer >= (global.bpm / 60) * 16) {
+//	hudBopVsp = 0.01;
+//	hudBopTimer = 0;
+//}
+
+actualDelta = delta_time / 1000000;
+global.deltaMultiplier = actualDelta/targetDelta;
 
 // check if song ended
 if (variable_global_exists("musicSync")) {
@@ -48,3 +51,6 @@ if (timeUntilMoveOn >= 420) {
 	audio_destroy_sync_group(global.musicSync);
 	timeUntilMoveOn = 0;
 }
+
+global.volume = clamp(global.volume, 0, 1);
+audio_master_gain(global.volume);

@@ -3,7 +3,7 @@ for (var i = 0; i < ds_grid_height(global.chart) / 2; ++i) {
 }
 
 draw_rectangle_color(selBoxX, selBoxY, selBoxX + gridSize - 1, selBoxY + gridSize - 1, c_white, c_white, c_white, c_white, false);
-draw_editor_notes(global.chart, x, y);
+if !(dontDraw) draw_editor_notes(global.chart, x, y);
 
 // character heads
 var headLeft = 4;

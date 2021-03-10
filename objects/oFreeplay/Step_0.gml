@@ -1,12 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (keyboard_check_pressed(vk_down)) && (curSelected > 0) {
+if (keyboard_check_pressed(vk_down)) {
 	curSelected -= 1;
+	if (curSelected = -1) curSelected = array_length(songs) - 1;
 	audio_play_sound(scrollMenu, 10, false);	
 }
-if (keyboard_check_pressed(vk_up)) && (curSelected < array_length(songs) - 1) {
+if (keyboard_check_pressed(vk_up)) {
 	curSelected += 1;
+	if (curSelected = array_length(songs)) curSelected = 0;
 	audio_play_sound(scrollMenu, 10, false);
 }
 

@@ -5,7 +5,10 @@ function load_chart(songNam, dif){
 	if (dif = 1) difName = "_Normal";
 	if (dif = 2) difName = "_Hard";
 	
-	ini_open(songNam + difName + ".ini");
+	var directory = songNam + "/" + songNam + difName + ".ini";
+	if (global.useProgramDir) directory = program_directory + songNam + "\\" + directory;
+	
+	ini_open(directory);
 	if (songNam = "") exit;
 	global.songName = ini_read_string("Song", "Name", global.songName);
 	global.song = asset_get_index(ini_read_string("Song", "Song File", "Dadbattle_Inst"));
@@ -14,6 +17,7 @@ function load_chart(songNam, dif){
 	
 	global.noteSpeed = ini_read_real("Song", "Notespeed", global.noteSpeed);
 	global.bpm = ini_read_real("Song", "BPM", global.bpm);
+	global.camSpeed = ini_read_real("Song", "Camspeed", global.camSpeed);
 	global.enemy = ini_read_real("Song", "Enemy", global.enemy);
 	
 	ds_grid_read(global.chart, ini_read_string("Song", "Notes", ds_grid_create(8, 16)));

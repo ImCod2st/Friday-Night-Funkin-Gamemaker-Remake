@@ -44,7 +44,25 @@ if (selectedTimer = 120) {
 	if (selectedWeek = 1) {
 		load_chart("Bopeebo", global.currentDif);
 		global.nextSong[0] = "Fresh";
+		global.nextSong[1] = "Dadbattle";
+		global.nextSong[2] = "n";
+	}
+	if (selectedWeek = 2) {
+		load_chart("Spookeez", global.currentDif);
+		global.nextSong[0] = "South";
 		global.nextSong[1] = "n";
+	}
+	if (selectedWeek = 3) {
+		load_chart("Pico", global.currentDif);
+		global.nextSong[0] = "Philly";
+		global.nextSong[1] = "Blammed";
+		global.nextSong[2] = "n";
+	}
+	if (selectedWeek = 4) {
+		load_chart("Satin_panties", global.currentDif);
+		global.nextSong[0] = "High";
+		global.nextSong[1] = "Milf";
+		global.nextSong[2] = "n";
 	}
 }
 

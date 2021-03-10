@@ -1,6 +1,8 @@
 curSelected = 0;
-optionAmount = 2;
+optionAmount = 4;
 
 fullscreenOption = false;
 smoothingOption = false;
 discord = false;
+
+heldKey = 0;

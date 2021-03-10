@@ -13,6 +13,9 @@ rightArrowScaleTo = 1;
 selectedWeek = 0;
 weekName[0] = "";
 weekName[1] = "DADDY DEAREST";
+weekName[2] = "SPOOKY MONTH";
+weekName[3] = "PICO";
+weekName[4] = "MOMMY MUST MURDER";
 
 selected = false;
 selectedTimer = 0;

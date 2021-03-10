@@ -1,13 +1,20 @@
-songs[0] = "amog us";
-songs[1] = "test5";
-songs[2] = "test4";
-songs[3] = "test3";
-songs[4] = "test2";
-songs[5] = "test";
+songs[0] = "milf";
+songs[1] = "high";
+songs[2] = "satin_panties";
 
-songs[6] = "fresh";
-songs[7] = "bopeebo";
-songs[8] = "tutorial";
+songs[3] = "blammed";
+songs[4] = "philly";
+songs[5] = "pico";
+
+songs[6] = "monster";
+songs[7] = "south";
+songs[8] = "spookeez";
+
+songs[9] = "dadbattle";
+songs[10] = "fresh";
+songs[11] = "bopeebo";
+
+songs[12] = "tutorial";
 
 difSelected = 1;
 curSelected = array_length(songs) - 1;
