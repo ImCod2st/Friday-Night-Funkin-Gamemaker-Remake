@@ -7,12 +7,14 @@ curSelected = 2; // decides which menu in the list is selected
 timer = 20; // timer prevents from events being activated instantly
 
 // pick the fake location of the boyfriend
+bfSprite = oBoyfriend.sprite_index;
 bfFakeX = oBoyfriend.x;
 bfFakeY = oBoyfriend.y;
 bfFakeIndex = oBoyfriend.image_index;
 bfFakeScale = oBoyfriend.image_xscale;
 
 // pick the fake location of the girlfriend
+gfSprite = oGirlfriend.sprite_index;
 gfFakeX = oGirlfriend.x;
 gfFakeY = oGirlfriend.y;
 gfFakeIndex = oGirlfriend.image_index;
@@ -36,4 +38,3 @@ xOffset = array_create(array_length(menus))
 // deactivate all objects, and pause the music
 audio_pause_sync_group(global.musicSync);
 instance_deactivate_all(true);
-instance_activate_object(oCamera);

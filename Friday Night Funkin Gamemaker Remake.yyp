@@ -432,6 +432,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/Tutorial","resourceVersion":"1.0","name":"Tutorial_Easy.ini","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/Tutorial","resourceVersion":"1.0","name":"Tutorial_Hard.ini","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/Tutorial","resourceVersion":"1.0","name":"Tutorial_Normal.ini","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/Songs/Codist_says_things","resourceVersion":"1.0","name":"Codist_says_things_Hard.ini","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2.3.1.542",

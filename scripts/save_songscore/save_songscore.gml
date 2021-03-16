@@ -5,6 +5,9 @@ function save_songscore(song, dif, scor){
 	var difString = "Easy";
 	if (dif = 1) difString = "Normal";
 	if (dif = 2) difString = "Hard";
-	ini_write_real(string_lower(song), difString, scor);
+	
+	var oldScor = ini_read_real(string_lower(song), difString, 0);
+	
+	if (scor > oldScor) ini_write_real(string_lower(song), difString, scor);
 	ini_close();
 }
