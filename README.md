@@ -1,4 +1,4 @@
-# Friday Night Funkin: Gamemaker Remake
+# Friday Night Funkin: Gamemaker Remake ![Discord](https://img.shields.io/discord/725981070360576080?style=flat-square) 
 The **Friday Night Funkin: Gamemaker Remake** *(FNF: GMS2 Remake)* for short, is a remake of the game titled **Friday Night Funkin** by ninja_muffin99 & friends on itch.io.
 If you have not played the original game, *please* play it [here](https://ninja-muffin24.itch.io/funkin).
 
