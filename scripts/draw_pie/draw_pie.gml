@@ -1,5 +1,6 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// yeah i didnt make this code, this shit is extremely smart
+// found at https://forum.yoyogames.com/index.php?threads/is-there-a-way-to-draw-a-partial-circle-like-a-pie-slice.39662/
+// posted by the user Galax (but i am not sure if he created this or not, if you know who did please contact me so i can give proper credit here)
 function draw_pie(__x ,__y ,__value, __max, __colour, __radius, __transparency){
 	/// draw_pie(_x ,_y ,_value, _max, _colour, _radius, _transparency)
 

@@ -1,3 +1,5 @@
+// if the chart exists, load the chart
+// change the notespeed depending on mods
 if (variable_global_exists("chart")) {
 	if (global.fastnotes) or (global.slownotes) load_chart(global.songName, global.currentDif)
 	

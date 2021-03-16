@@ -1,26 +1,29 @@
-/// @description Insert description here
-// You can write your code in this editor
+// when pressing down, move the selected item down
 if (keyboard_check_pressed(vk_down)) && (curSelected > 0) {
 	curSelected -= 1;
 	audio_play_sound(scrollMenu, 10, false);	
 }
+// when pressing up, move the selected item up
 if (keyboard_check_pressed(vk_up)) && (curSelected < array_length(menus) - 1) {
 	curSelected += 1;
 	audio_play_sound(scrollMenu, 10, false);
 }
 
-audio_pause_sync_group(global.musicSync);
+//when enter is pressed run the code for which is selected
 if (keyboard_check_pressed(vk_enter)) {
 	switch (curSelected) {
 		case 2:
+			// if resume is selected, destroy self
 			if (timer = 0) instance_destroy();
 			break;
 		case 1:
+			// if restart is selected. go to the same room
 			var o = instance_create_depth(0, 0, depth - 100, oFade);
 			o.roomTo = MainGame;
 			audio_destroy_sync_group(global.musicSync);
 			break;
 		case 0:
+			// if exit to main menu is selected, go to the main menu
 			var o = instance_create_depth(0, 0, depth - 100, oFade);
 			o.roomTo = MainMenu;
 			audio_destroy_sync_group(global.musicSync);
@@ -28,4 +31,5 @@ if (keyboard_check_pressed(vk_enter)) {
 			break;
 	}
 }
+// if the timer is greater than 0, subtract from the timer
 if (timer > 0) timer--;

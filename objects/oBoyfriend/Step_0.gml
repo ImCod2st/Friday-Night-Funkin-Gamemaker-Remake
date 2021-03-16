@@ -1,16 +1,22 @@
 if !(global.dead) {
-	if (global.enemy != 0) image_speed = ((global.bpm / 60) / 2) * global.deltaMultiplier;
-	else image_speed = (global.bpm / 60) * global.deltaMultiplier;
+	// make the bf bop to the music
+	if (global.enemy != 0) image_speed = ((global.bpm / 60) / 2) * global.deltaMultiplier; //all enemys
+	else image_speed = (global.bpm / 60) * global.deltaMultiplier; //tutorial
+	
+	// change the idle sprite
 	if !(sprChanged) {
 		sprite_index = sprIdle;
+		if (flipped) image_xscale = -image_xscale;
 		sprChanged = true;
 	}
 }
-else image_speed = global.deltaMultiplier;
+else image_speed = global.deltaMultiplier; // if dead change the image speed to 1 (deltaMultiplier should always equal something close to 1 depending on lag)
 
 if !(global.auto) {
 	// not auto mode code
-
+	
+	// check for arrow keys
+	// activate the animation when keys are pressed
 	function noteCheck(key, dir) {
 		if (keyboard_check_pressed(key)) {
 			notePlaying = dir;
@@ -19,6 +25,7 @@ if !(global.auto) {
 			singFrame = 0;
 		}
 	}
+	// subtract the time the animation is playing for
 	if (animCount > 0) animCount -= 1 * global.deltaMultiplier;
 
 	if !(global.dead) {
@@ -40,9 +47,10 @@ if !(global.auto) {
 	// death
 	if (global.hp <= 0) && !(global.dead) && !(global.nofail) {
 		global.dead = true;
-	
+		
+		// stop all music
 		audio_stop_all();
-		audio_stop_sync_group(global.musicSync);
+		audio_destroy_sync_group(global.musicSync);
 	
 		audio_play_sound(fnf_loss_sfx, 100, false);
 	
@@ -73,6 +81,3 @@ if !(global.auto) {
 		animationIndex = 0;	
 	}
 }
-
-image_xscale = scale;
-image_yscale = scale;

@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Philly",
-    "path": "folders/Sprites/Stages/Philly.yy",
+    "path": "folders/Sprites/Backgrounds/Stages/Philly.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPicoBehindTrain",

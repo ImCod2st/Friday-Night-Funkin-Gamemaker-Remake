@@ -1,11 +1,11 @@
 if !(selected) {
 	if (keyboard_check_pressed(vk_down)) {
 		audio_play_sound(scrollMenu, 0, false);
-		menuSelected++;
+		if (menuSelected < 3) menuSelected++;
 	}
 	if (keyboard_check_pressed(vk_up)) {
 		audio_play_sound(scrollMenu, 0, false);
-		menuSelected--;
+		if (menuSelected > 0) menuSelected--;
 	}
 	if (keyboard_check_pressed(vk_enter)) {
 		audio_play_sound(confirmMenu, 1, false);

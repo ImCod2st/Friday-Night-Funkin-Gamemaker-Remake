@@ -1,5 +1,5 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// every title joke that appears at the start of the game
+// including some of my own bad ones
 function title_jokes(jokeNum, leftSideOnly){
 	joke[0] = "shoutouts to tom fulp\nlmao";
 	joke[1] = "ludum dare\nextraordinaire";
@@ -40,6 +40,7 @@ function title_jokes(jokeNum, leftSideOnly){
 	joke[36] = "yooooooooooo\nyooooooooo";
 	joke[37] = "pico funny\npico funny";
 	joke[38] = "updates each friday\non time every time";
+	
 	// custom fuckery
 	joke[39] = "nictube on\nthe trampbopoleen";
 	joke[40] = "gamemaker\nsucks dick";
@@ -58,6 +59,7 @@ function title_jokes(jokeNum, leftSideOnly){
 	joke[53] = "ninjamuffin\nplease dont stab me";
 	joke[54] = "im inside your\nhouse";
 	
+	// get the selected joke and return the left side, or the entire thing
 	var chosen = joke[jokeNum];
 	if (leftSideOnly) chosen = string_delete(chosen, string_pos("\n", chosen), string_length(chosen));
 	return chosen;

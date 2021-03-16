@@ -4,7 +4,7 @@ if !(global.auto) {
 	if (notePlaying = notes.down) singSprite = sprDown;
 	if (notePlaying = notes.up) singSprite = sprUp;
 	if (notePlaying = notes.right) singSprite = sprRight;
-	if (missed) singSprite = asset_get_index(sprite_get_name(singSprite) + "Miss");
+	if (missed) && (useMiss) singSprite = asset_get_index(sprite_get_name(singSprite) + "Miss");
 
 	var singing = false;
 	if (keyboard_check(vk_left)) singing = true;

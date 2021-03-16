@@ -11,7 +11,9 @@ if !(enemy) && !(global.auto) {
 		image_index = 0;
 		
 		oBoyfriend.missed = true;
+		
 		with (instance_place(x, y, oNote)) {
+			
 			if !(notRealNote) {	
 				with (other) sprite_index = asset_get_index(sprite_get_name(spr) + "Hit");
 				if (sliderLength <= 0) instance_destroy();
@@ -39,7 +41,6 @@ if !(enemy) && !(global.auto) {
 			
 				global.combo++;
 				oHealthBar.hitCount += 1;
-				exit;
 			}
 		}
 		
@@ -59,7 +60,7 @@ if !(enemy) && !(global.auto) {
 		sprite_index = spr;
 	}
 
-	if (keyboard_check(key)) && (image_index >= sprite_get_number(sprite_index) - 2) {
-		image_index = sprite_get_number(sprite_index) - 2;
+	if (keyboard_check(key)) {
+		if (image_index >= sprite_get_number(sprite_index) - 2) image_index = sprite_get_number(sprite_index) - 2;
 	}
 }

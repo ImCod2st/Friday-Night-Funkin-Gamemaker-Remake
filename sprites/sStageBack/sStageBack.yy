@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Stage",
-    "path": "folders/Sprites/Stages/Stage.yy",
+    "path": "folders/Sprites/Backgrounds/Stages/Stage.yy",
   },
   "resourceVersion": "1.0",
   "name": "sStageBack",

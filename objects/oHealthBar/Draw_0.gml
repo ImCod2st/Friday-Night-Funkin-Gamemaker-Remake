@@ -5,24 +5,26 @@ if !(global.dead) {
 
 if !(global.flashlight) {
 global.hp = clamp(global.hp, 0, 100)
+
 var hpWidth = (global.hp / hpMax) * healthXOff;
-var boyHpLow = (global.hp <= 10) or (global.fragile);
-var enemyHpLow = (global.hp >= 90);
 draw_rectangle_color(x + outlineWidth, y - outlineWidth, x - healthXOff - outlineWidth, y + healthYOff + outlineWidth, c_black, c_black, c_black, c_black, false);
 draw_rectangle_color(x, y, x - healthXOff, y + healthYOff, c_red, c_red, c_red, c_red, false);
 draw_rectangle_color(x, y, x - hpWidth, y + 10, c_lime, c_lime, c_lime, c_lime, false);
 
-var enem = global.enemy;
-var bf = 0;
-var iconSpr = sIcons;
+var boyHpLow = (global.hp <= 10) or (global.fragile);
+var enemyHpLow = (global.hp >= 90);
 
-if (global.enemy = 102) {enem = 0; bf = 0; iconSpr = sIconsSpecial;}
+enem = global.enemy;
+bf = 0;
+iconSpr = sIcons;
+
+special_icons(global.enemy);
 
 var enemyIcon = (enem + 1) * 2;
-var bfIcon = (bf + boyHpLow);
+var bfIcon = bf * 2;
 
 draw_sprite_ext(iconSpr,enemyIcon + enemyHpLow, x - hpWidth - 55, y, 1, 1, 0, c_white, 1); // enemy icon
-draw_sprite_ext(iconSpr,bfIcon,x - hpWidth + 55, y, -1, 1, 0, c_white, 1); // boy icon
+draw_sprite_ext(iconSpr,bfIcon + boyHpLow,x - hpWidth + 55, y, -1, 1, 0, c_white, 1); // boy icon
 }
 
 // score

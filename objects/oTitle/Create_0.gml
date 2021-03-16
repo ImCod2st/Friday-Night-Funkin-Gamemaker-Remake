@@ -20,5 +20,5 @@ text[6] = title_jokes(chosenJoke, false);
 text[7] = "friday";
 text[8] = "friday\nnight";
 text[9] = "friday\nnight\nfunkin";
-text[10] = "friday\nnight\nfunkin\ngamemaker port";
+text[10] = "friday\nnight\nfunkin\ngamemaker remake";
 text[11] = "";

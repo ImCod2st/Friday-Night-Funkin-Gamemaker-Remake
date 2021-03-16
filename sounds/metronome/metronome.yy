@@ -1,5 +1,5 @@
 {
-  "compression": 1,
+  "compression": 0,
   "volume": 1.0,
   "preload": false,
   "bitRate": 128,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "CodistSaysThings.mp3",
-  "duration": 59.6947975,
+  "soundFile": "metronome.mp3",
+  "duration": 0.173,
   "parent": {
-    "name": "Special",
-    "path": "folders/Sounds/Music/Special.yy",
+    "name": "Sounds",
+    "path": "folders/Sounds/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "CodistSaysThings",
+  "name": "metronome",
   "tags": [],
   "resourceType": "GMSound",
 }

@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Christmas",
-    "path": "folders/Sprites/Stages/Christmas.yy",
+    "path": "folders/Sprites/Backgrounds/Stages/Christmas.yy",
   },
   "resourceVersion": "1.0",
   "name": "sChristBgEscalator",

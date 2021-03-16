@@ -1,3 +1,4 @@
+// load all the mods data
 modsName[0] = "Auto Play";
 modsDesc[0] = "Plays the game for you.";
 modsSelected[0] = false;
@@ -38,9 +39,10 @@ modsDesc[7] = "Left is right, up is down.";
 modsSelected[7] = false;
 modsMultiplier[7] = 0.1;
 
+// make every mods scale equal 0.8
 for (var i = 0; i < array_length(modsMultiplier); ++i) {
 	modsScale[i] = 0.8;
 }
 
-totalMulti = 1;
-hoveredMod = -1;
+totalMulti = 1; // total multiplier
+hoveredMod = -1; // the mod that has been hovered over, used for tips

@@ -1,9 +1,9 @@
 {
-  "option_windows_display_name": "Friday Night Funkin' | GMS2 Port",
+  "option_windows_display_name": "Friday Night Funkin' | GMS2 Remake",
   "option_windows_executable_name": "${project_name}.exe",
   "option_windows_version": "0.0.0.1",
   "option_windows_company_info": "Codist",
-  "option_windows_product_info": "Friday Night Funkin' | GMS2 Port",
+  "option_windows_product_info": "Friday Night Funkin' | GMS2 Remake",
   "option_windows_copyright_info": "",
   "option_windows_description_info": "https://ninja-muffin24.itch.io/funkin",
   "option_windows_display_cursor": true,

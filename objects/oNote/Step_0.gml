@@ -13,7 +13,7 @@ if (global.vanish) {
 if (global.flashlight) { if (y < 600) image_alpha += global.noteSpeed / 200; }
 
 // detect for enemys
-with (instance_place(x, y + 90, oArrowButton)) {
+with (instance_place(x, y + 85, oArrowButton)) {
 	if (enemy) or (global.auto) {
 		if (other.notRealNote) exit;
 		if (other.curNoteSpeed = 0) && (instance_exists(oReady)) exit;

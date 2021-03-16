@@ -1,21 +1,29 @@
-//1369, 772
-//1049, 593
+x = oPersist.oldCamX;
+y = oPersist.oldCamY;
+
+oPersist.oldCamX = 1164;
+oPersist.oldCamY = 692;
+
+// set where the cam should go
 xTo = 1369;
 yTo = 772;
 
+// offsets for the bf and enemy
 offsetX = 0;
 offsetY = 0;
 
 bfOffsetX = 0;
 bfOffsetY = 0;
 
+// changes the cam zoom
 global.camWidth = 1280;
 global.camHeight = 720;
 
+// flashlight position
 flashX = 1280 / 2;
 flashY = 255;
 
-// backgrounds
+// background variables
 bgDad = layer_get_id("Background_Dad");
 bgDadFront = layer_get_id("Background_Front");
 bgDadFrontmost = layer_get_id("Background_FrontMost");

@@ -77,7 +77,7 @@
   ],
   "parent": {
     "name": "Limo",
-    "path": "folders/Sprites/Stages/Limo.yy",
+    "path": "folders/Sprites/Backgrounds/Stages/Limo.yy",
   },
   "resourceVersion": "1.0",
   "name": "sLimoDrive",

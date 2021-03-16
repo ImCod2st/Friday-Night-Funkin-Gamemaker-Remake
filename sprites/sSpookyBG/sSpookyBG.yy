@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Spooky",
-    "path": "folders/Sprites/Stages/Spooky.yy",
+    "path": "folders/Sprites/Backgrounds/Stages/Spooky.yy",
   },
   "resourceVersion": "1.0",
   "name": "sSpookyBG",

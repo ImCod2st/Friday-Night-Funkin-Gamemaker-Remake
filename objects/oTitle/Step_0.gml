@@ -9,7 +9,7 @@ if (trackPos >=6.4) && (curText = 5) curText++;	// stupid
 if (trackPos >=7.1) && (curText = 6) curText++;	// friday
 if (trackPos >=7.6) && (curText = 7) curText++;	// night
 if (trackPos >=8.2) && (curText = 8) curText++;	// funkin
-if (trackPos >=8.7) && (curText = 9) curText++;	// gms2 port
+if (trackPos >=8.7) && (curText = 9) curText++;	// gms2 remake
 if (trackPos >=9.4) && (curText = 10) {
 	curText++;
 	whiteFlashOpacity = 1;

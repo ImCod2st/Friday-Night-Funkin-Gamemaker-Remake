@@ -1,15 +1,17 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// this script is used to load a chart created using the editor
 function load_chart(songNam, dif){
+	// change the saved difficullty at the end of the file
 	var difName = "_Easy";
 	if (dif = 1) difName = "_Normal";
 	if (dif = 2) difName = "_Hard";
 	
-	var directory = songNam + "/" + songNam + difName + ".ini";
-	if (global.useProgramDir) directory = program_directory + songNam + "\\" + directory;
+	// choose the directory to load in depending on if the game is being run in the ide, or as a released build
+	var directory = songNam + "\\" + songNam + difName + ".ini";
+	if (global.useProgramDir) directory = program_directory + "\\Songs\\" + directory;
 	
+	// load all of the songs data
 	ini_open(directory);
-	if (songNam = "") exit;
+	if (songNam = "") {exit; ini_close();} // if the song being loaded's name is "", then give up on loading the file
 	global.songName = ini_read_string("Song", "Name", global.songName);
 	global.song = asset_get_index(ini_read_string("Song", "Song File", "Dadbattle_Inst"));
 	global.voices = ini_read_string("Song", "Vocal File", "Dadbattle_Voices");

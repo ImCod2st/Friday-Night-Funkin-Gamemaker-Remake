@@ -1,0 +1,1 @@
+url_open("https://github.com/ImCodist/Friday-Night-Funkin-Gamemaker-Port/issues");
