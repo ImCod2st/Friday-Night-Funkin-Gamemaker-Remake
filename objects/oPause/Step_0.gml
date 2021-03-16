@@ -21,13 +21,16 @@ if (keyboard_check_pressed(vk_enter)) {
 			var o = instance_create_depth(0, 0, depth - 100, oFade);
 			o.roomTo = MainGame;
 			audio_destroy_sync_group(global.musicSync);
+			timer = 300;
 			break;
 		case 0:
 			// if exit to main menu is selected, go to the main menu
+			if (timer > 0) exit;
 			var o = instance_create_depth(0, 0, depth - 100, oFade);
 			o.roomTo = MainMenu;
 			audio_destroy_sync_group(global.musicSync);
 			audio_play_sound(freakyMenu, 10, true);
+			timer = 300;
 			break;
 	}
 }

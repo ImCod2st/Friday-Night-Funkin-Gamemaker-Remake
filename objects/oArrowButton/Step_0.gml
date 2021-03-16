@@ -40,7 +40,7 @@ if !(enemy) && !(global.auto) {
 				if (scor = 3) global.curScore += 50;
 			
 				global.combo++;
-				oHealthBar.hitCount += 1;
+				oHUD.hitCount += 1;
 			}
 		}
 		
@@ -49,7 +49,7 @@ if !(enemy) && !(global.auto) {
 			global.hp -= 2;	
 			global.curScore -= 10;
 			global.combo = 0;
-			oHealthBar.missCount += 1;
+			oHUD.missCount += 1;
 			
 			if (global.fragile) global.hp = 0;
 		}

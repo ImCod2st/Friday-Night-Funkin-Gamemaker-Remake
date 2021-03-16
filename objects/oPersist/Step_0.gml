@@ -31,6 +31,8 @@ if (timeUntilMoveOn >= 420) {
 	
 	// load the next songs chart
 	load_chart(global.nextSong[global.songOn], global.currentDif);
+
+	if (global.auto) global.curScore = 0;
 	global.songScore[global.songOn] = global.curScore;
 	
 	// if the next song does not exist

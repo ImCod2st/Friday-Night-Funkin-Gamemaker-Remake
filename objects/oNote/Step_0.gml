@@ -10,7 +10,11 @@ if (y > 1280) exit;
 if (global.vanish) {
 	if (y < 400) image_alpha -= global.noteSpeed / 200;
 }
+
 if (global.flashlight) { if (y < 600) image_alpha += global.noteSpeed / 200; }
+else if (image_alpha < 1) {
+	image_alpha = lerp(image_alpha, 1, 0.06);
+}
 
 // detect for enemys
 with (instance_place(x, y + 85, oArrowButton)) {
@@ -77,7 +81,7 @@ if (y < 0 - sliderLength - 10) {
 	global.hp -= 3 + sliderLength / 80;
 	if (global.fragile) global.hp = 0;
 	
-	oHealthBar.missCount += 1;
+	oHUD.missCount += 1;
 }
 
 //if (fadeIn) && (image_alpha < 1) image_alpha += 0.1;

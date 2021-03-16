@@ -13,7 +13,7 @@ if (keyboard_check_pressed(vk_left)) && (difSelected > 0) difSelected--;
 if (keyboard_check_pressed(vk_right)) && (difSelected < 2) difSelected++;
 
 if (keyboard_check_pressed(vk_enter)) {
-	if (difSelected != 2) && !(keyboard_check(vk_shift)) exit;
+	if (difSelected != 2) && !(keyboard_check(vk_shift)) or (instance_exists(oFade)) exit;
 	
 	audio_play_sound(confirmMenu, 10, false);
 	

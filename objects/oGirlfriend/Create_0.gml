@@ -11,4 +11,4 @@ if (room = Title) {
 bpmMulti = 2;
 if (global.enemy = 5) sprite_index = sGirlfriendCarIdle;
 if (global.enemy = 6) sprite_index = sGirlfriendChristIdle;
-if (global.enemy = 102) image_alpha = 0;
+if (global.enemy = 102) sprite_index = sGirlfriendCodist;

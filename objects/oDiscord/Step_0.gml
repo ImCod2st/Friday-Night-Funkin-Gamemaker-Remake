@@ -10,12 +10,18 @@ if (changeTimer <= 0) {
 		
 		// get the enemy
 		// 0 - gf, 1 - dad, 2 - spooky, 3 - monster, 4 - pico, 5 - mom
-		if (global.enemy = 0) rousr_dissonance_set_large_image("gficon", "Girlfriend");
-		if (global.enemy = 1) rousr_dissonance_set_large_image("dad", "Daddy Dearest");
-		if (global.enemy = 2) rousr_dissonance_set_large_image("spooky", "Spooky Kids");
-		if (global.enemy = 3) rousr_dissonance_set_large_image("monster", "??????");
-		if (global.enemy = 4) rousr_dissonance_set_large_image("pico", "Pico");
-		if (global.enemy = 5) rousr_dissonance_set_large_image("mom", "Mom");
+		switch (global.enemy) {
+			case 0: rousr_dissonance_set_large_image("gficon", "Girlfriend"); break;
+			case 1: rousr_dissonance_set_large_image("dad", "Daddy Dearest"); break;
+			case 2: rousr_dissonance_set_large_image("spooky", "Spooky Kids"); break;
+			case 3: rousr_dissonance_set_large_image("monster", "??????"); break;
+			case 4: rousr_dissonance_set_large_image("pico", "Pico"); break;
+			case 5: rousr_dissonance_set_large_image("mom", "Mom"); break;
+		
+			// special enemys
+			case 101: rousr_dissonance_set_large_image("whitty", "?"); break;
+			case 102: rousr_dissonance_set_large_image("oxi", "?????????????"); break;
+		}
 		
 		// get the songs dif
 		var difName = "Easy";
@@ -31,7 +37,6 @@ if (changeTimer <= 0) {
 	// reset the change timer
 	changeTimer = 180;
 	
-} else {
-	// lower the timer
-	changeTimer--;	
 }
+// lower the timer
+changeTimer--;	

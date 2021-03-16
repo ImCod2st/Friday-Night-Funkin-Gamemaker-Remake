@@ -36,3 +36,4 @@ xOffset = array_create(array_length(menus))
 // deactivate all objects, and pause the music
 audio_pause_sync_group(global.musicSync);
 instance_deactivate_all(true);
+instance_activate_object(oCamera);

@@ -8,6 +8,7 @@ if !(selected) {
 		if (menuSelected > 0) menuSelected--;
 	}
 	if (keyboard_check_pressed(vk_enter)) {
+		if (instance_exists(oFade)) exit;
 		audio_play_sound(confirmMenu, 1, false);
 		if (menuSelected = 0) {
 			selected = true;
