@@ -4,6 +4,8 @@ If you have not played the original game, *please* play it [here](https://ninja-
 
 This project is a passion project, and **I will not profit** from this remakes creation.
 
+You can find the games download link [here](https://github.com/ImCodist/Friday-Night-Funkin-Gamemaker-Remake/releases).
+
 ## Motivation
 I made this out of **love for the original game** and to **improve** my skill in new areas of Gamemaker Studio. As a result I have learned how to work with *higher-res graphics*, and how to make a *ddr style rhythm game work*.
 
