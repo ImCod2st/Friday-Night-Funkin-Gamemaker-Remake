@@ -43,7 +43,7 @@ ini_close();
 if (lastSelected != curSelected) {
 	// get the selected songs directory
 	var directory = songNam + "/" + songNam + "_Hard.ini";
-	if (global.useProgramDir) directory = program_directory + songNam + "\\" + songNam + "_Hard.ini";
+	if (global.useProgramDir) directory = program_directory +"\\Songs\\" + directory;
 	
 	// load the selected songs data
 	ini_open(directory);

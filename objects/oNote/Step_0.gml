@@ -8,7 +8,7 @@ if (y > 1280) exit;
 
 // mods
 if (global.vanish) {
-	if (y < 400) image_alpha -= global.noteSpeed / 200;
+	if (y < 400) image_alpha -= global.noteSpeed / 100;
 }
 
 if (global.flashlight) { if (y < 600) image_alpha += global.noteSpeed / 200; }
