@@ -2,6 +2,14 @@ if !(surface_exists(global.hudSurface)) exit;
 surface_set_target(global.hudSurface);
 
 if !(global.dead) {
+	
+// bpm code
+if (bpmTimer >= 120) {
+	iconBopVsp = 0;
+	iconBop = 0.2;
+	bpmTimer = 0;
+}
+bpmTimer += (global.bpm / 60) * global.deltaMultiplier;
 
 if !(global.flashlight) {
 global.hp = clamp(global.hp, 0, 100)
@@ -23,8 +31,8 @@ special_icons(global.enemy);
 var enemyIcon = (enem + 1) * 2;
 var bfIcon = bf * 2;
 
-draw_sprite_ext(iconSpr,enemyIcon + enemyHpLow, x - hpWidth - 55, y, 1, 1, 0, c_white, 1); // enemy icon
-draw_sprite_ext(iconSpr,bfIcon + boyHpLow,x - hpWidth + 55, y, -1, 1, 0, c_white, 1); // boy icon
+draw_sprite_ext(iconSpr,enemyIcon + enemyHpLow, x - hpWidth , y, 1 + iconBop, 1 + iconBop, 0, c_white, 1); // enemy icon
+draw_sprite_ext(iconSpr,bfIcon + boyHpLow,x - hpWidth, y, -1 + -iconBop, 1 + iconBop, 0, c_white, 1); // boy icon
 }
 
 // score

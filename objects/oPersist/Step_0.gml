@@ -1,15 +1,14 @@
-// unused bopping code, might re add but idk
+// used bopping code, readded
+//hudBopVsp += 0.1;
+//if (hudBopScale > 0) hudBopScale -= hudBopVsp;
+//if (hudBopScale < 0) hudBopScale = 0;
 
-//hudBopVsp -= 0.001;
-
-//hudBopScale += hudBopVsp;
-//if (hudBopScale < 1) hudBopScale = 1;
-
-//hudBopTimer += 0.1;
-//if (hudBopTimer >= (global.bpm / 60) * 16) {
-//	hudBopVsp = 0.01;
+//if (hudBopTimer >= 240) {
+//	hudBopVsp = 0;
+//	hudBopScale = 10;
 //	hudBopTimer = 0;
 //}
+//hudBopTimer += (global.bpm / 60) * global.deltaMultiplier;
 
 // calculate deltatime
 actualDelta = delta_time / 1000000;

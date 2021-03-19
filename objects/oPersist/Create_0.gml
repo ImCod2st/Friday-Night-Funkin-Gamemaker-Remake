@@ -30,9 +30,9 @@ global.dead = false; // is the player dead
 global.camWidth = 1280;
 global.camHeight = 720;
 global.hudSurface = surface_create(1280, 720)
-hudBopTimer = 0;
-hudBopScale = 1;
 hudBopVsp = 0;
+hudBopScale = 0;
+hudBopTimer = 0;
 
 oldCamX = 1164;
 oldCamY = 692;

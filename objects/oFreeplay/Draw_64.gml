@@ -25,8 +25,8 @@ special_icons(curEnemy);
 
 var enemyIcon = (enem + 1) * 2;
 var bfIcon = bf * 2;
-draw_sprite(iconSpr, enemyIcon, 1020, 220);
-draw_sprite_ext(iconSpr, bfIcon, 1180, 220, -1, 1, 0, c_white, 1);
+draw_sprite(iconSpr, enemyIcon, 1070, 220);
+draw_sprite_ext(iconSpr, bfIcon, 1130, 220, -1, 1, 0, c_white, 1);
 
 for (var i = 0; i < array_length(songs); ++i) {
 	if (i != curSelected) draw_set_alpha(0.5);

@@ -1,5 +1,3 @@
-
-
 // choose the sprites to use
 char = "sBoyfriend";
 flipped = false;
