@@ -18,5 +18,6 @@ draw_option(10, 0, "fullscreen", fullscreenOption, true);
 draw_option(80, 1, "smoothing", smoothingOption, true);
 draw_option(150, 2, "offset", round(global.offset), false);
 draw_option(220, 3, "advanced hud", global.advancedHud, true);
+draw_option(290, 4, "set keybinds", "", false);
 
 draw_set_font(fntDefault);

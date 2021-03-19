@@ -84,13 +84,11 @@ if (y < 0 - sliderLength - 10) {
 	
 	if (notRealNote) exit; 
 	if (x < 600) exit;
+	global.playVoice = 0;	
 	global.combo = 0;
 	global.hp -= 3 + sliderLength / 80;
 	if (global.fragile) global.hp = 0;
 	
 	oHUD.missCount += 1;
-	
-	global.playVoice = 0;
 }
-
 //if (fadeIn) && (image_alpha < 1) image_alpha += 0.1;

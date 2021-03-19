@@ -5,7 +5,7 @@ if (global.voices != "") {
 	if (!global.turn) 
 		audio_sound_gain(global.voices, 1, 0);
 	else
-		audio_sound_gain(global.voices, global.playVoice, 0);
+		audio_sound_gain(global.voices, global.playVoice, 0.01);
 }
 
 // there is no set controller

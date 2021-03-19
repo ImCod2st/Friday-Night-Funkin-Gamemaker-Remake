@@ -91,15 +91,15 @@ load_data();
 
 // keyboard maps
 keyboard_set_map(ord("A"), vk_left);
+keyboard_set_map(ord("S"), vk_down);
 keyboard_set_map(ord("W"), vk_up);
 keyboard_set_map(ord("D"), vk_right);
-keyboard_set_map(ord("S"), vk_down);
 
 keyboard_set_map(vk_escape, vk_backspace);
 keyboard_set_map(ord("Z"), vk_space);
 
 // basic controller support because I don't think I have the patience to go through the whole project and rewrite it
-
+// i dont blame you - codist
 
 // delta time
 targetDelta = 1/120;

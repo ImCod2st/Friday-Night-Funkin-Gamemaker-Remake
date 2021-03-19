@@ -16,6 +16,7 @@
     {"id":{"name":"sDebugEditorGrid","path":"sprites/sDebugEditorGrid/sDebugEditorGrid.yy",},"order":0,},
     {"id":{"name":"sndBfBah","path":"sounds/sndBfBah/sndBfBah.yy",},"order":0,},
     {"id":{"name":"scrollMenu","path":"sounds/scrollMenu/scrollMenu.yy",},"order":1,},
+    {"id":{"name":"oMapKeys","path":"objects/oMapKeys/oMapKeys.yy",},"order":10,},
     {"id":{"name":"sBoyfriendRightMiss","path":"sprites/sBoyfriendRightMiss/sBoyfriendRightMiss.yy",},"order":2,},
     {"id":{"name":"oBoyfriend","path":"objects/oBoyfriend/oBoyfriend.yy",},"order":0,},
     {"id":{"name":"sDadRight","path":"sprites/sDadRight/sDadRight.yy",},"order":4,},

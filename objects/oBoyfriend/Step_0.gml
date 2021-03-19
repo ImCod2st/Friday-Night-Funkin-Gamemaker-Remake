@@ -1,6 +1,6 @@
 if !(global.dead) {
 	// make the bf bop to the music
-	if (global.bpm >= 120) image_speed = ((global.bpm / 60) / 2) * global.deltaMultiplier; //all enemys
+	if !(global.enemy = 0) image_speed = ((global.bpm / 60) / 2) * global.deltaMultiplier; //all enemys
 	else image_speed = (global.bpm / 60) * global.deltaMultiplier; //tutorial
 	
 	// change the idle sprite
@@ -57,6 +57,7 @@ if !(global.auto) {
 		audio_play_sound(fnf_loss_sfx, 100, false);
 	
 		image_index = 0;
+		image_speed = 1;
 		sprite_index = sBoyfriendDie;
 	}
 	

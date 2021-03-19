@@ -20,6 +20,9 @@ or (keyboard_check_pressed(vk_right)) {
 		case 3:
 			global.advancedHud = !global.advancedHud;
 			break;
+		case 4:
+			instance_create_depth(0,0,-10000,oMapKeys);
+			break;
 	}
 }
 
