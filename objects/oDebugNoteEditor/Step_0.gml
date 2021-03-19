@@ -3,12 +3,29 @@ var mouseY = mouse_y - 2;
 selBoxX = (round(mouseX/gridSize) * gridSize);
 selBoxY = (round(mouseY/gridSize) * gridSize) - 18;
 
-if (room_height / 40 > ds_grid_height(global.chart)) ds_grid_resize(global.chart, 8, room_height / 40)
+if (room_height / 40 != ds_grid_height(global.chart)) ds_grid_resize(global.chart, 8, room_height / 40)
 
 var selectedList = global.chart;
 
 var notePosX = -(x - selBoxX) / gridSize;
 var notePosY = -(y - selBoxY) / gridSize;
+
+function function_key_up() {
+	if (mouse_wheel_up())
+	|| (keyboard_check(vk_up))
+		return true;
+	else
+		return false;
+}
+
+function function_key_down() {
+	if (mouse_wheel_down())
+	|| (keyboard_check(vk_down))
+		return true;
+	else
+		return false;
+}
+
 
 if (fnfBotMode) {
 	if (keyboard_check_pressed(vk_anykey)) {
@@ -52,11 +69,11 @@ if (mouse_check_button_pressed(mb_middle)) {
 
 // change length
 if (keyboard_check(vk_shift)) {
-	if (mouse_wheel_down()) {
+	if (function_key_down()) {
 		var curVal = ds_grid_get(selectedList, notePosX, notePosY);
 		ds_grid_set(selectedList, notePosX, notePosY, curVal + 1);
 	}
-	if (mouse_wheel_up()) {
+	if (function_key_up()) {
 		var curVal = ds_grid_get(selectedList, notePosX, notePosY);
 		if (curVal > 1) ds_grid_set(selectedList, notePosX, notePosY, curVal - 1);
 	}
@@ -64,11 +81,11 @@ if (keyboard_check(vk_shift)) {
 
 // change offset
 if (keyboard_check(vk_tab)) {
-	if (mouse_wheel_down()) {
+	if (function_key_down()) {
 		var curVal = ds_grid_get(selectedList, notePosX, notePosY);
 		ds_grid_set(selectedList, notePosX, notePosY, curVal + 0.01);
 	}
-	if (mouse_wheel_up()) {
+	if (function_key_up()) {
 		var curVal = ds_grid_get(selectedList, notePosX, notePosY);
 		ds_grid_set(selectedList, notePosX, notePosY, curVal - 0.01);
 	}

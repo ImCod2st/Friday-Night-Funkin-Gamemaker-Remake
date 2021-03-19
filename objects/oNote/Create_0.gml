@@ -4,6 +4,8 @@ image_xscale = 0.7;
 image_yscale = 0.7;
 
 curNoteSpeed = 0;
+noteSpeedAdd = 0;
+noteRangeDetermine = 0; // the range of the note from the top of the screen
 
 notRealNote = false;
 switchTurn = false;

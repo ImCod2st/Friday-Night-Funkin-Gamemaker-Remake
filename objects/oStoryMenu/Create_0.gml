@@ -1,6 +1,16 @@
 animate = 0;
 bfAnimate = 0;
 
+// if the player is exiting the stage dead
+if (global.dead = true) {
+	var o = instance_create_depth(0, 0, depth - 100, oFade);
+	with (o) {
+		fadeY = -199;
+		moved = true;
+	}
+	global.dead = false;
+}
+
 yOffset = 0;
 yOffsetTo = 0;
 

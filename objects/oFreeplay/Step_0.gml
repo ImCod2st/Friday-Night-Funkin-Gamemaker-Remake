@@ -1,18 +1,37 @@
-if (keyboard_check_pressed(vk_down)) {
+if (keyboard_check_pressed(vk_down))
+|| (gamepad_button_check_pressed(global.controller, gp_padd)) {
 	curSelected -= 1;
 	if (curSelected = -1) curSelected = array_length(songs) - 1;
 	audio_play_sound(scrollMenu, 10, false);	
 }
-if (keyboard_check_pressed(vk_up)) {
+if (keyboard_check_pressed(vk_up))
+|| (gamepad_button_check_pressed(global.controller, gp_padu)) {
 	curSelected += 1;
 	if (curSelected = array_length(songs)) curSelected = 0;
 	audio_play_sound(scrollMenu, 10, false);
 }
 
-if (keyboard_check_pressed(vk_left)) && (difSelected > 0) difSelected--;
-if (keyboard_check_pressed(vk_right)) && (difSelected < 2) difSelected++;
+if (keyboard_check_pressed(vk_backspace))
+|| (gamepad_button_check_pressed(global.controller, gp_face2)) {
+	if (instance_exists(oFade)) exit;
 
-if (keyboard_check_pressed(vk_enter)) {
+	audio_play_sound(cancelMenu, 10, false);
+	o = instance_create_depth(0, 0, -10000, oFade);
+	o.roomTo = MainMenu;
+}
+
+if ((keyboard_check_pressed(vk_left)) 
+|| (gamepad_button_check_pressed(global.controller, gp_padl))) && (difSelected > 0) 
+	difSelected--;
+	
+if ((keyboard_check_pressed(vk_right)) 
+|| (gamepad_button_check_pressed(global.controller, gp_padr))) && (difSelected < 2) 
+	difSelected++;
+
+if ((keyboard_check_pressed(vk_enter)) 
+|| (keyboard_check_pressed(vk_space))
+|| (gamepad_button_check_pressed(global.controller, gp_face1))
+|| (gamepad_button_check_pressed(global.controller, gp_start)))  {
 	if (difSelected != 2) && !(keyboard_check(vk_shift)) or (instance_exists(oFade)) exit;
 	
 	audio_play_sound(confirmMenu, 10, false);
@@ -43,7 +62,7 @@ ini_close();
 if (lastSelected != curSelected) {
 	// get the selected songs directory
 	var directory = songNam + "/" + songNam + "_Hard.ini";
-	if (global.useProgramDir) directory = program_directory +"\\Songs\\" + directory;
+	if (global.useProgramDir) directory = working_directory +"\\Songs\\" + directory;
 	
 	// load the selected songs data
 	ini_open(directory);
@@ -56,7 +75,7 @@ if (lastSelected != curSelected) {
 	musicPlaying = audio_play_sound(asset_get_index(songString), 10, true);
 }
 
-if (keyboard_check_pressed(ord("S"))) {
+if (keyboard_check_pressed(ord("V"))) {
 	global.specialSongs = !global.specialSongs;
 	room_restart();
 }

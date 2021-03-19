@@ -1,5 +1,5 @@
 y = 0;
-fadeY = 720;
+fadeY = -720;
 moved = false;
 
 roomTo = room_next(room);

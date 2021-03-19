@@ -22,20 +22,28 @@ if (trackPos >= 9.5) {
 	backgroundHidden = false;	
 }
 
-if (keyboard_check_pressed(vk_enter)) && (timerUntilNextRoom = -1) {
-	if (backgroundHidden) {
-		backgroundHidden = false;
-		curText = 11;
-		
-		whiteFlashOpacity = 1;
-		image_index = 0;
-		oGirlfriend.image_index = 0;
-	} else {
-		audio_play_sound(confirmMenu, 10, false);
-		whiteFlashOpacity = 1;
-		timerUntilNextRoom = 0;
-		oPressEnter.sprite_index = sPressEnterPressed;	
-	}
+if ((keyboard_check_pressed(vk_enter))
+|| (keyboard_check_pressed(vk_space))
+|| (gamepad_button_check_pressed(global.controller, gp_face1))
+|| (gamepad_button_check_pressed(global.controller, gp_start))) 
+&& (timerUntilNextRoom = -1)
+&& (backgroundHidden) {
+	backgroundHidden = false;
+	curText = 11;
+	
+	whiteFlashOpacity = 1;
+	image_index = 0;
+	oGirlfriend.image_index = 0;
+}
+
+if ((keyboard_check_pressed(vk_enter))
+|| (gamepad_button_check_pressed(global.controller, gp_start)))
+&& (timerUntilNextRoom = -1)
+&& (!backgroundHidden) {
+	audio_play_sound(confirmMenu, 10, false);
+	whiteFlashOpacity = 1;
+	timerUntilNextRoom = 0;
+	oPressEnter.sprite_index = sPressEnterPressed;	
 }
 
 if (whiteFlashOpacity > 0) whiteFlashOpacity -= 0.0025;

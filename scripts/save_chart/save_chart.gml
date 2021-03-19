@@ -8,7 +8,7 @@ function save_chart(dif){
 	
 	// choose the directory to save in depending on if the game is being run in the ide, or as a released build
 	var directory = global.songName + "\\" + global.songName + difName + ".ini";
-	if (global.useProgramDir) directory = program_directory + "\\Songs\\" + directory;
+	if (global.useProgramDir) directory = working_directory + "\\Songs\\" + directory;
 	
 	// save all the songs data
 	ini_open(directory);

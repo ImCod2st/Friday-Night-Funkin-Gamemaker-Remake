@@ -4,8 +4,9 @@ function create_notes(noteGrid){
 	for (var h = 0; h < ds_grid_height(noteGrid); ++h) {
 		for (var w = 0; w < ds_grid_width(noteGrid); ++w) {
 			if (ds_grid_get(noteGrid, w, h) != 0) {
+				
 				// get the y the note is needed to be created at using bullshit math
-				var noteY = (h * global.noteSpeed) * (100 / (global.camSpeed / 48)) + global.offset;
+				var noteY = ((h * (global.noteSpeed + (0.01*h*global.accelnotes))) * (100 / (global.camSpeed / 48))) + global.offset;
 				var noteX = 745;
 				
 				// choose the x position for the notes
@@ -29,6 +30,7 @@ function create_notes(noteGrid){
 				}
 				// create the note
 				n = instance_create_layer(noteX, 103 + noteY, "Notes", oNote);
+				n.noteRangeDetermine = h;
 				
 				// get the notes value from the grid
 				var val = ds_grid_get(noteGrid, w, h);

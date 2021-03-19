@@ -1,13 +1,22 @@
 if !(selected) {
-	if (keyboard_check_pressed(vk_down)) {
+	// the max amount of menu options
+	var menuMax = 3;
+	if (keyboard_check_pressed(vk_down))
+	|| (gamepad_button_check_pressed(global.controller, gp_padd)) {
 		audio_play_sound(scrollMenu, 0, false);
-		if (menuSelected < 3) menuSelected++;
+		if (menuSelected < menuMax) menuSelected++;
+		else menuSelected = 0;
 	}
-	if (keyboard_check_pressed(vk_up)) {
+	if (keyboard_check_pressed(vk_up))
+	|| (gamepad_button_check_pressed(global.controller, gp_padu)) {
 		audio_play_sound(scrollMenu, 0, false);
 		if (menuSelected > 0) menuSelected--;
+		else menuSelected = menuMax;
 	}
-	if (keyboard_check_pressed(vk_enter)) {
+	if ((keyboard_check_pressed(vk_enter)) 
+	|| (keyboard_check_pressed(vk_space))
+	|| (gamepad_button_check_pressed(global.controller, gp_face1))
+	|| (gamepad_button_check_pressed(global.controller, gp_start))) {
 		if (instance_exists(oFade)) exit;
 		audio_play_sound(confirmMenu, 1, false);
 		if (menuSelected = 0) {
@@ -30,6 +39,7 @@ if !(selected) {
 			textFlash[2] = 0;
 		}
 	}
+	
 }
 
 if (selected) {

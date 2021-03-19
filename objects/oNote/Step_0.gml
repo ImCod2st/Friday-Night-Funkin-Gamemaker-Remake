@@ -1,4 +1,4 @@
-trueNoteSpeed = curNoteSpeed * global.deltaMultiplier;
+trueNoteSpeed = (curNoteSpeed) * global.deltaMultiplier;
 
 y -= trueNoteSpeed;
 if (yOff != 0) {y -= yOff; yOff = 0;}
@@ -14,6 +14,13 @@ if (global.vanish) {
 if (global.flashlight) { if (y < 600) image_alpha += global.noteSpeed / 200; }
 else if (image_alpha < 1) {
 	image_alpha = lerp(image_alpha, 1, 0.06);
+}
+
+
+if (!global.playVoice) {
+	with (instance_place(x, y - 120, oArrowButton))
+		if (enemy)
+			global.playVoice = 1;
 }
 
 // detect for enemys
@@ -82,6 +89,8 @@ if (y < 0 - sliderLength - 10) {
 	if (global.fragile) global.hp = 0;
 	
 	oHUD.missCount += 1;
+	
+	global.playVoice = 0;
 }
 
 //if (fadeIn) && (image_alpha < 1) image_alpha += 0.1;

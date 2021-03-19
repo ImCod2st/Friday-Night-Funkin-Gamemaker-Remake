@@ -39,6 +39,11 @@ modsDesc[7] = "Left is right, up is down.";
 modsSelected[7] = false;
 modsMultiplier[7] = 0.1;
 
+modsName[8] = "Accel Notes";
+modsDesc[8] = "Notes gradually accelerate as time passes.";
+modsSelected[8] = false;
+modsMultiplier[8] = 0.5;
+
 // make every mods scale equal 0.8
 for (var i = 0; i < array_length(modsMultiplier); ++i) {
 	modsScale[i] = 0.8;

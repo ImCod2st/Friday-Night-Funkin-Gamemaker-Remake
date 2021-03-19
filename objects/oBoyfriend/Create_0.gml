@@ -1,18 +1,10 @@
-var add = "";
-// choose the addon to add depending on the enemy being fought
-if (global.enemy = 5) add = "Car";
-if (global.enemy = 6) or (global.enemy = 7) add = "Christ";
-if (global.enemy = 102) add = "Cod";
+
 
 // choose the sprites to use
-var char = "sBoyfriend";
+char = "sBoyfriend";
 flipped = false;
+boyfriend_sprites();
 
-sprIdle = asset_get_index(char + add + "Idle");
-sprLeft = asset_get_index(char + add + "Left");
-sprDown = asset_get_index(char + add + "Down");
-sprUp = asset_get_index(char + add + "Up");
-sprRight = asset_get_index(char + add + "Right");
 
 useMiss = true;
 if !(sprite_exists(asset_get_index(sprite_get_name(sprLeft) + "Miss"))) useMiss = false;
@@ -35,6 +27,8 @@ if (global.enemy = 5) singFrameMulti = 2;
 singFrame = 0; // the frame the animation is on
 
 scale = image_yscale; // the entire scale
+recAlpha = 0; // death rectangle alpha
+returnTo = -1; // return to the main menu if this is 1
 
 // the current score, and combo
 global.curScore = 0;

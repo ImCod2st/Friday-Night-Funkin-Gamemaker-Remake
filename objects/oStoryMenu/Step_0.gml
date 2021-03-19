@@ -8,26 +8,65 @@ yOffsetTo = selectedWeek * 120;
 // week change
 if !(selected) {
 
-if (keyboard_check_pressed(vk_up)) && (selectedWeek > 0) {
-	audio_play_sound(scrollMenu, 10, false);
-	selectedWeek--;
+if (keyboard_check_pressed(vk_enter))
+|| (keyboard_check_pressed(vk_space))
+|| (gamepad_button_check_pressed(global.controller, gp_face1))
+|| (gamepad_button_check_pressed(global.controller, gp_start)) {
+	if (selected) exit;
+	if (global.currentDif != 2) && !(keyboard_check(vk_shift)) exit; // TEMP BECAUSE I HAVE YET TO FINISH THE OTHER DIFS
+	
+	global.freeplay = false;
+	global.songOn = 0;
+	selected = true;
+	audio_play_sound(confirmMenu, 100, false);
+	bfAnimate = 0;
+	global.weekPlaying = selectedWeek;
 }
-if (keyboard_check_pressed(vk_down)) && (selectedWeek < global.weeks) {
+
+if (keyboard_check_pressed(vk_backspace))
+|| (gamepad_button_check_pressed(global.controller, gp_face2)) {
+	if (instance_exists(oFade)) exit;
+
+	audio_play_sound(cancelMenu, 10, false);
+	o = instance_create_depth(0, 0, -10000, oFade);
+	o.roomTo = MainMenu;
+}
+
+if ((keyboard_check_pressed(vk_up)) 
+|| (gamepad_button_check_pressed(global.controller, gp_padu))) {
 	audio_play_sound(scrollMenu, 10, false);
-	selectedWeek++;
+	if (selectedWeek > 0) selectedWeek--;
+	else selectedWeek = global.weeks;
+}
+if ((keyboard_check_pressed(vk_down)) 
+|| (gamepad_button_check_pressed(global.controller, gp_padd))) {
+	audio_play_sound(scrollMenu, 10, false);
+	if (selectedWeek < global.weeks) selectedWeek++;
+	else selectedWeek = 0;
 }
 
 // dif change
-if (keyboard_check_pressed(vk_left)) && (global.currentDif  > 0) {
+var maxDif = 2;
+if ((keyboard_check_pressed(vk_left)) 
+|| (gamepad_button_check_pressed(global.controller, gp_padl))) {
 	difOffset = -20;
-	global.currentDif --;
+	if (global.currentDif > 0) global.currentDif--;
+	else global.currentDif = maxDif;
 }
-if (keyboard_check_pressed(vk_right)) && (global.currentDif  < 2) {
+if ((keyboard_check_pressed(vk_right)) 
+|| (gamepad_button_check_pressed(global.controller, gp_padr))) {
 	difOffset = -20;
-	global.currentDif ++;
+	if (global.currentDif < maxDif) global.currentDif++;
+	else global.currentDif = 0;
 }
-if (keyboard_check(vk_left)) leftArrowScaleTo = 0.8; else leftArrowScaleTo = 1;
-if (keyboard_check(vk_right)) rightArrowScaleTo = 0.8; else rightArrowScaleTo = 1;
+
+if ((keyboard_check(vk_left)) 
+|| (gamepad_button_check(global.controller, gp_padl))) leftArrowScaleTo = 0.8; 
+	else leftArrowScaleTo = 1;
+	
+if ((keyboard_check(vk_right)) 
+|| (gamepad_button_check(global.controller, gp_padl))) rightArrowScaleTo = 0.8; 
+	else rightArrowScaleTo = 1;
 
 }
 if (selected) selectedTimer++;

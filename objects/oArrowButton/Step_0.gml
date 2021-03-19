@@ -4,9 +4,19 @@ if !(afterCreate) {
 	sprite_index = spr;
 	afterCreate = true;	
 }
+var controllerKey;
+if (key == vk_left)
+	controllerKey = gp_padl;
+if (key == vk_right)
+	controllerKey = gp_padr;
+if (key == vk_up)
+	controllerKey = gp_padu;
+if (key == vk_down)
+	controllerKey = gp_padd;
 
 if !(enemy) && !(global.auto) {
-	if (keyboard_check_pressed(key)) {
+	if (keyboard_check_pressed(key))
+	|| (gamepad_button_check_pressed(global.controller, controllerKey)) {
 		image_speed = 1;
 		image_index = 0;
 		
@@ -23,6 +33,7 @@ if !(enemy) && !(global.auto) {
 				}
 				global.hp += 1;
 				oBoyfriend.missed = false;
+				global.playVoice = 1;
 				
 				var distance = point_distance(x, y, other.x, other.y);
 				var scor = 0;
@@ -47,6 +58,7 @@ if !(enemy) && !(global.auto) {
 		if (oBoyfriend.missed) {
 			audio_play_sound(asset_get_index("missnote" + choose("1", "2", "3")), 10, false);
 			global.hp -= 2;	
+			global.playVoice = 0;
 			global.curScore -= 10;
 			global.combo = 0;
 			oHUD.missCount += 1;
@@ -55,12 +67,14 @@ if !(enemy) && !(global.auto) {
 		}
 	}
 
-	if (keyboard_check_released(key)) {
+	if (keyboard_check_released(key))
+	|| (gamepad_button_check_released(global.controller, controllerKey)) {
 		image_index = 1;
 		sprite_index = spr;
 	}
 
-	if (keyboard_check(key)) {
+	if (keyboard_check(key))
+	|| (gamepad_button_check(global.controller, controllerKey)) {
 		if (image_index >= sprite_get_number(sprite_index) - 2) image_index = sprite_get_number(sprite_index) - 2;
 	}
 }

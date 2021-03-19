@@ -6,9 +6,9 @@ whiteFlashOpacity = 0;
 timerUntilNextRoom = -1;
 
 mus = audio_play_sound(freakyMenu, 10, true);
-var chosenJoke = irandom_range(0, 53);
+var chosenJoke = irandom_range(0, 56);
 
-var directory = program_directory +"\\Songs\\";
+var directory = working_directory + "\\Songs\\";
 var songsExist = directory_exists(directory);
 
 image_speed = (100 / 60) / 2;

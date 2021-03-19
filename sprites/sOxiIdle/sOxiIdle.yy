@@ -73,7 +73,7 @@
   ],
   "parent": {
     "name": "Oxi",
-    "path": "folders/Sprites/Characters/Oxi.yy",
+    "path": "folders/Sprites/Characters/Extra/Oxi.yy",
   },
   "resourceVersion": "1.0",
   "name": "sOxiIdle",

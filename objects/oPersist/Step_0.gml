@@ -47,7 +47,7 @@ if (timeUntilMoveOn >= 420) {
 		// save scores
 		if !(global.freeplay) {
 			if (global.currentDif = 0) global.weekScoreEasy[global.weekPlaying] = totalScore;
-			if (global.currentDif =1) global.weekScoreNormal[global.weekPlaying] = totalScore;
+			if (global.currentDif = 1) global.weekScoreNormal[global.weekPlaying] = totalScore;
 			if (global.currentDif = 2) global.weekScoreHard[global.weekPlaying] = totalScore;
 			save_weekscore(global.weekPlaying, global.currentDif);
 		} else {
