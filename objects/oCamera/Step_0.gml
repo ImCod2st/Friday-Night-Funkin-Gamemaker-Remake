@@ -21,13 +21,23 @@ if (global.dead) {
 	} else {
 		// bf turn
 		xTo = 1369 + bfOffsetX;
-		yTo = 752 + bfOffsetY;	
+		yTo = 752 + bfOffsetY - (((sprite_get_height(oBoyfriend.sprIdle)/2) % 8) * 8);	
+		// idk I just wanted to automatically adjust for the height of all characters but I get if you wanna remove that
 	}
 
 }
 
+if (keyboard_check_pressed(vk_enter))
+|| (gamepad_button_check_pressed(global.controller, gp_start)) {
+	if (instance_exists(oPause)) exit;
+	if (global.dead) exit;
+	
+	instance_create_layer(0, 0, "Main", oPause);
+}
+
 // backgrounds
-background_setup();
+if (!instance_exists(oPause))
+	background_setup();
 
 // change the cameras size
 var cam = view_camera[0];

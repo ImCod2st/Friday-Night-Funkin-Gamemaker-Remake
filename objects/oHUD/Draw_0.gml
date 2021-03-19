@@ -47,7 +47,7 @@ if (global.advancedHud) or (global.auto) {
 	
 	var str = "HP: " + string(round(global.hp)) + "%" + "          " + "MISSES: " + string(missCount) + "          " + "ACCURACY: " + string(100 - ((missCount / (hitCount + missCount)) * 100)) + "%";
 	if (global.auto) str = "! AUTO MODE !";
-	draw_text_transformed(640, 680, str, 1, 1, 0);	
+	//draw_text_transformed(640, 680, str, 1, 1, 0);	
 	
 	draw_set_halign(fa_left);
 }

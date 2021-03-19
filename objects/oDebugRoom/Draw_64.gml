@@ -17,4 +17,4 @@ if (dif = 2) difName = "Hard";
 draw_text(1003, 235, "Difficulty: " + string(difName));
 draw_text(1003, 255, "Cam Speed: " + string(global.camSpeed));
 
-draw_text_ext(1003, 455, "Controls:\nS = Save\nL = Load\nN = Notespeed\nB = BPM\nO = Song\nP = Vocals\nE = Enemy\nD = Difficulty\nC = Cam Speed\n\nR = Reset", 20, 10000000);
+draw_text_ext(1003, 455, "Controls:\nV = Save\nL = Load\nN = Notespeed\nB = BPM\nO = Song\nP = Vocals\nE = Enemy\nX = Difficulty\nC = Cam Speed\n\nR = Reset", 20, 10000000);

@@ -58,6 +58,8 @@ function title_jokes(jokeNum, leftSideOnly){
 	joke[52] = "/n\n damn it wrong way round";
 	joke[53] = "ninjamuffin\nplease dont stab me";
 	joke[54] = "im inside your\nhouse";
+	joke[55] = "there is no joke\ntake of your clothe";
+	joke[56] = "man\n";
 	
 	// get the selected joke and return the left side, or the entire thing
 	var chosen = joke[jokeNum];

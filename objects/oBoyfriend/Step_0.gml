@@ -6,7 +6,8 @@ if !(global.dead) {
 	// change the idle sprite
 	if !(sprChanged) {
 		sprite_index = sprIdle;
-		if (flipped) image_xscale = -image_xscale;
+		if (flipped) 
+			image_xscale = -image_xscale;
 		sprChanged = true;
 	}
 }
@@ -17,8 +18,9 @@ if !(global.auto) {
 	
 	// check for arrow keys
 	// activate the animation when keys are pressed
-	function noteCheck(key, dir) {
-		if (keyboard_check_pressed(key)) {
+	function noteCheck(key, controllerKey, dir) {
+		if (keyboard_check_pressed(key))
+		|| (gamepad_button_check_pressed(global.controller, controllerKey)) {
 			notePlaying = dir;
 			animCount = 45;
 			if (missed) animCount = 70;
@@ -29,10 +31,10 @@ if !(global.auto) {
 	if (animCount > 0) animCount -= 1 * global.deltaMultiplier;
 
 	if !(global.dead) {
-		noteCheck(vk_left, notes.left);
-		noteCheck(vk_down, notes.down);
-		noteCheck(vk_up, notes.up);
-		noteCheck(vk_right, notes.right);
+		noteCheck(vk_left, gp_padl, notes.left);
+		noteCheck(vk_down, gp_padd, notes.down);
+		noteCheck(vk_up, gp_padu, notes.up);
+		noteCheck(vk_right, gp_padr, notes.right);
 	}
 
 	if !(holdAnimation) {
@@ -57,7 +59,13 @@ if !(global.auto) {
 		image_index = 0;
 		sprite_index = sBoyfriendDie;
 	}
-	if (keyboard_check_pressed(vk_enter)) && (global.dead) && (restartTimer <= 0) {
+	
+	if ((keyboard_check_pressed(vk_enter)) 
+	|| (keyboard_check_pressed(vk_space))
+	|| (gamepad_button_check_pressed(global.controller, gp_face1))
+	|| (gamepad_button_check_pressed(global.controller, gp_start))) 
+	&& (global.dead) && (restartTimer <= 0)
+	&& (!returnTo) {
 		image_index = 0;
 		restartTimer = 340;
 	
@@ -66,12 +74,39 @@ if !(global.auto) {
 	
 		sprite_index = sBoyfriendDie3;
 	}
-	if (restartTimer > 0) restartTimer--;
-	if (restartTimer = 0) room_restart();
+	
+	if ((keyboard_check_pressed(vk_backspace)) 
+	|| (gamepad_button_check_pressed(global.controller, gp_face2)))
+	&& (!instance_exists(oFade))
+	&& (global.dead) {
+		returnTo = 1;
+		restartTimer = 100;
+		audio_stop_all();
+	}
+	
+	if (restartTimer > 0) {
+		restartTimer--;
+		if (returnTo) recAlpha += 0.025;
+		else recAlpha += 0.005;
+	}
+	
+	if (restartTimer == 0) {
+		if (!returnTo) room_restart();
+		else {
+			// probably not a good way to do this but it'll work for now
+			if (global.freeplay) {
+				var o = instance_create_depth(0, 0, -10000, oFade);
+				o.roomTo = FreePlay;
+			} else {
+				audio_play_sound(freakyMenu, 100, true);
+				room_goto(StoryMenu);
+			}
+			
+		}
+	}
 
 } else {
 	// auto mode code
-	
 	if (sprite_index != sprIdle) sprite_index = sprIdle;
 
 	if (animationTimer > 0) {

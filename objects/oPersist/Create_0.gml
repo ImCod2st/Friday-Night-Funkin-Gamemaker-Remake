@@ -7,6 +7,12 @@ global.noteSpeed = 5;
 global.camSpeed = 360; // 225 is 1 in real game
 global.songName = "Tutorial";
 
+global.boyfriend = "og";
+global.roomBefore = room;
+
+// voice muting
+global.playVoice = 1;
+
 // story mode variables
 global.weekPlaying = 0;
 global.songOn = 0;
@@ -40,6 +46,7 @@ global.nofail = false;
 global.flashlight = false;
 global.fragile = false;
 global.flipped = false;
+global.accelnotes = false;
 
 // freeplay variables
 global.specialSongs = false;
@@ -48,6 +55,7 @@ global.specialSongs = false;
 global.offset = 0;
 global.advancedHud = false;
 global.volume = 1;
+global.controller = -1;
 
 // week variables
 global.freeplay = false;
@@ -78,10 +86,23 @@ timeUntilMoveOn = 0;
 
 // check where data should be saved / loaded
 global.useProgramDir = true;
-if (program_directory = "X:\\windows\\") global.useProgramDir = false;
+if (working_directory = "X:\\windows\\") global.useProgramDir = false;
 load_data();
+
+// keyboard maps
+keyboard_set_map(ord("A"), vk_left);
+keyboard_set_map(ord("W"), vk_up);
+keyboard_set_map(ord("D"), vk_right);
+keyboard_set_map(ord("S"), vk_down);
+
+keyboard_set_map(vk_escape, vk_backspace);
+keyboard_set_map(ord("Z"), vk_space);
+
+// basic controller support because I don't think I have the patience to go through the whole project and rewrite it
+
 
 // delta time
 targetDelta = 1/120;
 actualDelta = delta_time / 1000000;
 global.deltaMultiplier = actualDelta/targetDelta;
+

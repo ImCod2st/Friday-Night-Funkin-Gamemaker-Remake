@@ -97,7 +97,7 @@
   ],
   "parent": {
     "name": "Crazy",
-    "path": "folders/Sprites/Characters/Whitty?/Crazy.yy",
+    "path": "folders/Sprites/Characters/Extra/Whitty?/Crazy.yy",
   },
   "resourceVersion": "1.0",
   "name": "sWhittyCIdle",

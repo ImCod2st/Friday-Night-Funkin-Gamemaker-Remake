@@ -1,16 +1,34 @@
 if !(global.auto) {
 	singSprite = -1;
-	if (notePlaying = notes.left) singSprite = sprLeft;
+	if (notePlaying = notes.left) { 
+		if (!flipped) singSprite = sprLeft;
+		else singSprite = sprRight;
+	}
 	if (notePlaying = notes.down) singSprite = sprDown;
 	if (notePlaying = notes.up) singSprite = sprUp;
-	if (notePlaying = notes.right) singSprite = sprRight;
+	
+	
+	if (notePlaying = notes.right) { 
+		if (!flipped) singSprite = sprRight;
+		else singSprite = sprLeft;
+	}
+	
 	if (missed) && (useMiss) singSprite = asset_get_index(sprite_get_name(singSprite) + "Miss");
 
 	var singing = false;
-	if (keyboard_check(vk_left)) singing = true;
-	if (keyboard_check(vk_right)) singing = true;
-	if (keyboard_check(vk_down)) singing = true;
-	if (keyboard_check(vk_up)) singing = true;
+	if (keyboard_check(vk_left))
+	|| (gamepad_button_check(global.controller, gp_padl)) 
+		singing = true;
+	if (keyboard_check(vk_right))
+	|| (gamepad_button_check(global.controller, gp_padr)) 
+		singing = true;
+	if (keyboard_check(vk_down))
+	|| (gamepad_button_check(global.controller, gp_padd)) 
+		singing = true;
+	if (keyboard_check(vk_up))
+	|| (gamepad_button_check(global.controller, gp_padu)) 
+		singing = true;
+		
 	if (singing) && (singSprite != -1) && !(global.dead) && !(sprite_index = sBoyfriendCheer) or (animCount > 0) && !(global.dead) && !(sprite_index = sBoyfriendCheer) {
 		draw_sprite_ext(singSprite, singFrame, x, y, image_xscale, image_yscale, 0, c_white, 1);
 	} else {
@@ -28,3 +46,10 @@ if !(global.auto) {
 		draw_self();
 	}
 }
+
+// draw fade stuffs
+draw_set_alpha(recAlpha);
+draw_set_color(c_black);
+draw_rectangle(x - 1280, y - 720, x + 1280, y + 720, 0);
+draw_set_color(c_white);
+draw_set_alpha(image_alpha);

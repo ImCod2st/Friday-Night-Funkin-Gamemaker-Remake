@@ -52,6 +52,8 @@ modCreate(1, 1, 6, "fragile");
 modCreate(2, 1, 5, "flashlight");
 modCreate(3, 1, 7, "flipped");
 
+modCreate(0, 2, 8, "accelnotes");
+
 draw_set_halign(fa_center);
 
 // if there is a hovered mod

@@ -5,7 +5,11 @@ discord = instance_exists(rousrDissonance);
 if (keyboard_check_pressed(vk_up)) && (curSelected > 0) curSelected--;
 if (keyboard_check_pressed(vk_down)) && (curSelected < optionAmount - 1) curSelected++;
 
-if (keyboard_check_pressed(vk_enter)) or (keyboard_check_pressed(vk_left)) or (keyboard_check_pressed(vk_right)) {
+if (keyboard_check_pressed(vk_enter)) || (keyboard_check_pressed(vk_space)) 
+|| (gamepad_button_check_pressed(global.controller, gp_face1))
+|| (gamepad_button_check_pressed(global.controller, gp_start)) 
+or (keyboard_check_pressed(vk_left)) 
+or (keyboard_check_pressed(vk_right)) {
 	switch (curSelected) {
 		case 0:
 			window_set_fullscreen(!fullscreenOption)
