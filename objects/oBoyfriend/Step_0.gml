@@ -1,6 +1,6 @@
 if !(global.dead) {
 	// make the bf bop to the music
-	if (global.enemy != 0) image_speed = ((global.bpm / 60) / 2) * global.deltaMultiplier; //all enemys
+	if (global.bpm >= 120) image_speed = ((global.bpm / 60) / 2) * global.deltaMultiplier; //all enemys
 	else image_speed = (global.bpm / 60) * global.deltaMultiplier; //tutorial
 	
 	// change the idle sprite

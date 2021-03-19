@@ -21,3 +21,12 @@ for (var i = 0; i < array_length(menus); ++i) {
 }
 
 draw_set_color(c_white);
+
+var difString = "Easy";
+if (global.currentDif = 1) difString = "Normal";
+if (global.currentDif = 2) difString = "Hard";
+draw_set_halign(fa_right);
+
+draw_text_ext_transformed(1260, 0, global.songName + "\n" + difString, 20, 1000, 1.2, 1.2, 0);
+
+draw_set_halign(fa_left);
