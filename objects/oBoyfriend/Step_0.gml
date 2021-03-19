@@ -56,9 +56,9 @@ if !(global.auto) {
 	
 		audio_play_sound(fnf_loss_sfx, 100, false);
 	
+		sprite_index = sBoyfriendDie;
 		image_index = 0;
 		image_speed = 1;
-		sprite_index = sBoyfriendDie;
 	}
 	
 	if ((keyboard_check_pressed(vk_enter)) 
@@ -92,17 +92,24 @@ if !(global.auto) {
 	}
 	
 	if (restartTimer == 0) {
+		var o = instance_create_depth(0, 0, depth - 100, oFade);
+		with (o) {
+			fadeY = -199;
+			moved = true;
+		}
+		global.dead = false;
+		
 		if (!returnTo) room_restart();
 		else {
-			// probably not a good way to do this but it'll work for now
+			var roomTo;
 			if (global.freeplay) {
-				var o = instance_create_depth(0, 0, -10000, oFade);
-				o.roomTo = FreePlay;
+				roomTo = FreePlay;
 			} else {
 				audio_play_sound(freakyMenu, 100, true);
-				room_goto(StoryMenu);
+				roomTo = StoryMenu;
 			}
 			
+			room_goto(roomTo);
 		}
 	}
 
