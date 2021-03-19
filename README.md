@@ -19,6 +19,8 @@ If you have **issues, or requests**. Use the [Issues page](https://github.com/Im
 If you **need** to talk to me directly, I can be contacted on **[Twitter](https://twitter.com/ImCodist)**, or in my **[Discord](https://discord.gg/Uamsymr)**.
 
 ## Credit
+[Yoshubs](https://github.com/Yoshubs) - Programming Help
+
 [ninja_muffin99](https://twitter.com/ninja_muffin99), 
 [Phantom Arcade](https://twitter.com/PhantomArcade3k), 
 [evilsk8r](https://twitter.com/evilsk8r), 
