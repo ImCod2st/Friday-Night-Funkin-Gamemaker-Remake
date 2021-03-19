@@ -45,11 +45,12 @@ if !(enemy) && !(global.auto) {
 				if (instance_exists(oGirlfriend)) scoreX = oGirlfriend.x + 5;
 				var o = instance_create_depth(scoreX, 485, 400 - instance_number(oScoreText), oScoreText);
 				o.image_index = scor;
-				if (scor = 0) global.curScore += 350;
-				if (scor = 1) global.curScore += 200;
-				if (scor = 2) global.curScore += 100;
-				if (scor = 3) global.curScore += 50;
-			
+				var scoreAdd = 350;
+				if (scor = 1) scoreAdd += 200;
+				if (scor = 2) scoreAdd += 100;
+				if (scor = 3) scoreAdd += 50;
+				global.curScore += scoreAdd * global.currentMultiplier;
+				
 				global.combo++;
 				oHUD.hitCount += 1;
 			}
@@ -59,7 +60,7 @@ if !(enemy) && !(global.auto) {
 			audio_play_sound(asset_get_index("missnote" + choose("1", "2", "3")), 10, false);
 			global.hp -= 2;	
 			global.playVoice = 0;
-			global.curScore -= 10;
+			global.curScore -= 10 * global.currentMultiplier;
 			global.combo = 0;
 			oHUD.missCount += 1;
 			

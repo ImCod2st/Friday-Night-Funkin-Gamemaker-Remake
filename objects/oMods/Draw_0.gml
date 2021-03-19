@@ -64,6 +64,6 @@ if (hoveredMod != -1) {
 	draw_text(x + 135, y + 150, string(modsMultiplier[hoveredMod]) + "x");
 }
 // the total multiplier
-draw_text(x + 135, y + 170, string(totalMulti) + "x Total Multiplier\n(Doesn't work yet)");
+draw_text(x + 135, y + 170, string(totalMulti) + "x Total Multiplier");
 
 draw_set_halign(fa_left);

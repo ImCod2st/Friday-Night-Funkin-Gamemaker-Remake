@@ -12,10 +12,6 @@ if (global.vanish) {
 }
 
 if (global.flashlight) { if (y < 600) image_alpha += global.noteSpeed / 200; }
-else if (image_alpha < 1) {
-	image_alpha = lerp(image_alpha, 1, 0.06);
-}
-
 
 if (!global.playVoice) {
 	with (instance_place(x, y - 120, oArrowButton))
@@ -49,7 +45,7 @@ with (instance_place(x, y + 85, oArrowButton)) {
 		if (obj = oBoyfriend) {
 			if (other.sliderLength > 0) exit;
 			// fake the game being played lol
-			global.curScore += 350;	
+			global.curScore += 350 * global.currentMultiplier;	
 			global.hp += 1;
 			global.combo++;
 			

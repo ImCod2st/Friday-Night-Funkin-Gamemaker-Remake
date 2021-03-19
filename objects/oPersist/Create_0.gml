@@ -48,6 +48,8 @@ global.fragile = false;
 global.flipped = false;
 global.accelnotes = false;
 
+global.currentMultiplier = 1;
+
 // freeplay variables
 global.specialSongs = false;
 
