@@ -53,7 +53,7 @@ draw_pie(1242, 675, curTime, leng, c_white, 30, 0.8);
 if (global.advancedHud) or (global.auto) {
 	draw_set_halign(fa_center);
 	
-	var str = "HP: " + string(round(global.hp)) + "%" + "          " + "MISSES: " + string(missCount) + "          " + "ACCURACY: " + string(100 - ((missCount / (hitCount + missCount)) * 100)) + "%";
+	var str = "HP: " + string(round(global.hp)) + "%" + "          " + "MISSES: " + string(missCount) + "          " + "ACCURACY: " + string(round(100 - ((missCount / (hitCount + missCount)) * 100))) + "%";
 	if (global.auto) str = "! AUTO MODE !";
 	draw_text_transformed(640, 680, str, 1, 1, 0);	
 	

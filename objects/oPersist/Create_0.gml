@@ -92,6 +92,7 @@ if (working_directory = "X:\\windows\\") global.useProgramDir = false;
 load_data();
 
 // keyboard maps
+global.kadeInput = false;
 keyboard_set_map(ord("A"), vk_left);
 keyboard_set_map(ord("S"), vk_down);
 keyboard_set_map(ord("W"), vk_up);

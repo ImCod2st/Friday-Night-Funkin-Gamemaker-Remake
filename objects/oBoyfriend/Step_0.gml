@@ -30,7 +30,7 @@ if !(global.auto) {
 	// subtract the time the animation is playing for
 	if (animCount > 0) animCount -= 1 * global.deltaMultiplier;
 
-	if !(global.dead) {
+	if !(global.dead) && !(global.kadeInput) {
 		noteCheck(vk_left, gp_padl, notes.left);
 		noteCheck(vk_down, gp_padd, notes.down);
 		noteCheck(vk_up, gp_padu, notes.up);
@@ -58,8 +58,10 @@ if !(global.auto) {
 	
 		image_index = 0;
 		image_speed = 1;
+		deathAnimCooldown = 10;
 		sprite_index = sBoyfriendDie;
 	}
+	if (deathAnimCooldown > 0) deathAnimCooldown--;
 	
 	if ((keyboard_check_pressed(vk_enter)) 
 	|| (keyboard_check_pressed(vk_space))

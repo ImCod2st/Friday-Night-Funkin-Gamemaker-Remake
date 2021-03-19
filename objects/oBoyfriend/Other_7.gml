@@ -4,7 +4,7 @@ if (sprite_index = sBoyfriendDie) {
 	image_speed = (180 / 60) / 2;
 }
 
-if (sprite_index = sBoyfriendDie3) {
+if (sprite_index = sBoyfriendDie3) && (deathAnimCooldown <= 0) {
 	image_speed = 0;
 	image_index = image_number - 1;
 }

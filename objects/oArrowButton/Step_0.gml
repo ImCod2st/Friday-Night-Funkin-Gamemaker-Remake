@@ -20,7 +20,7 @@ if !(enemy) && !(global.auto) {
 		image_speed = 1;
 		image_index = 0;
 		
-		oBoyfriend.missed = true;
+		if !(global.kadeInput) oBoyfriend.missed = true;
 		
 		with (instance_place(x, y, oNote)) {
 			
@@ -35,6 +35,15 @@ if !(enemy) && !(global.auto) {
 				oBoyfriend.missed = false;
 				global.playVoice = 1;
 				
+				// whitty input animations
+				if (global.kadeInput) {
+					with (oBoyfriend) {
+						notePlaying = other.image_index;
+						animCount = 45;
+						singFrame = 0;	
+					}
+				}
+				
 				var distance = point_distance(x, y, other.x, other.y);
 				var scor = 0;
 
@@ -45,6 +54,7 @@ if !(enemy) && !(global.auto) {
 				if (instance_exists(oGirlfriend)) scoreX = oGirlfriend.x + 5;
 				var o = instance_create_depth(scoreX, 485, 400 - instance_number(oScoreText), oScoreText);
 				o.image_index = scor;
+				
 				var scoreAdd = 350;
 				if (scor = 1) scoreAdd += 200;
 				if (scor = 2) scoreAdd += 100;

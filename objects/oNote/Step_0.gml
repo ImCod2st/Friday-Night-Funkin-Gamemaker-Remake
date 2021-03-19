@@ -80,10 +80,25 @@ if (y < 0 - sliderLength - 10) {
 	
 	if (notRealNote) exit; 
 	if (x < 600) exit;
-	global.playVoice = 0;	
-	global.combo = 0;
+	if (global.dead) exit;
+	// WHITTY INPUT STUFF
+	if (global.kadeInput) {
+		audio_play_sound(asset_get_index("missnote" + choose("1", "2", "3")), 10, false);
+		global.curScore -= 10 * global.currentMultiplier;
+		
+		with (oBoyfriend) {
+			notePlaying = other.image_index;
+			missed = true;
+			animCount = 70;
+			singFrame = 0;	
+		}
+	}
+	
 	global.hp -= 3 + sliderLength / 80;
 	if (global.fragile) global.hp = 0;
+	
+	global.playVoice = 0;	
+	global.combo = 0;
 	
 	oHUD.missCount += 1;
 }

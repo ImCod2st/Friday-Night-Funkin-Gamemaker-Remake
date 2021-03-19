@@ -28,6 +28,7 @@ if !(global.auto) {
 	if (keyboard_check(vk_up))
 	|| (gamepad_button_check(global.controller, gp_padu)) 
 		singing = true;
+	if (global.kadeInput) singing = false;
 		
 	if (singing) && (singSprite != -1) && !(global.dead) && !(sprite_index = sBoyfriendCheer) or (animCount > 0) && !(global.dead) && !(sprite_index = sBoyfriendCheer) {
 		draw_sprite_ext(singSprite, singFrame, x, y, image_xscale, image_yscale, 0, c_white, 1);

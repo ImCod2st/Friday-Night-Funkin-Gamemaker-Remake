@@ -36,5 +36,6 @@ global.combo = 0;
 dir = notes.left;
 animationTimer = 0;
 animationIndex = 0;
+deathAnimCooldown = 0;
 
 spriteUsed = sprLeft;
