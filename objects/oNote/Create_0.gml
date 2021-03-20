@@ -18,6 +18,15 @@ keyPressedWith = undefined;
 heldAlready = false;
 beingHeld = false;
 
+midNote = sNotesMid;
+lowNote = sNotesLow;
+if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) {
+	sprite_index = sNotesPixel;
+	
+	midNote = sNotesMidPixel;
+	lowNote = sNotesLowPixel;
+}
+
 if (global.flashlight) image_alpha = 0;
 
 if (x = 216) or (x = 856) image_index = 1;

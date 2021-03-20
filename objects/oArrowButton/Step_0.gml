@@ -1,6 +1,7 @@
 if (global.dead) exit;
 
 if !(afterCreate) {
+	if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) spr = asset_get_index(sprite_get_name(spr) + "Pixel");
 	sprite_index = spr;
 	afterCreate = true;	
 }

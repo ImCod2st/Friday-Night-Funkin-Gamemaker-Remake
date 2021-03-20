@@ -1,3 +1,4 @@
+if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) gpu_set_texfilter(false); // pixel filtering
 if (animationTimer > 0) {
 	if (dir = notes.left)	spriteUsed = sGirlfriendLeft;
 	if (dir = notes.down) spriteUsed = sGirlfriendDown;
@@ -7,3 +8,4 @@ if (animationTimer > 0) {
 } else {
 	draw_self();
 }
+if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) gpu_set_texfilter(true);

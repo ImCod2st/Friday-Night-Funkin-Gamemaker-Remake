@@ -1,3 +1,5 @@
+if (instance_exists(oDialogBox)) exit;
+
 if !(surface_exists(global.hudSurface)) exit;
 surface_set_target(global.hudSurface);
 
@@ -24,19 +26,21 @@ var enemyHpLow = (global.hp >= 90);
 
 enem = global.enemy;
 bf = 0;
-iconSpr = sIcons;
+enemyIconSpr = sIcons;
+bfIconSpr = sIcons;
 
 special_icons(global.enemy);
 
 var enemyIcon = (enem + 1) * 2;
 var bfIcon = bf * 2;
 
-draw_sprite_ext(iconSpr,enemyIcon + enemyHpLow, x - hpWidth , y, 1 + iconBop, 1 + iconBop, 0, c_white, 1); // enemy icon
-draw_sprite_ext(iconSpr,bfIcon + boyHpLow,x - hpWidth, y, -1 + -iconBop, 1 + iconBop, 0, c_white, 1); // boy icon
+draw_sprite_ext(enemyIconSpr,enemyIcon + enemyHpLow, x - hpWidth , y, 1 + iconBop, 1 + iconBop, 0, c_white, 1); // enemy icon
+draw_sprite_ext(bfIconSpr,bfIcon + boyHpLow,x - hpWidth, y, -1 + -iconBop, 1 + iconBop, 0, c_white, 1); // boy icon
 }
 
 // score
 draw_set_font(global.comboNumberFont);
+if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) draw_set_font(global.comboNumberFontPixel);
 draw_set_halign(fa_right);
 hiddenScore = lerp(hiddenScore, global.curScore, 0.2);
 draw_text_transformed(1270, 5, round(hiddenScore), 0.3, 0.3, 0);

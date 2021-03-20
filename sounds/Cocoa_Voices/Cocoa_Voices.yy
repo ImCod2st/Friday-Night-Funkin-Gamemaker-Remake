@@ -14,7 +14,7 @@
   "duration": 115.231125,
   "parent": {
     "name": "Cocoa",
-    "path": "folders/Sounds/Music/Cocoa.yy",
+    "path": "folders/Sounds/Music/Week 5/Cocoa.yy",
   },
   "resourceVersion": "1.0",
   "name": "Cocoa_Voices",

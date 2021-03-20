@@ -1,6 +1,8 @@
 // choose the sprites to use
 char = "sBoyfriend";
 flipped = false;
+scale = image_yscale; // the entire scale
+isPixel = false;
 boyfriend_sprites();
 
 
@@ -24,9 +26,20 @@ singFrameMulti = 1; // the multiplier for the animation image speed
 if (global.enemy = 5) singFrameMulti = 2;
 singFrame = 0; // the frame the animation is on
 
-scale = image_yscale; // the entire scale
 recAlpha = 0; // death rectangle alpha
 returnTo = -1; // return to the main menu if this is 1
+
+// death
+sprDeath2 = asset_get_index(sprite_get_name(sprDeath) + "2");
+sprDeath3 = asset_get_index(sprite_get_name(sprDeath) + "3");
+deathSound = fnf_loss_sfx;
+gameoverMusic = gameOver;
+gameoverMusicEnd = gameOverEnd;
+if (isPixel) {
+	deathSound = fnf_loss_sfxPixel;
+	gameoverMusic = gameOverPixel;
+	gameoverMusicEnd = gameOverEndPixel;
+}
 
 // the current score, and combo
 global.curScore = 0;

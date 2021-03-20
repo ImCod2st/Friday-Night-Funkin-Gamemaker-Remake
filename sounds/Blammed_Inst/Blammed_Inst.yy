@@ -14,7 +14,7 @@
   "duration": 106.924187,
   "parent": {
     "name": "Blammed",
-    "path": "folders/Sounds/Music/Blammed.yy",
+    "path": "folders/Sounds/Music/Week 3/Blammed.yy",
   },
   "resourceVersion": "1.0",
   "name": "Blammed_Inst",

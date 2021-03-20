@@ -3,7 +3,7 @@ var mouseY = mouse_y - 2;
 selBoxX = (round(mouseX/gridSize) * gridSize);
 selBoxY = (round(mouseY/gridSize) * gridSize) - 18;
 
-if (room_height / 40 != ds_grid_height(global.chart)) ds_grid_resize(global.chart, 8, room_height / 40)
+if (room_height / 40 > ds_grid_height(global.chart)) ds_grid_resize(global.chart, 8, room_height / 40)
 
 var selectedList = global.chart;
 

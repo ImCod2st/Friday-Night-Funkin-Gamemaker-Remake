@@ -14,7 +14,7 @@
   "duration": 84.8126,
   "parent": {
     "name": "Pico",
-    "path": "folders/Sounds/Music/Pico.yy",
+    "path": "folders/Sounds/Music/Week 3/Pico.yy",
   },
   "resourceVersion": "1.0",
   "name": "Pico_Voices",

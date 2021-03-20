@@ -14,7 +14,7 @@
   "duration": 88.7309647,
   "parent": {
     "name": "South",
-    "path": "folders/Sounds/Music/South.yy",
+    "path": "folders/Sounds/Music/Week 2/South.yy",
   },
   "resourceVersion": "1.0",
   "name": "South_Voices",

@@ -18,4 +18,12 @@ function freeplay_songs(){
 	song[10] = "satin_panties";
 	song[11] = "high";
 	song[12] = "milf";
+	
+	song[13] = "cocoa";
+	song[14] = "eggnog";
+	song[15] = "winter_horrorland";
+	
+	song[16] = "senpai";
+	song[17] = "roses";
+	song[18] = "thorns";
 }

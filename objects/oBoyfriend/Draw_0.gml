@@ -1,3 +1,5 @@
+if (isPixel) gpu_set_texfilter(false); // pixel filtering
+
 if !(global.auto) {
 	singSprite = -1;
 	if (notePlaying = notes.left) { 
@@ -54,3 +56,5 @@ draw_set_color(c_black);
 draw_rectangle(x - 1280, y - 720, x + 1280, y + 720, 0);
 draw_set_color(c_white);
 draw_set_alpha(image_alpha);
+
+if (isPixel) gpu_set_texfilter(true);

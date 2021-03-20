@@ -42,6 +42,12 @@ function boyfriend_sprites() {
 			flipped = true;
 			char = "sWhittyC";
 		break;
+		
+		case("pixel"):
+			char = "sBoyfriendPixel";
+			scale = 6;
+			isPixel = true;
+		break;
 
 		default:
 			flipped = false;
@@ -54,6 +60,11 @@ function boyfriend_sprites() {
 	&& (room != CharacterSelect) { // then just add an addon
 		if (global.enemy = 5) add = "Car";
 		if (global.enemy = 6) or (global.enemy = 7) add = "Christ";
+		if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) {
+			add = "Pixel";
+			scale = 6;
+			isPixel = true;
+		}
 	}
 
 	sprIdle = asset_get_index(char + add + "Idle");
@@ -61,4 +72,7 @@ function boyfriend_sprites() {
 	sprDown = asset_get_index(char + add + "Down");
 	sprUp = asset_get_index(char + add + "Up");
 	sprRight = asset_get_index(char + add + "Right");
+	
+	sprDeath = sBoyfriendDie;
+	if (sprite_exists(asset_get_index(char + add + "Die"))) sprDeath = asset_get_index(char + add + "Die");
 }

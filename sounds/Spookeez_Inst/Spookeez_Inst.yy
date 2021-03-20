@@ -14,7 +14,7 @@
   "duration": 99.21806,
   "parent": {
     "name": "Spookez",
-    "path": "folders/Sounds/Music/Spookez.yy",
+    "path": "folders/Sounds/Music/Week 2/Spookez.yy",
   },
   "resourceVersion": "1.0",
   "name": "Spookeez_Inst",

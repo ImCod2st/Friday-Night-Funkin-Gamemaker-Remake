@@ -1,13 +1,11 @@
 if !(global.dead) {
 	// make the bf bop to the music
-	if !(global.enemy = 0) image_speed = ((global.bpm / 60) / 2) * global.deltaMultiplier; //all enemys
+	if (global.bpm > 100) image_speed = ((global.bpm / 60) / 2) * global.deltaMultiplier; //all enemys
 	else image_speed = (global.bpm / 60) * global.deltaMultiplier; //tutorial
 	
 	// change the idle sprite
 	if !(sprChanged) {
 		sprite_index = sprIdle;
-		if (flipped) 
-			image_xscale = -image_xscale;
 		sprChanged = true;
 	}
 }
@@ -54,12 +52,11 @@ if !(global.auto) {
 		audio_stop_all();
 		audio_destroy_sync_group(global.musicSync);
 	
-		audio_play_sound(fnf_loss_sfx, 100, false);
+		audio_play_sound(deathSound, 100, false);
 	
+		sprite_index = sprDeath;
 		image_index = 0;
 		image_speed = 1;
-		deathAnimCooldown = 10;
-		sprite_index = sBoyfriendDie;
 	}
 	if (deathAnimCooldown > 0) deathAnimCooldown--;
 	
@@ -73,9 +70,9 @@ if !(global.auto) {
 		restartTimer = 340;
 	
 		audio_stop_all();
-		audio_play_sound(gameOverEnd, 100, false);
+		audio_play_sound(gameoverMusicEnd, 100, false);
 	
-		sprite_index = sBoyfriendDie3;
+		sprite_index = sprDeath3;
 	}
 	
 	if ((keyboard_check_pressed(vk_backspace)) 
@@ -119,3 +116,8 @@ if !(global.auto) {
 		animationIndex = 0;	
 	}
 }
+
+image_yscale = scale;
+
+if !(flipped) image_xscale = scale;
+else image_xscale = -scale;

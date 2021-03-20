@@ -14,7 +14,7 @@
   "duration": 76.805,
   "parent": {
     "name": "Bopeebo",
-    "path": "folders/Sounds/Music/Bopeebo.yy",
+    "path": "folders/Sounds/Music/Week 1/Bopeebo.yy",
   },
   "resourceVersion": "1.0",
   "name": "Bopeebo_Inst",

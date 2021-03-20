@@ -1,12 +1,8 @@
 if (global.enemy = 0) instance_destroy();
 if (global.enemy = 5) or (global.enemy = 6) singFrameMulti = 2;
+if (global.enemy = 10) singFrameMulti = 2;
 if (sprite_index != sprIdle) sprite_index = sprIdle;
 image_speed = global.deltaMultiplier;
-
-if (flipped) {
-	image_xscale = -image_xscale;
-	flipped = false;
-}
 
 if (animationTimer > 0) {
 	animationTimer -= global.deltaMultiplier;
@@ -14,3 +10,7 @@ if (animationTimer > 0) {
 } else {
 	animationIndex = 0;	
 }
+
+image_yscale = scale;
+if !(flipped) image_xscale = scale;
+else image_xscale = -scale;

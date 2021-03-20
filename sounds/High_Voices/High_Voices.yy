@@ -14,7 +14,7 @@
   "duration": 105.618057,
   "parent": {
     "name": "High",
-    "path": "folders/Sounds/Music/High.yy",
+    "path": "folders/Sounds/Music/Week 4/High.yy",
   },
   "resourceVersion": "1.0",
   "name": "High_Voices",
