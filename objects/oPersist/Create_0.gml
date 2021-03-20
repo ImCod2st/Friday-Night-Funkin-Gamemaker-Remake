@@ -4,7 +4,7 @@ global.song = Tutorial_Inst;
 global.voices = "";
 global.bpm = 100;
 global.noteSpeed = 5;
-global.camSpeed = 360; // 225 is 1 in real game
+global.camSpeed = 360; // BPM * 2.85256410256
 global.songName = "Tutorial";
 
 global.boyfriend = "og";
@@ -20,7 +20,7 @@ global.songScore[0] = 0;
 global.nextSong[0] = "n";
 
 // enemy variables
-global.enemy = 0; // 0 - gf, 1 - dad, 2 - spooky, 3 - monster, 4 - pico, 5 - mom, 6/7 - parents c
+global.enemy = 0; // 0 - gf, 1 - dad, 2 - spooky, 3 - monster, 4 - pico, 5 - mom, 6/7 - parents & monster, 8/9/10 - senpai
 // special enemys 100/101 - whitty, 102 - oxi
 global.turn = true;
 
@@ -72,7 +72,9 @@ global.currentDif = 1;
 // fonts
 draw_set_font(fntDefault);
 global.font = font_add_sprite_ext(sMessageFont, "abcdefghijklmnopqrstuvwxyz,_0123456789-.:", true, -2);
-global.comboNumberFont = font_add_sprite_ext(sComboNumber, "0123456789-x", true, -20);
+var comboNumStr = "0123456789-x";
+global.comboNumberFont = font_add_sprite_ext(sComboNumber, comboNumStr, true, -20);
+global.comboNumberFontPixel = font_add_sprite_ext(sComboNumberPixel, comboNumStr, true, -20);
 
 // list of notes
 enum notes {
@@ -88,7 +90,7 @@ timeUntilMoveOn = 0;
 
 // check where data should be saved / loaded
 global.useProgramDir = true;
-if (working_directory = "X:\\windows\\") global.useProgramDir = false;
+if (program_directory = "X:\\windows\\") global.useProgramDir = false;
 load_data();
 
 // keyboard maps

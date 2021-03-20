@@ -7,8 +7,11 @@ characters[4] = "dad";
 characters[5] = "mom";
 characters[6] = "spooky twins";
 characters[7] = "whitty2";
+characters[8] = "pixel";
 
 curEnemy = 0;
+
+flipped = false;
 
 difSelected = 1;
 curSelected = array_length(characters) - 1;

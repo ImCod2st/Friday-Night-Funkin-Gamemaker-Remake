@@ -49,4 +49,11 @@ bgChristTree = layer_get_id("Assets_Tree");
 bgChristUpBop = layer_get_id("Assets_UpBop");
 bgChristMain = layer_get_id("Background_Main");
 
+bgSenpaiFreaks = layer_get_id("Assets_SenpaiFreaks");
+bgSenpaiStreet = layer_get_id("Backgrounds_SenpaiStreet");
+bgSenpaiTrees = layer_get_id("Assets_SenpaiTrees");
+bgSenpaiSchool = layer_get_id("Assets_SenpaiSchool");
+bgSenpaiSky = layer_get_id("Backgrounds_SenpaiSky");
+bgSpirit = layer_get_id("Backgrounds_EvilSchool");
+
 bgCodist = layer_get_id("Background_Codist");

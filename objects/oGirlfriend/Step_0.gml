@@ -5,3 +5,6 @@ if (animationTimer > 0) {
 } else {
 	animationIndex = 0;	
 }
+
+image_xscale = scale;
+image_yscale = scale;

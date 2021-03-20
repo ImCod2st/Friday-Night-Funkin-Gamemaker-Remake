@@ -14,7 +14,7 @@
   "duration": 94.013,
   "parent": {
     "name": "Eggnog",
-    "path": "folders/Sounds/Music/Eggnog.yy",
+    "path": "folders/Sounds/Music/Week 5/Eggnog.yy",
   },
   "resourceVersion": "1.0",
   "name": "Eggnog_Inst",

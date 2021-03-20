@@ -14,7 +14,7 @@
   "duration": 101.490715,
   "parent": {
     "name": "Philly",
-    "path": "folders/Sounds/Music/Philly.yy",
+    "path": "folders/Sounds/Music/Week 3/Philly.yy",
   },
   "resourceVersion": "1.0",
   "name": "Philly_Voices",

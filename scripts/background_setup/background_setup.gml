@@ -1,7 +1,7 @@
 //setup the backgrounds depending on the enemy being fought
 function background_setup(){
 	// dad / everyone else
-	if (global.enemy <= 1) or (global.enemy > 6) {
+	if (global.enemy <= 1) or (global.enemy > 10) {
 		if !(global.enemy = 102) { // exceptions for special enemys
 			// make layers visible
 			layer_set_visible(bgDad, true);
@@ -136,9 +136,31 @@ function background_setup(){
 		offsetX = -40;
 		
 		bfOffsetX = 420;
-		bfOffsetY = -80;
+		bfOffsetY = -40;
 	}
 	
+	// senpai
+	if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) {
+		if (global.enemy != 10) {
+			// make layers visible
+			layer_set_visible(bgSenpaiFreaks, true);
+			layer_set_visible(bgSenpaiStreet, true);
+			layer_set_visible(bgSenpaiTrees, true);
+			layer_set_visible(bgSenpaiSchool, true);
+			layer_set_visible(bgSenpaiSky, true);
+		
+			var spd = ((global.bpm / 60) / 2) * global.deltaMultiplier;
+			var freaks = layer_sprite_get_id(bgSenpaiFreaks, "freaks");
+			if (global.enemy = 9) layer_sprite_change(freaks, sWeebFreaksScared);
+			layer_sprite_speed(freaks, spd);
+		} else {
+			layer_set_visible(bgSpirit, true);
+		}
+		
+		offsetY = 80;
+		offsetX = 150;
+	}
+	// spirit
 	
 	// stupid special codist week
 	if (global.enemy = 102) {

@@ -30,6 +30,7 @@ if (global.dead) {
 if (keyboard_check_pressed(vk_enter))
 || (gamepad_button_check_pressed(global.controller, gp_start)) {
 	if (instance_exists(oPause)) exit;
+	if (instance_exists(oDialogBox)) exit;
 	if (global.dead) exit;
 	
 	instance_create_layer(0, 0, "Main", oPause);

@@ -13,8 +13,8 @@
   "soundFile": "Winter_horrorland_Voices.ogg",
   "duration": 132.8899,
   "parent": {
-    "name": "Winter_horrorland",
-    "path": "folders/Sounds/Music/Winter_horrorland.yy",
+    "name": "Winter Horrorland",
+    "path": "folders/Sounds/Music/Week 5/Winter Horrorland.yy",
   },
   "resourceVersion": "1.0",
   "name": "Winter_horrorland_Voices",

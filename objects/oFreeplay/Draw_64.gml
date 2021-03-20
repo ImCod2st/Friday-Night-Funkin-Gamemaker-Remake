@@ -19,14 +19,15 @@ draw_set_halign(fa_left);
 // enemy icons
 enem = curEnemy;
 bf = 0;
-iconSpr = sIcons;
+enemyIconSpr = sIcons;
+bfIconSpr = sIcons;
 
 special_icons(curEnemy);
 
 var enemyIcon = (enem + 1) * 2;
 var bfIcon = bf * 2;
-draw_sprite(iconSpr, enemyIcon, 1070, 220);
-draw_sprite_ext(iconSpr, bfIcon, 1130, 220, -1, 1, 0, c_white, 1);
+draw_sprite(enemyIconSpr, enemyIcon, 1070, 220);
+draw_sprite_ext(bfIconSpr, bfIcon, 1130, 220, -1, 1, 0, c_white, 1);
 
 for (var i = 0; i < array_length(songs); ++i) {
 	if (i != curSelected) draw_set_alpha(0.5);

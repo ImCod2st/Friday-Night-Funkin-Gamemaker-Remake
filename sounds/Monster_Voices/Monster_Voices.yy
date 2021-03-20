@@ -14,7 +14,7 @@
   "duration": 177.716019,
   "parent": {
     "name": "Monster",
-    "path": "folders/Sounds/Music/Monster.yy",
+    "path": "folders/Sounds/Music/Week 2/Monster.yy",
   },
   "resourceVersion": "1.0",
   "name": "Monster_Voices",

@@ -14,7 +14,7 @@
   "duration": 86.67928,
   "parent": {
     "name": "Dadbattle",
-    "path": "folders/Sounds/Music/Dadbattle.yy",
+    "path": "folders/Sounds/Music/Week 1/Dadbattle.yy",
   },
   "resourceVersion": "1.0",
   "name": "Dadbattle_Voices",

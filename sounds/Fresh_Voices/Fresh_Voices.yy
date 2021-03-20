@@ -14,7 +14,7 @@
   "duration": 82.02949,
   "parent": {
     "name": "Fresh",
-    "path": "folders/Sounds/Music/Fresh.yy",
+    "path": "folders/Sounds/Music/Week 1/Fresh.yy",
   },
   "resourceVersion": "1.0",
   "name": "Fresh_Voices",
