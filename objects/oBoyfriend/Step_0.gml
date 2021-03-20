@@ -92,7 +92,7 @@ if !(global.auto) {
 	}
 	
 	if (restartTimer == 0) {
-		var o = instance_create_depth(0, 0, depth - 100, oFade);
+		var o = instance_create_depth(0, 0, -10000, oFade);
 		with (o) {
 			fadeY = -199;
 			moved = true;

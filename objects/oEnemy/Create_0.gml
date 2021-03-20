@@ -14,6 +14,7 @@ sprEnemy[5] = "sMom";
 sprEnemy[6] = "sCParentsDad";
 sprEnemy[101] = "sWhittyC";
 sprEnemy[102] = "sOxi";
+sprEnemy[103] = "sWhitty";
 
 if (global.enemy = 0) instance_destroy();
 

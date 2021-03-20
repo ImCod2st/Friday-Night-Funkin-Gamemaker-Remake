@@ -5,6 +5,8 @@ key = vk_down;
 dir = notes.down;
 enemy = false;
 
+botTimer = 0;
+
 afterCreate = false;
 
 event_inherited();
