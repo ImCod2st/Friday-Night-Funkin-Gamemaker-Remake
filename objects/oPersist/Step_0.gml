@@ -25,7 +25,7 @@ if (variable_global_exists("musicSync")) {
 }
 
 // when the song has ended
-if (timeUntilMoveOn >= 420) {
+if (timeUntilMoveOn >= 420) && !(global.dead) {
 	var roomTo = MainGame;
 	
 	// load the next songs chart

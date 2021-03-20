@@ -29,6 +29,7 @@ draw_option(10, 0, "fullscreen", "Switch between fullscreen & windowed mode.", f
 draw_option(80, 1, "smoothing", "Fixes jagged edges around most sprites.", smoothingOption, true);
 draw_option(150, 2, "offset", "Negative Numbers - Late\nPositive Numbers - Early", round(global.offset), false);
 draw_option(220, 3, "advanced hud", "Adds extra information under the health bar.", global.advancedHud, true);
-draw_option(290, 4, "set keybinds", "Change your keybinds.", "", false);
+draw_option(290, 4, "input", "Default - FNF Input System\nKade - KadeDevs Input System (Whitty)", currentInputString[currentInput], false);
+draw_option(360, 5, "set keybinds", "Change your keybinds.", "", false);
 
 draw_set_font(fntDefault);
