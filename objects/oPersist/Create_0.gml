@@ -90,7 +90,7 @@ timeUntilMoveOn = 0;
 
 // check where data should be saved / loaded
 global.useProgramDir = true;
-if (program_directory = "X:\\windows\\") global.useProgramDir = false;
+//if (working_directory = "X:\\windows\\") global.useProgramDir = false;
 load_data();
 
 // keyboard maps
