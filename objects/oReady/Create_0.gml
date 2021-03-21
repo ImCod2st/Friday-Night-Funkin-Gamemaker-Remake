@@ -26,16 +26,6 @@ else {
 	instance_create_depth(x, y, -100000, oDialogBox);
 	image_speed = 0;	
 }
-
-// death reset
-if (global.dead = true) {
-	var o = instance_create_depth(0, 0, depth - 100, oFade);
-	with (o) {
-		fadeY = -199;
-		moved = true;
-	}
-	global.dead = false;
-}
 global.playVoice = 1;
 global.turn = 1;
 

@@ -38,7 +38,7 @@ if (global.currentDif != 2) {
 	
 	draw_set_halign(fa_right);
 	draw_set_valign(fa_bottom);
-	draw_text(1260, 700, "NORMAL and EASY difficultys are temporarily disabled\ndue to having no time to finish them.\n\nIf you would like to help, contact me. :D")
+	draw_text(1260, 700, "NORMAL and EASY difficulties are temporarily disabled\ndue to having no time to finish them.\n\nIf you would like to help, contact me. :D")
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_left);
 }
