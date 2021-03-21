@@ -28,7 +28,7 @@ if !(global.auto) {
 	// subtract the time the animation is playing for
 	if (animCount > 0) animCount -= 1 * global.deltaMultiplier;
 
-	if !(global.dead) && !(global.kadeInput) {
+	if !(global.dead) {
 		noteCheck(vk_left, gp_padl, notes.left);
 		noteCheck(vk_down, gp_padd, notes.down);
 		noteCheck(vk_up, gp_padu, notes.up);
@@ -58,7 +58,6 @@ if !(global.auto) {
 		image_index = 0;
 		image_speed = 1;
 	}
-	if (deathAnimCooldown > 0) deathAnimCooldown--;
 	
 	if ((keyboard_check_pressed(vk_enter)) 
 	|| (keyboard_check_pressed(vk_space))
@@ -91,17 +90,24 @@ if !(global.auto) {
 	}
 	
 	if (restartTimer == 0) {
+		var o = instance_create_depth(0, 0, -10000, oFade);
+		with (o) {
+			fadeY = -199;
+			moved = true;
+		}
+		global.dead = false;
+		
 		if (!returnTo) room_restart();
 		else {
-			// probably not a good way to do this but it'll work for now
+			var roomTo;
 			if (global.freeplay) {
-				var o = instance_create_depth(0, 0, -10000, oFade);
-				o.roomTo = FreePlay;
+				roomTo = FreePlay;
 			} else {
 				audio_play_sound(freakyMenu, 100, true);
-				room_goto(StoryMenu);
+				roomTo = StoryMenu;
 			}
 			
+			room_goto(roomTo);
 		}
 	}
 
