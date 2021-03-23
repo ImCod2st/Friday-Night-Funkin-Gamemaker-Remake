@@ -70,9 +70,10 @@ if (lastSelected != curSelected) {
 	ini_close();
 
 	// play the songs music
-	songString = songNam + "_Inst";
+	songString = asset_get_index(songNam + "_Inst");
+	if (global.specialSongs) songString = songsFileInst[curSelected];
 	audio_stop_sound(musicPlaying);
-	musicPlaying = audio_play_sound(asset_get_index(songString), 10, true);
+	musicPlaying = audio_play_sound(songString, 10, true);
 }
 
 if (keyboard_check_pressed(ord("V"))) {

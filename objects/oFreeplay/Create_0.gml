@@ -16,3 +16,5 @@ visibleScore = 0;
 
 yOffset = array_create(array_length(songs))
 xOffset = array_create(array_length(songs))
+
+songsFileInst[0] = 0;

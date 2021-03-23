@@ -7,5 +7,6 @@ function load_freeplay(special){
 	var leng = array_length(song) - 1;
 	for (var i = leng; i >= 0; --i) {
 		songs[abs(i - leng)] = song[i]
+		if (global.specialSongs) songsFileInst[abs(i - leng)] = songFileInst[i];
 	}
 }
