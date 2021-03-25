@@ -26,14 +26,14 @@ special_icons(curEnemy);
 
 var enemyIcon = (enem + 1) * 2;
 var bfIcon = bf * 2;
-draw_sprite(enemyIconSpr, enemyIcon, 1070, 220);
-draw_sprite_ext(bfIconSpr, bfIcon, 1130, 220, -1, 1, 0, c_white, 1);
+draw_sprite(enemyIconSpr, enemyIcon, 1070, 220 + iconYOffset);
+draw_sprite_ext(bfIconSpr, bfIcon, 1130, 220 + iconYOffset, -1, 1, 0, c_white, 1);
 
 for (var i = 0; i < array_length(songs); ++i) {
 	if (i != curSelected) draw_set_alpha(0.5);
 	draw_set_font(global.font);
 	
-	yOffset[i] = lerp(yOffset[i], 170 * (curSelected - i), 0.1);
+	yOffset[i] = lerp(yOffset[i], 120 * (curSelected - i), 0.1);
 	xOffset[i] = lerp(xOffset[i], 16 * (curSelected - i), 0.1);
 	draw_text(60 + xOffset[i], 300 + yOffset[i], songs[i]);
 	

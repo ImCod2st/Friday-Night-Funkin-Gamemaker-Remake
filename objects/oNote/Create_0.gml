@@ -11,6 +11,7 @@ notRealNote = false;
 switchTurn = false;
 bfHey = false;
 useAlt = false;
+enemyHeld = false;
 
 yOff = 0;
 sliderLength = 0;

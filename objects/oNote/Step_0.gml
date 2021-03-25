@@ -36,11 +36,12 @@ with (instance_place(x, y + 85, oArrowButton)) {
 			obj.holdAnimation = false;
 			obj.animationIndex = 0;
 		} else {
-			other.heldAlready = true;
-			other.sliderLength -= global.noteSpeed * global.deltaMultiplier;
-			other.curNoteSpeed = 0;
+			other.enemyHeld = true;
 			obj.holdAnimation = true;
 		}
+		
+		sprite_index = sprHit;
+		image_speed = 1;
 		
 		if (obj = oBoyfriend) {
 			if (other.sliderLength > 0) exit;
@@ -60,7 +61,7 @@ if (beingHeld) {
 	curNoteSpeed = 0;
 	sliderLength -= global.noteSpeed * global.deltaMultiplier;
 	global.hp += 0.025;
-	with (oArrowButton) if (dir = other.image_index) image_index = 0;
+	with (oArrowButton) if (dir = other.image_index) && (image_index > 4) image_index = 0;
 	oBoyfriend.holdAnimation = true;
 	
 	if (keyboard_check_released(keyPressedWith)) {
@@ -72,6 +73,18 @@ if (beingHeld) {
 	if (sliderLength <= 0) {
 		instance_destroy();	
 		oBoyfriend.holdAnimation = false;
+	}
+}
+
+if (enemyHeld) {
+	heldAlready = true;
+	curNoteSpeed = 0;
+	sliderLength -= global.noteSpeed * global.deltaMultiplier;
+	oEnemy.holdAnimation = true;
+	
+	if (sliderLength <= 0) {
+		instance_destroy();	
+		oEnemy.holdAnimation = false;
 	}
 }
 
@@ -101,5 +114,8 @@ if (y < 0 - sliderLength - 10) {
 	global.combo = 0;
 	
 	oHUD.missCount += 1;
+}
+if (switchTurn) && (y < 200) {
+	instance_destroy();
 }
 //if (fadeIn) && (image_alpha < 1) image_alpha += 0.1;

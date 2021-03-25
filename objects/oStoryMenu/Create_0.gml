@@ -16,6 +16,8 @@ weekName[1] = "DADDY DEAREST";
 weekName[2] = "SPOOKY MONTH";
 weekName[3] = "PICO";
 weekName[4] = "MOMMY MUST MURDER";
+weekName[5] = "RED SNOW";
+weekName[6] = "HATING SIMULATOR FT. MOAWLING";
 
 selected = false;
 selectedTimer = 0;

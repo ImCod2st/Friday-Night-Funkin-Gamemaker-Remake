@@ -35,6 +35,9 @@ if (instance_exists(oEnemy)) {
 yOffset = array_create(array_length(menus))
 xOffset = array_create(array_length(menus))
 
+curAlpha = 0;
+curAlphaTo = 0.5;
+
 // deactivate all objects, and pause the music
 audio_pause_sync_group(global.musicSync);
 instance_deactivate_all(true);

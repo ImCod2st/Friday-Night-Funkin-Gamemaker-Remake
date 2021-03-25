@@ -52,6 +52,7 @@ global.currentMultiplier = 1;
 
 // freeplay variables
 global.specialSongs = false;
+global.bSides = false;
 
 // settings
 global.offset = 0;
@@ -61,7 +62,7 @@ global.controller = -1;
 
 // week variables
 global.freeplay = false;
-global.weeks = 4;
+global.weeks = 6;
 for (var i = 0; i < global.weeks + 1; ++i) {
 	global.weekScoreEasy[i] = 0;
 	global.weekScoreNormal[i] = 0;
@@ -90,7 +91,7 @@ timeUntilMoveOn = 0;
 
 // check where data should be saved / loaded
 global.useProgramDir = true;
-//if (working_directory = "X:\\windows\\") global.useProgramDir = false;
+if (program_directory = "X:\\windows\\") global.useProgramDir = false;
 load_data();
 
 // keyboard maps

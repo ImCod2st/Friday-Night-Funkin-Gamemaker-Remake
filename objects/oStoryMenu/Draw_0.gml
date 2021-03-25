@@ -20,6 +20,8 @@ var enemyOutline = sDaddyOutline;
 if (selectedWeek = 2) enemyOutline = sSpookyOutline;
 if (selectedWeek = 3) enemyOutline = sPicoOutline;
 if (selectedWeek = 4) enemyOutline = sMomOutline;
+if (selectedWeek = 5) enemyOutline = sParentsOutline;
+if (selectedWeek = 6) enemyOutline = sSenpaiOutline;
 if (selectedWeek != 0) draw_sprite_ext(enemyOutline, animate, 264, 450, 0.4980007, 0.4980007, 0, c_white, 1);
 draw_sprite_ext(sGirlfriendOutline, animate * 2, 753, 16, 0.4980007, 0.4980007, 0, c_white, 1);
 

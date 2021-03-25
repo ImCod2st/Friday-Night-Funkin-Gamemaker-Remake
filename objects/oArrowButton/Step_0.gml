@@ -2,6 +2,7 @@ if (global.dead) exit;
 
 if !(afterCreate) {
 	if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) spr = asset_get_index(sprite_get_name(spr) + "Pixel");
+	sprHit = asset_get_index(sprite_get_name(spr) + "Hit");
 	sprite_index = spr;
 	afterCreate = true;	
 }
@@ -26,7 +27,7 @@ if !(enemy) && !(global.auto) {
 		with (instance_place(x, y, oNote)) {
 			
 			if !(notRealNote) {	
-				with (other) sprite_index = asset_get_index(sprite_get_name(spr) + "Hit");
+				with (other) sprite_index = sprHit;
 				if (sliderLength <= 0) instance_destroy();
 				else {
 					beingHeld = true;

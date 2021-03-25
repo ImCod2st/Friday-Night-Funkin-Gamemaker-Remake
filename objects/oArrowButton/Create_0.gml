@@ -1,6 +1,7 @@
 image_speed = 0;
 
 spr = sDownArrowButton;
+sprHit = asset_get_index(sprite_get_name(spr) + "Hit");
 key = vk_down;
 dir = notes.down;
 enemy = false;

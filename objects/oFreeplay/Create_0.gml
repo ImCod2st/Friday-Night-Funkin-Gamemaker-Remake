@@ -1,4 +1,4 @@
-load_freeplay(global.specialSongs);
+load_freeplay(global.specialSongs, global.bSides);
 
 curEnemy = 0;
 
@@ -16,3 +16,5 @@ visibleScore = 0;
 
 yOffset = array_create(array_length(songs))
 xOffset = array_create(array_length(songs))
+
+iconYOffset = 0;

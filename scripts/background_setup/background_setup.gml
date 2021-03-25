@@ -90,6 +90,7 @@ function background_setup(){
 		// change the cameras offset
 		offsetY = -180;
 		bfOffsetY = -330;
+		bfOffsetX = -20;
 	}
 	
 	// parents
@@ -159,6 +160,8 @@ function background_setup(){
 		
 		offsetY = 80;
 		offsetX = 150;
+		
+		bfOffsetX = -15;
 	}
 	// spirit
 	
@@ -177,7 +180,5 @@ function background_setup(){
 		// change the cameras offset
 		offsetY = 150;
 		offsetX = 100;
-		
-		bfOffsetX = -20;
 	}
 }

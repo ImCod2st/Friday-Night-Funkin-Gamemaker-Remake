@@ -4,6 +4,12 @@ if (finished) exit;
 if !(surface_exists(global.hudSurface)) exit;
 surface_set_target(global.hudSurface);
 
+// bg
+draw_set_color(c_white);
+draw_set_alpha(0.6);
+draw_rectangle(0, 0, room_width, room_height, false);
+draw_set_alpha(1);
+
 draw_set_font(font);
 draw_set_color(c_black);
 
@@ -14,7 +20,7 @@ var selCharacter = dialogChar[curDialog];
 var charIndex = get_portraits(selCharacter);
 var portraitX = -310;
 if (charIndex = 0) portraitX = 310;
-draw_sprite(sDialogPortrait, charIndex, x + portraitX, y - 110)
+draw_sprite(sDialogPortrait, charIndex, x + portraitX + charSpriteOffset, y - 110)
 
 // box
 draw_sprite(spr, index, x, y);

@@ -103,6 +103,18 @@ if (selectedTimer = 120) {
 		global.nextSong[1] = "Milf";
 		global.nextSong[2] = "n";
 	}
+	if (selectedWeek = 5) {
+		load_chart("Cocoa", global.currentDif);
+		global.nextSong[0] = "Eggnog";
+		global.nextSong[1] = "Winter_horrorland";
+		global.nextSong[2] = "n";
+	}
+	if (selectedWeek = 6) {
+		load_chart("Senpai", global.currentDif);
+		global.nextSong[0] = "Roses";
+		global.nextSong[1] = "Thorns";
+		global.nextSong[2] = "n";
+	}
 }
 
 leftArrowScale = lerp(leftArrowScale, leftArrowScaleTo, 0.3);
