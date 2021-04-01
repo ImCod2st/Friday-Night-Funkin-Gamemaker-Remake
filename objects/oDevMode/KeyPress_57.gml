@@ -1,2 +1,3 @@
 /// @desc restart the room
-room_restart();
+game_restart();
+show_debug_overlay(false);

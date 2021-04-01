@@ -1,5 +1,5 @@
 curSelected = 0;
-optionAmount = 6;
+optionAmount = 5;
 
 fullscreenOption = false;
 smoothingOption = false;

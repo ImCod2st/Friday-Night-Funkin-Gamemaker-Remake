@@ -20,7 +20,7 @@ or (keyboard_check_pressed(vk_right)) {
 		case 3:
 			global.advancedHud = !global.advancedHud;
 			break;
-		case 5:
+		case 4:
 			instance_create_depth(0,0,-10000,oMapKeys);
 			break;
 	}
@@ -31,7 +31,7 @@ if (curSelected = 2) {
 	if (keyboard_check_pressed(vk_left)) global.offset -= 1;
 }
 
-if (curSelected = 4) {
+if (curSelected = 5) {
 //	if (keyboard_check_pressed(vk_right)) or (keyboard_check_pressed(vk_enter)) currentInput++;
 //	if (keyboard_check_pressed(vk_left)) currentInput--;
 //	if (currentInput > 1) currentInput = 0;
