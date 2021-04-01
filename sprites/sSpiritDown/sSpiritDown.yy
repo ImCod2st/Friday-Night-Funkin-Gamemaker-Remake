@@ -143,6 +143,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"42819468-ae1f-453d-8ea2-08bd0a501743","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Spirit",
     "path": "folders/Sprites/Characters/Senpai/Spirit.yy",

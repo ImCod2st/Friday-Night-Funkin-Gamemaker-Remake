@@ -10,17 +10,9 @@ if (menuSelected = 1) spr = sFreeplaySelect;
 draw_sprite_ext(spr, image_index, x, y + 160, 1, 1, 0, c_white, round(textFlash[1]));
 
 var spr = sOptions;
-if (menuSelected = 3) spr = sOptionsSelect;
-draw_sprite_ext(spr, image_index, x, y + (160 * 3), 1, 1, 0, c_white, round(textFlash[3]));
+if (menuSelected = 2) spr = sOptionsSelect;
+draw_sprite_ext(spr, image_index, x, y + (160 * 2), 1, 1, 0, c_white, round(textFlash[2]));
 
 var spr = sDonate;
-if (menuSelected = 2) {
-	spr = sDonateSelect;
-	
-	draw_set_halign(fa_center);
-	draw_set_font(global.font);
-	draw_text_ext_transformed(x, 551, "donate to the original creators, they\ncan use all the support to make this game\nthe best version of itself.", 80, 100000, 0.5, 0.5, 0);
-	draw_set_font(fntDefault);
-	draw_set_halign(fa_left);
-}
-draw_sprite_ext(spr, image_index, x, y + (160 * 2), 1, 1, 0, c_white, round(textFlash[2]));
+if (menuSelected = 3) spr = sDonateSelect;
+draw_sprite_ext(spr, image_index, x, y + (160 * 3), 1, 1, 0, c_white, round(textFlash[3]));

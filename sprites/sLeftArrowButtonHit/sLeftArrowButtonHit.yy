@@ -91,6 +91,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0dcdd70f-99ed-44ae-a7d4-fd66e36a4316","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Hit",
     "path": "folders/Sprites/Arrows/Buttons/Hit.yy",

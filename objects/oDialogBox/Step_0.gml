@@ -1,5 +1,6 @@
 if (instance_exists(oFade)) exit;
-if (index < sprite_get_number(spr) - 1) index += 0.1;
+if (instance_exists(oCutscene)) exit;
+if (index < 6) index += 0.1;
 
 if (lastDialogChar != dialogChar[curDialog]) {
 	charSpriteOffset = -60;

@@ -23,6 +23,7 @@ if !(enemy) && !(global.auto) {
 		image_index = 0;
 		
 		if !(global.kadeInput) oBoyfriend.missed = true;
+		else oBoyfriend.missed = false;
 		
 		with (instance_place(x, y, oNote)) {
 			
@@ -53,8 +54,9 @@ if !(enemy) && !(global.auto) {
 				if (distance > 65) scor = 2;
 				if (distance > 75) scor = 3;
 				var scoreX = 1259
-				if (instance_exists(oGirlfriend)) scoreX = oGirlfriend.x + 5;
-				var o = instance_create_depth(scoreX, 485, 400 - instance_number(oScoreText), oScoreText);
+				var scoreY = 485;
+				if (instance_exists(oGirlfriend)) {scoreX = oGirlfriend.x + 5; scoreY = oGirlfriend.y - 517};
+				var o = instance_create_depth(scoreX, scoreY, 400 - instance_number(oScoreText), oScoreText);
 				o.image_index = scor;
 				
 				var scoreAdd = 350;

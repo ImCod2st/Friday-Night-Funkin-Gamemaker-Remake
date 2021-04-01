@@ -83,6 +83,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"841fdd3e-0d63-46bb-8082-04f4936f7be8","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Girlfriend",
     "path": "folders/Sprites/Characters/Girlfriend.yy",

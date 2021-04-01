@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1f1c1d75-9373-40f1-9f35-da5fb8fe9ca9","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Philly",
     "path": "folders/Sprites/Backgrounds/Stages/Philly.yy",

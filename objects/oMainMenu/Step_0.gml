@@ -31,13 +31,13 @@ if !(selected) {
 			textFlash[2] = 0;
 			textFlash[3] = 0;
 		}
-		if (menuSelected = 2) url_open("https://ninja-muffin24.itch.io/funkin");
-		if (menuSelected = 3) {
+		if (menuSelected = 2) {
 			selected = true;
 			textFlash[0] = 0;
 			textFlash[1] = 0;
-			textFlash[2] = 0;
+			textFlash[3] = 0;
 		}
+		if (menuSelected = 3) url_open("https://ninja-muffin24.itch.io/funkin");
 	}
 	
 }
@@ -56,7 +56,7 @@ if (selectedTimer = 120) {
 		o = instance_create_depth(0, 0, -10000, oFade);
 		o.roomTo = FreePlay;
 	}
-	if (menuSelected = 3) {
+	if (menuSelected = 2) {
 		o = instance_create_depth(0, 0, -10000, oFade);
 		o.roomTo = Options;
 	}

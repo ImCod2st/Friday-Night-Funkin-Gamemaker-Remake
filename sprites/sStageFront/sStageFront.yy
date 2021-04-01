@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"799ac6bf-2770-46fc-bab0-3498646f9177","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Stage",
     "path": "folders/Sprites/Backgrounds/Stages/Stage.yy",

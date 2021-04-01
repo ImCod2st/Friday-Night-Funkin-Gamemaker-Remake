@@ -36,8 +36,15 @@ with (instance_place(x, y + 85, oArrowButton)) {
 			obj.holdAnimation = false;
 			obj.animationIndex = 0;
 		} else {
-			other.enemyHeld = true;
-			obj.holdAnimation = true;
+			if (global.auto) && !(enemy) {
+				other.heldAlready = true;
+				other.sliderLength -= global.noteSpeed * global.deltaMultiplier;
+				other.curNoteSpeed = 0;
+				obj.holdAnimation = true;
+			} else {			
+				other.enemyHeld = true;
+				obj.holdAnimation = true;
+			}
 		}
 		
 		sprite_index = sprHit;
@@ -60,7 +67,7 @@ if (beingHeld) {
 	heldAlready = true;
 	curNoteSpeed = 0;
 	sliderLength -= global.noteSpeed * global.deltaMultiplier;
-	global.hp += 0.025;
+	global.hp += 0.08;
 	with (oArrowButton) if (dir = other.image_index) && (image_index > 4) image_index = 0;
 	oBoyfriend.holdAnimation = true;
 	

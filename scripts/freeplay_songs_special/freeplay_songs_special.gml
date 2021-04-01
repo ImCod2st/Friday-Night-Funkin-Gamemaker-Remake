@@ -2,9 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function freeplay_songs_special(){
 	song[0] = "lofight";
-	song[1] = "ballistic";
-	song[2] = "codist_says_things";
-	song[3] = "cookies";
+	song[1] = "overhead";
+	song[2] = "ballistic";
+	song[3] = "codist_says_things";
+	song[4] = "cookies";
 }
 
 function freeplay_songs_bside(){

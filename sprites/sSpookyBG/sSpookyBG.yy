@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"43cbb1f0-28ef-480e-be56-dc1c8b060a2b","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Spooky",
     "path": "folders/Sprites/Backgrounds/Stages/Spooky.yy",

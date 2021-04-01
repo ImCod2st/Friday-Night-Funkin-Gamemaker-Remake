@@ -79,6 +79,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"81afa8e6-9356-4563-9b3c-7cdb4fbccfbf","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Limo",
     "path": "folders/Sprites/Backgrounds/Stages/Limo.yy",

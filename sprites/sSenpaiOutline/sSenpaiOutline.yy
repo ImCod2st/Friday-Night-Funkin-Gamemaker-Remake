@@ -83,6 +83,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ca5c7882-0e5d-4b97-88e0-2b7700ba2396","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "StoryMenu",
     "path": "folders/Sprites/Other/StoryMenu.yy",

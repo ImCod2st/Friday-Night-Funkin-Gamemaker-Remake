@@ -1,4 +1,5 @@
 if (finished) exit;
+if (instance_exists(oCutscene)) exit;
 audio_play_sound(clickText, 0, false);
 
 if (curDialog + 1 >= array_length(dialog)) {

@@ -30,6 +30,9 @@
     {"compositeImage":{"FrameId":{"name":"2960d0e4-11aa-47c5-9787-fdd36ecc8a34","path":"sprites/sBackgroundFunkOther/sBackgroundFunkOther.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"2960d0e4-11aa-47c5-9787-fdd36ecc8a34","path":"sprites/sBackgroundFunkOther/sBackgroundFunkOther.yy",},"LayerId":{"name":"529fdce7-45ba-482c-ae85-ef9794dfdd52","path":"sprites/sBackgroundFunkOther/sBackgroundFunkOther.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sBackgroundFunkOther","path":"sprites/sBackgroundFunkOther/sBackgroundFunkOther.yy",},"resourceVersion":"1.0","name":"2960d0e4-11aa-47c5-9787-fdd36ecc8a34","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4f9d9e63-905c-4431-b8aa-1ef840f760cc","path":"sprites/sBackgroundFunkOther/sBackgroundFunkOther.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4f9d9e63-905c-4431-b8aa-1ef840f760cc","path":"sprites/sBackgroundFunkOther/sBackgroundFunkOther.yy",},"LayerId":{"name":"529fdce7-45ba-482c-ae85-ef9794dfdd52","path":"sprites/sBackgroundFunkOther/sBackgroundFunkOther.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBackgroundFunkOther","path":"sprites/sBackgroundFunkOther/sBackgroundFunkOther.yy",},"resourceVersion":"1.0","name":"4f9d9e63-905c-4431-b8aa-1ef840f760cc","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sBackgroundFunkOther","path":"sprites/sBackgroundFunkOther/sBackgroundFunkOther.yy",},
@@ -39,13 +42,14 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 2.0,
+    "length": 3.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"87916010-61a1-4bce-a221-2bf2e45dda12","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e735c1c0-33ba-4f87-a79d-a6648a02d2b6","path":"sprites/sBackgroundFunkOther/sBackgroundFunkOther.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8bb19426-3c02-4bb9-af8e-dafbf61b2166","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2960d0e4-11aa-47c5-9787-fdd36ecc8a34","path":"sprites/sBackgroundFunkOther/sBackgroundFunkOther.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7f9bcf3a-d519-4ff0-86e6-47d390fabf9a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4f9d9e63-905c-4431-b8aa-1ef840f760cc","path":"sprites/sBackgroundFunkOther/sBackgroundFunkOther.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -71,6 +75,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"529fdce7-45ba-482c-ae85-ef9794dfdd52","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Backgrounds",
     "path": "folders/Sprites/Backgrounds.yy",
