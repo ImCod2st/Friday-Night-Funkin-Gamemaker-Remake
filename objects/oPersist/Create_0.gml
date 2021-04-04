@@ -90,8 +90,9 @@ volumeDisplay = 0;
 timeUntilMoveOn = 0;
 
 // check where data should be saved / loaded
+// if useprogramdir is on, it will check in where the program is stored
+// codist only changes this because his computer is stupid
 global.useProgramDir = true;
-if (program_directory = "X:\\windows\\") global.useProgramDir = false;
 load_data();
 
 // keyboard maps

@@ -1,6 +1,5 @@
 fullscreenOption = window_get_fullscreen();
 smoothingOption = gpu_get_texfilter();
-discord = instance_exists(rousrDissonance);
 
 if (keyboard_check_pressed(vk_up)) && (curSelected > 0) curSelected--;
 if (keyboard_check_pressed(vk_down)) && (curSelected < optionAmount - 1) curSelected++;
@@ -21,6 +20,15 @@ or (keyboard_check_pressed(vk_right)) {
 			global.advancedHud = !global.advancedHud;
 			break;
 		case 4:
+			discord = !discord;
+			
+			ini_open("options.ini");
+			ini_write_real("Options", "Discord", discord);
+			ini_close();
+			
+			game_restart();
+			break;
+		case 5:
 			instance_create_depth(0,0,-10000,oMapKeys);
 			break;
 	}

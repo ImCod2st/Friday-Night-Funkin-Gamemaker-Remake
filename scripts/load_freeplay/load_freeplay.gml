@@ -7,6 +7,8 @@ function load_freeplay(special, bside){
 	
 	var leng = array_length(song) - 1;
 	for (var i = leng; i >= 0; --i) {
-		songs[abs(i - leng)] = song[i]
+		// order the songs properly
+		songO = abs(i - leng);
+		songs[songO] = song[i]
 	}
 }
