@@ -2,6 +2,7 @@ if (global.dead) exit;
 
 if !(afterCreate) {
 	if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) spr = asset_get_index(sprite_get_name(spr) + "Pixel");
+	sprHit = asset_get_index(sprite_get_name(spr) + "Hit");
 	sprite_index = spr;
 	afterCreate = true;	
 }
@@ -22,11 +23,12 @@ if !(enemy) && !(global.auto) {
 		image_index = 0;
 		
 		if !(global.kadeInput) oBoyfriend.missed = true;
+		else oBoyfriend.missed = false;
 		
 		with (instance_place(x, y, oNote)) {
 			
 			if !(notRealNote) {	
-				with (other) sprite_index = asset_get_index(sprite_get_name(spr) + "Hit");
+				with (other) sprite_index = sprHit;
 				if (sliderLength <= 0) instance_destroy();
 				else {
 					beingHeld = true;
@@ -52,8 +54,9 @@ if !(enemy) && !(global.auto) {
 				if (distance > 65) scor = 2;
 				if (distance > 75) scor = 3;
 				var scoreX = 1259
-				if (instance_exists(oGirlfriend)) scoreX = oGirlfriend.x + 5;
-				var o = instance_create_depth(scoreX, 485, 400 - instance_number(oScoreText), oScoreText);
+				var scoreY = 485;
+				if (instance_exists(oGirlfriend)) {scoreX = oGirlfriend.x + 5; scoreY = oGirlfriend.y - 517};
+				var o = instance_create_depth(scoreX, scoreY, 400 - instance_number(oScoreText), oScoreText);
 				o.image_index = scor;
 				
 				var scoreAdd = 350;

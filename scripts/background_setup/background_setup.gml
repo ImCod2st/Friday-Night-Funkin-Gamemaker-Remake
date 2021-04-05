@@ -90,6 +90,7 @@ function background_setup(){
 		// change the cameras offset
 		offsetY = -180;
 		bfOffsetY = -330;
+		bfOffsetX = -20;
 	}
 	
 	// parents
@@ -139,6 +140,38 @@ function background_setup(){
 		bfOffsetY = -40;
 	}
 	
+	if (global.enemy = 7) {
+		// make layers visible
+		layer_set_visible(bgChristEvilSnow, true);
+		layer_set_visible(bgChristEvilTree, true);
+		layer_set_visible(bgChristEvilBG, true);
+		
+		// apply parallax to the background
+		var camX = camera_get_view_x(view_camera[0]);
+		layer_x(bgChristEvilTree, (camX * 0.9) - 640);
+		layer_x(bgChristEvilBG, (camX * 0.9) - 640);
+		
+		// change the bf's position
+		oBoyfriend.x = 1672;
+		oBoyfriend.y = 1280;
+		
+		// change the parents position
+		oEnemy.x = 840;
+		oEnemy.y = 1280;
+		
+		// change the gf's position
+		oGirlfriend.y = 1248;
+		
+		// change the cameras offset
+		offsetY = 235;
+		
+		bfOffsetX = 230;
+		bfOffsetY = 260;
+		
+		global.camWidth = 1120;
+		global.camHeight = 630;
+	}
+	
 	// senpai
 	if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) {
 		if (global.enemy != 10) {
@@ -159,6 +192,8 @@ function background_setup(){
 		
 		offsetY = 80;
 		offsetX = 150;
+		
+		bfOffsetX = -15;
 	}
 	// spirit
 	
@@ -177,7 +212,5 @@ function background_setup(){
 		// change the cameras offset
 		offsetY = 150;
 		offsetX = 100;
-		
-		bfOffsetX = -20;
 	}
 }

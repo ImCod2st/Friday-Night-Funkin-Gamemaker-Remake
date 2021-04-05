@@ -21,7 +21,8 @@ if ((keyboard_check_pressed(vk_enter))
 	switch (curSelected) {
 		case 2:
 			// if resume is selected, destroy self
-			if (timer = 0) instance_destroy();
+			curAlphaTo = 0;
+			if (timer = 0) alarm[0] = 20;
 			break;
 		case 1:
 			// if restart is selected. go to the same room

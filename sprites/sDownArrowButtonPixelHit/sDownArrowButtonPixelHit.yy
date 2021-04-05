@@ -79,6 +79,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"4f416896-1ca0-4f95-8e02-cc1f6271b4cd","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Hit",
     "path": "folders/Sprites/Arrows/Pixel/Buttons/Hit.yy",

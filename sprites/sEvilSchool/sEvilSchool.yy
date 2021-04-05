@@ -223,6 +223,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"873292e4-44da-4225-b166-e33a4aae5f19","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Spooky",
     "path": "folders/Sprites/Backgrounds/Stages/Senpai/Spooky.yy",

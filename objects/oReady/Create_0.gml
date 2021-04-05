@@ -19,6 +19,7 @@ hasDialog = false;
 var dialogueFile = global.songName + "\\dialogue.txt";
 if (global.useProgramDir) dialogueFile = working_directory + "\\Songs\\" + dialogueFile;
 if (file_exists(dialogueFile)) hasDialog = true;
+if (global.freeplay) hasDialog = false;
 
 audio_stop_all();
 if !(hasDialog) audio_play_sound(snd3, 10, false);

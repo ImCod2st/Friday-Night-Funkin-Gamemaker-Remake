@@ -3,12 +3,16 @@ if (keyboard_check_pressed(vk_down))
 	curSelected -= 1;
 	if (curSelected = -1) curSelected = array_length(songs) - 1;
 	audio_play_sound(scrollMenu, 10, false);	
+	
+	iconYOffset = 10;
 }
 if (keyboard_check_pressed(vk_up))
 || (gamepad_button_check_pressed(global.controller, gp_padu)) {
 	curSelected += 1;
 	if (curSelected = array_length(songs)) curSelected = 0;
 	audio_play_sound(scrollMenu, 10, false);
+	
+	iconYOffset = -10;
 }
 
 if (keyboard_check_pressed(vk_backspace))
@@ -59,6 +63,7 @@ if (difSelected = 2) difString = "Hard";
 visibleScore = ini_read_real(songs[curSelected], difString, 0);
 ini_close();
 
+// song has changed
 if (lastSelected != curSelected) {
 	// get the selected songs directory
 	var directory = songNam + "/" + songNam + "_Hard.ini";
@@ -67,18 +72,28 @@ if (lastSelected != curSelected) {
 	// load the selected songs data
 	ini_open(directory);
 	curEnemy = ini_read_real("Song", "Enemy", global.enemy);
+	songString = ini_read_string("Song", "Song File", "Tutorial_Inst");
 	ini_close();
 
 	// play the songs music
-	songString = asset_get_index(songNam + "_Inst");
-	if (global.specialSongs) songString = songsFileInst[curSelected];
 	audio_stop_sound(musicPlaying);
-	musicPlaying = audio_play_sound(songString, 10, true);
+	musicPlaying = audio_play_sound(asset_get_index(songString), 10, true);
 }
 
 if (keyboard_check_pressed(ord("V"))) {
 	global.specialSongs = !global.specialSongs;
+	global.bSides = false;
+	room_restart();
+}
+
+if (keyboard_check_pressed(ord("B"))) {
+	global.bSides = !global.bSides;
+	global.specialSongs = false;
 	room_restart();
 }
 
 lastSelected = curSelected;
+
+// small animation variables
+if (iconYOffset < 0) iconYOffset++;
+if (iconYOffset > 0) iconYOffset--;

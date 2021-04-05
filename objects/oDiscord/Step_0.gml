@@ -9,7 +9,8 @@ if (changeTimer <= 0) {
 	} else { // if you are playing a song, update with the song info
 		
 		// get the enemy
-		// 0 - gf, 1 - dad, 2 - spooky, 3 - monster, 4 - pico, 5 - mom
+		// 0 - gf, 1 - dad, 2 - spooky, 3 - monster, 4 - pico, 5 - mom, 6/7 - parents & monster, 8/9/10 - senpai
+	// special enemys 100/101 - whitty, 102 - oxi
 		switch (global.enemy) {
 			case 0: rousr_dissonance_set_large_image("gficon", "Girlfriend"); break;
 			case 1: rousr_dissonance_set_large_image("dad", "Daddy Dearest"); break;
@@ -17,9 +18,15 @@ if (changeTimer <= 0) {
 			case 3: rousr_dissonance_set_large_image("monster", "??????"); break;
 			case 4: rousr_dissonance_set_large_image("pico", "Pico"); break;
 			case 5: rousr_dissonance_set_large_image("mom", "Mom"); break;
+			case 6: rousr_dissonance_set_large_image("parents", "Parents"); break;
+			case 7: rousr_dissonance_set_large_image("christmas_monster", "??????"); break;
+			case 8: rousr_dissonance_set_large_image("senpai1", "Senpai"); break;
+			case 9: rousr_dissonance_set_large_image("senpai2", "Senpai?"); break;
+			case 10: rousr_dissonance_set_large_image("spirit", "???????????"); break;
 		
 			// special enemys
-			case 101: rousr_dissonance_set_large_image("whitty", "?"); break;
+			case 100: rousr_dissonance_set_large_image("whitty", "Whitty"); break;
+			case 101: rousr_dissonance_set_large_image("whitty", "Whitty"); break;
 			case 102: rousr_dissonance_set_large_image("oxi", "?????????????"); break;
 		}
 		

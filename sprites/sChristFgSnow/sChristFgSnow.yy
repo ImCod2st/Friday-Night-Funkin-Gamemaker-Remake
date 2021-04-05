@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2d86b890-8a5b-4be0-a3ca-41f6f061c24a","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Christmas",
     "path": "folders/Sprites/Backgrounds/Stages/Christmas.yy",

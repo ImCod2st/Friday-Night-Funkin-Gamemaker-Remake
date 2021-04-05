@@ -65,6 +65,8 @@ function boyfriend_sprites() {
 			scale = 6;
 			isPixel = true;
 		}
+		
+		if (global.enemy = 102) add = "Cod";
 	}
 
 	sprIdle = asset_get_index(char + add + "Idle");

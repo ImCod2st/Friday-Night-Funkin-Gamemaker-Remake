@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 8,
-  "bbox_right": 98,
+  "bbox_right": 97,
   "bbox_top": 8,
-  "bbox_bottom": 118,
+  "bbox_bottom": 119,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 108,
-  "height": 127,
+  "height": 128,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -111,6 +111,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"08c3a7f9-67df-41ba-91f3-2f30a0ec4849","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "UI",
     "path": "folders/Sprites/Other/UI.yy",

@@ -1,56 +1,82 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function jsontoini(){
-	global.json_filename = get_open_filename("*.json", "");
-	global.json_id = file_text_open_read(global.json_filename);
-	global.json_contents = file_text_read_string(global.json_id);
-	global.json_decoded = json_decode(global.json_contents)
-
-	// global.notes -- 0-3 = enemy notes; 4-7 = player notes
-	global.notes_output = ds_grid_create(8,16)
-	global.notes = global.json_decoded[? "notes"]
-
-	global.bpm = ds_list_find_value(global.notes, ds_list_size(global.notes) - 1)[? "bpm"]
-	global.bps = global.bpm/60
-	global.noteSpeed = global.bpm/20
-	global.camSpeed = global.bpm * 2.6
-	global.posCoefficient = global.noteSpeed * (100 / (global.camSpeed/48))
-	global.pixelsToSeconds = global.noteSpeed * 120
-
-
-	for (i = 0; i < ds_list_size(global.notes); i += 1){
-		global.section_notes = ds_list_find_value(global.notes,i)[? "sectionNotes"]
-		for (j = 0; j < ds_list_size(global.section_notes); j += 1){
-			global.note = ds_list_find_value(global.section_notes,j)
-			global.must_hit_section = ds_list_find_value(global.notes,i)[? "mustHitSection"]
-		
-			global.chartTime = ds_list_find_value(global.note, 0)
-			global.noteType = ds_list_find_value(global.note, 1)
-			global.noteDuration = ds_list_find_value(global.note, 2)
-		
-			global.calculatedPos = global.chartTime * global.pixelsToSeconds / 1000
-			global.noteY = global.calculatedPos / global.posCoefficient
-		
-			if (global.must_hit_section){
-				global.noteType = (global.noteType + 4) % 8
-			}
-		
-			if (global.noteY >= ds_grid_height(global.notes_output)){
-				ds_grid_resize(global.notes_output, 8, global.noteY + 1)
-			}
-			ds_grid_set(global.notes_output,global.noteType,global.noteY,1)
-		}
+	var json_filename = get_open_filename_ext("FNF Song Data|*.json", "", "", "Select a FNF Song File");
+	if (json_filename = "") exit;
+	var json_id = file_text_open_read(json_filename);
+	var json_contents = file_text_read_string(json_id);
+	
+	while (!file_text_eof(json_id)) {
+		var curLine = file_text_readln(json_id);
+		curLine = string_replace_all(curLine, "#", "");
+		json_contents += curLine;
 	}
 	
-	setDirectory = get_save_filename("*.json", "");
-	ini_open(setDirectory);
-	ini_write_string("Song", "Notes", ds_grid_write(global.notes_output))
-	ini_write_string("Song", "Enemy", get_integer("Enemy ID:", 0))
-	ini_write_string("Song", "Camspeed", global.camSpeed)
-	ini_write_string("Song", "BPM", global.bpm)
-	ini_write_string("Song", "Notespeed", global.noteSpeed)
-	ini_write_string("Song", "Vocal File", get_string("Voices File:", ""))
-	ini_write_string("Song", "Song File", get_string("Song File:", ""))
-	ini_write_string("Song", "Name", get_string("Name", ""))
-	ini_close()
+	show_debug_message(json_contents);
+	var json_decoded = json_decode(json_contents);
+
+	// global.notes -- 0-3 = enemy notes; 4-7 = player notes
+	var notes_output = ds_grid_create(8,16)
+	var songJson = json_decoded[? "song"]
+	var notes = songJson[? "notes"]
+	
+	var bpm = ds_list_find_value(notes, ds_list_size(notes) - 1)[? "bpm"];
+	var bps = bpm/60
+	var noteSpeed = bpm/20
+	var camSpeed = bpm * 2.6
+	var posCoefficient = noteSpeed * (100 / (camSpeed/48))
+	var pixelsToSeconds = noteSpeed * 120
+	
+	var lastSection = 1;
+
+	for (i = 0; i < ds_list_size(notes); i += 1){
+		var section_notes = ds_list_find_value(notes,i)[? "sectionNotes"]
+		for (j = 0; j < ds_list_size(section_notes); j += 1){
+			var note = ds_list_find_value(section_notes,j)
+			var must_hit_section = ds_list_find_value(notes,i)[? "mustHitSection"]
+		
+			var chartTime = ds_list_find_value(note, 0)
+			var noteType = ds_list_find_value(note, 1)
+			var noteDuration = ds_list_find_value(note, 2) / 14.151;
+			if (noteDuration > 1) noteDuration -= 1;
+		
+			var calculatedPos = chartTime * pixelsToSeconds / 1000
+			var noteY = calculatedPos / posCoefficient
+		
+			if (must_hit_section){
+				noteType = (noteType + 4) % 8
+			}
+		
+			if (noteY >= ds_grid_height(notes_output)){
+				ds_grid_resize(notes_output, 8, noteY + 1)
+			}
+			
+			// create cam notes
+			if (lastSection != must_hit_section) {
+				place_camera(notes_output, noteType, noteY);
+			}
+			lastSection = must_hit_section;
+			ds_grid_set(notes_output,noteType,noteY,1 + noteDuration)
+		}
+	}
+	var trueSongName = string_copy(json_filename, string_last_pos("\\", json_filename) + 1, string_length(json_filename));
+	trueSongName = string_copy(trueSongName, 0, string_last_pos(".", trueSongName) - 1);
+	if (string_pos("-", trueSongName)) trueSongName = string_copy(trueSongName, 0, string_last_pos("-", trueSongName) - 1);
+	trueSongName = string_replace_all(trueSongName, "-", "_");
+	trueSongName = string_upper_first(string_lower(trueSongName));
+	
+	var trueDif = string_copy(json_filename, string_last_pos("-", json_filename) + 1, string_length(json_filename));
+
+	json_SongName = trueSongName;
+	json_SongFile = json_SongName + "_Inst";
+	json_VoiceFile = json_SongName + "_Voices";
+	
+	if (trueDif = "easy.json") json_Difficulty = 0;
+	else if (trueDif = "hard.json") json_Difficulty = 2;
+	else json_Difficulty = 1;
+	
+	json_NoteOutput = ds_grid_write(notes_output);
+	json_CamSpeed = camSpeed;
+	json_BPM = bpm;
+	json_NoteSpeed = noteSpeed;
 }

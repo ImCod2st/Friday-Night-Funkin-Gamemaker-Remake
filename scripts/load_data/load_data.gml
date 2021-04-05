@@ -9,4 +9,10 @@ function load_data(){
 		global.weekScoreHard[i] = ini_read_real("Week" + string(i) + "Score", "Hard", 0);
 	}
 	ini_close();
+	
+	ini_open("options.ini");
+	window_set_fullscreen(ini_read_real("Options", "Fullscreen", false));
+	gpu_set_texfilter(ini_read_real("Options", "Smoothing", true));
+	global.advancedHud = ini_read_real("Options", "AdvancedHud", false);
+	ini_close();
 }

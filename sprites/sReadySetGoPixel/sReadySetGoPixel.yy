@@ -87,6 +87,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"fb6fc5a5-b677-4dcc-86b7-3187a7ca6eb0","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Pixel",
     "path": "folders/Sprites/Other/UI/Pixel.yy",

@@ -19,12 +19,14 @@ If you have **issues, or requests**. Use the [Issues page](https://github.com/Im
 If you **need** to talk to me directly, I can be contacted on **[Twitter](https://twitter.com/ImCodist)**, or in my **[Discord](https://discord.gg/Uamsymr)**.
 
 ## Credit
-[Yoshubs](https://github.com/Yoshubs) - Programming Help
+### Remake Help
+
+[codst](https://twitter.com/ImCodist) - it me lol,
+[Yoshubs](https://twitter.com/Yoshubs) - Programming Help
+
+### Orignal Game Creators
 
 [ninja_muffin99](https://twitter.com/ninja_muffin99), 
 [Phantom Arcade](https://twitter.com/PhantomArcade3k), 
 [evilsk8r](https://twitter.com/evilsk8r), 
 [kawaisprite](https://twitter.com/kawaisprite)
-
-### Project Status
-Currently, development will be slow. Help with charting is appreciated.

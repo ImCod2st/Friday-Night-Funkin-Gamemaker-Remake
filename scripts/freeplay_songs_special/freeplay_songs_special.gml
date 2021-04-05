@@ -1,24 +1,15 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function freeplay_songs_special() {
-	// load the main songs, and the song file
-	function load_song(songName, songNumber) {
-		song[songNumber] = string_lower(songName);
-		
-		var songDir = working_directory + "Custom\\" + songName + "\\";
-		ini_open(songDir + songName + "_Hard.ini");
-		songFileInst[songNumber] = audio_create_stream(songDir + songName + "_Inst.ogg");
-		ini_close();
-	}
-	
-	var firstFile = file_find_first(working_directory + "Custom\\*", fa_directory);
-	load_song(firstFile, 0);
-	
-	var lastFile = false;
-	while (!lastFile) {
-		var nextFile = file_find_next();
-		
-		if (nextFile != "") load_song(nextFile, array_length(song));
-		else lastFile = true;
-	}
+function freeplay_songs_special(){
+	song[0] = "lofight";
+	song[1] = "overhead";
+	song[2] = "ballistic";
+	song[3] = "codist_says_things";
+	song[4] = "cookies";
+}
+
+function freeplay_songs_bside(){
+	song[0] = "bopeebo_bside";
+	song[1] = "fresh_bside";
+	song[2] = "dadbattle_bside";
 }

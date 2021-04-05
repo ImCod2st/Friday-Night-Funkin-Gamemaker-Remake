@@ -1,3 +1,10 @@
+ini_open("options.ini");
+if !(ini_read_real("Options", "Discord", true)) {
+	instance_destroy();
+	exit;	
+}
+ini_close();
+
 // setup discord rich presence
 rousr_dissonance_create("810748186117013514");
 rousr_dissonance_set_details("Main Menu");

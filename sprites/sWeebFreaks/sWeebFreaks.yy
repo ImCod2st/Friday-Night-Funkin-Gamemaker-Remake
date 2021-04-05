@@ -87,6 +87,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"238af1e9-7e5e-4c39-b707-32312288e5a0","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Senpai",
     "path": "folders/Sprites/Backgrounds/Stages/Senpai.yy",
