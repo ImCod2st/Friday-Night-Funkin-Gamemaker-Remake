@@ -28,10 +28,12 @@ if (global.dead) {
 }
 
 if (keyboard_check_pressed(vk_enter))
+|| (keyboard_check_pressed(global.acceptKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_start)) {
 	if (instance_exists(oPause)) exit;
 	if (instance_exists(oDialogBox)) exit;
 	if (global.dead) exit;
+	if (rankingScreen) exit;
 	
 	instance_create_layer(0, 0, "Main", oPause);
 }
@@ -39,6 +41,15 @@ if (keyboard_check_pressed(vk_enter))
 // backgrounds
 if (!instance_exists(oPause))
 	background_setup();
+	
+if (rankingScreen) {
+	// zoom the camera
+	global.camWidth = 1024;
+	global.camHeight = 576;
+	
+	xTo = oBoyfriend.x - 200;
+	yTo = oBoyfriend.y - 200;
+}
 
 // change the cameras size
 var cam = view_camera[0];

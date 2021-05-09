@@ -18,19 +18,18 @@ if !(global.auto) {
 	if (missed) && (useMiss) singSprite = asset_get_index(sprite_get_name(singSprite) + "Miss");
 
 	var singing = false;
-	if (keyboard_check(vk_left))
+	if (keyboard_check(vk_left)) || (keyboard_check(global.leftKeybind))
 	|| (gamepad_button_check(global.controller, gp_padl)) 
 		singing = true;
-	if (keyboard_check(vk_right))
+	if (keyboard_check(vk_right)) || (keyboard_check(global.rightKeybind))
 	|| (gamepad_button_check(global.controller, gp_padr)) 
 		singing = true;
-	if (keyboard_check(vk_down))
+	if (keyboard_check(vk_down)) || (keyboard_check(global.downKeybind))
 	|| (gamepad_button_check(global.controller, gp_padd)) 
 		singing = true;
-	if (keyboard_check(vk_up))
+	if (keyboard_check(vk_up)) || (keyboard_check(global.upKeybind))
 	|| (gamepad_button_check(global.controller, gp_padu)) 
 		singing = true;
-	if (global.kadeInput) singing = false;
 		
 	if (singing) && (singSprite != -1) && !(global.dead) && !(sprite_index = sBoyfriendCheer) or (animCount > 0) && !(global.dead) && !(sprite_index = sBoyfriendCheer) {
 		draw_sprite_ext(singSprite, singFrame, x, y, image_xscale, image_yscale, 0, c_white, 1);

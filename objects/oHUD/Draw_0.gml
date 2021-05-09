@@ -34,6 +34,8 @@ special_icons(global.enemy);
 var enemyIcon = (enem + 1) * 2;
 var bfIcon = bf * 2;
 
+if (global.combo >= 100) bfIconSpr = sIconsBFEpic;
+	
 draw_sprite_ext(enemyIconSpr,enemyIcon + enemyHpLow, x - hpWidth , y, 1 + iconBop, 1 + iconBop, 0, c_white, 1); // enemy icon
 draw_sprite_ext(bfIconSpr,bfIcon + boyHpLow,x - hpWidth, y, -1 + -iconBop, 1 + iconBop, 0, c_white, 1); // boy icon
 }

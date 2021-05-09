@@ -10,7 +10,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "Milf_Inst.ogg",
+  "soundFile": "Milf_Inst.mp3",
   "duration": 124.685,
   "parent": {
     "name": "Milf",

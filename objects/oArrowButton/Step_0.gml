@@ -7,23 +7,21 @@ if !(afterCreate) {
 	afterCreate = true;	
 }
 var controllerKey;
-if (key == vk_left)
-	controllerKey = gp_padl;
-if (key == vk_right)
-	controllerKey = gp_padr;
-if (key == vk_up)
-	controllerKey = gp_padu;
-if (key == vk_down)
-	controllerKey = gp_padd;
+var altKey;
+switch (key) {
+	case vk_left: controllerKey = gp_padl; altKey = global.leftKeybind; break;
+	case vk_right: controllerKey = gp_padr; altKey = global.rightKeybind; break;
+	case vk_up: controllerKey = gp_padu; altKey = global.upKeybind; break;
+	case vk_down: controllerKey = gp_padd; altKey = global.downKeybind; break;
+}
 
 if !(enemy) && !(global.auto) {
-	if (keyboard_check_pressed(key))
+	if (keyboard_check_pressed(key)) || (keyboard_check_pressed(altKey))
 	|| (gamepad_button_check_pressed(global.controller, controllerKey)) {
 		image_speed = 1;
 		image_index = 0;
 		
-		if !(global.kadeInput) oBoyfriend.missed = true;
-		else oBoyfriend.missed = false;
+		oBoyfriend.missed = true;
 		
 		with (instance_place(x, y, oNote)) {
 			
@@ -37,15 +35,6 @@ if !(enemy) && !(global.auto) {
 				global.hp += 1;
 				oBoyfriend.missed = false;
 				global.playVoice = 1;
-				
-				// whitty input animations
-				if (global.kadeInput) {
-					with (oBoyfriend) {
-						notePlaying = other.image_index;
-						animCount = 45;
-						singFrame = 0;	
-					}
-				}
 				
 				var distance = point_distance(x, y, other.x, other.y);
 				var scor = 0;
@@ -65,6 +54,17 @@ if !(enemy) && !(global.auto) {
 				if (scor = 3) scoreAdd += 50;
 				global.curScore += scoreAdd * global.currentMultiplier;
 				
+				if (global.particles) && (scor = 0) {
+					var o = instance_create_depth(x, y, depth - 100, oSickParticle);
+					o.sprite_index = choose(sParticleLeft1,  sParticleLeft2);
+					if (image_index = 1) o.sprite_index = choose(sParticleDown1,  sParticleDown2);
+					if (image_index = 2) o.sprite_index = choose(sParticleUp1,  sParticleUp2);
+					if (image_index = 3) o.sprite_index = choose(sParticleRight1,  sParticleRight2);
+					
+					o.x = other.x;
+					o.y = other.y;
+				}
+				
 				global.combo++;
 				oHUD.hitCount += 1;
 			}
@@ -82,13 +82,13 @@ if !(enemy) && !(global.auto) {
 		}
 	}
 
-	if (keyboard_check_released(key))
+	if (keyboard_check_released(key)) || (keyboard_check_released(altKey))
 	|| (gamepad_button_check_released(global.controller, controllerKey)) {
 		image_index = 1;
 		sprite_index = spr;
 	}
 
-	if (keyboard_check(key))
+	if (keyboard_check(key)) || (keyboard_check(altKey))
 	|| (gamepad_button_check(global.controller, controllerKey)) {
 		if (image_index >= sprite_get_number(sprite_index) - 2) image_index = sprite_get_number(sprite_index) - 2;
 	}

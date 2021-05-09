@@ -1,15 +1,16 @@
-if ((keyboard_check_pressed(vk_down)) || (gamepad_button_check_pressed(global.controller, gp_padd))) {
+if ((keyboard_check_pressed(vk_down)) || (keyboard_check_pressed(global.downKeybind)) || (gamepad_button_check_pressed(global.controller, gp_padd))) {
 	curSelected -= 1;
 	if (curSelected = -1) curSelected = array_length(characters) - 1;
 	audio_play_sound(scrollMenu, 10, false);	
 }
-if ((keyboard_check_pressed(vk_up)) || (gamepad_button_check_pressed(global.controller, gp_padu))) {
+if ((keyboard_check_pressed(vk_up)) || (keyboard_check_pressed(global.upKeybind)) || (gamepad_button_check_pressed(global.controller, gp_padu))) {
 	curSelected += 1;
 	if (curSelected = array_length(characters)) curSelected = 0;
 	audio_play_sound(scrollMenu, 10, false);
 }
 
 if (keyboard_check_pressed(vk_backspace)) 
+|| (keyboard_check_pressed(global.backKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_face2)) {
 	if (instance_exists(oFade)) 
 		exit;
@@ -23,6 +24,7 @@ if (keyboard_check_pressed(vk_backspace))
 
 if ((keyboard_check_pressed(vk_enter)) 
 || (keyboard_check_pressed(vk_space))
+|| (keyboard_check_pressed(global.acceptKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_face1))
 || (gamepad_button_check_pressed(global.controller, gp_start)))  {
 	audio_play_sound(confirmMenu, 10, false);

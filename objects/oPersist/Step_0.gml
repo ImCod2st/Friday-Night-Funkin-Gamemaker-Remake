@@ -26,7 +26,15 @@ if (variable_global_exists("musicSync")) {
 	}
 }
 
+//if (timeUntilMoveOn >= 420) {
+//	oBoyfriend.sprite_index = sBoyfriendCheer;
+//	oBoyfriend.image_index = 1;
+	
+//	oCamera.rankingScreen = true;
+//}
+
 // when the song has ended
+//if (timeUntilMoveOn >= 420) && !(global.dead) && (keyboard_check_pressed(vk_enter)) {
 if (timeUntilMoveOn >= 420) && !(global.dead) {
 	var roomTo = MainGame;
 	

@@ -1,10 +1,10 @@
-if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) gpu_set_texfilter(false); // pixel filtering
+if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) or (global.enemy = 103) gpu_set_texfilter(false); // pixel filtering
 
 if (global.dead) exit;
 
 var drawSprite = sprite_index;
 var drawIndex = image_index;
-if (animationTimer > 0) {
+if (animationTimer > 0) && (sprite_index == sprIdle) {
 	var usedLeft = sprLeft;
 	var usedDown = sprDown;
 	var usedUp = sprUp;

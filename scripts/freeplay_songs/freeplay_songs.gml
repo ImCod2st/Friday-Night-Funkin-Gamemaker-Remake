@@ -26,4 +26,8 @@ function freeplay_songs(){
 	song[16] = "senpai";
 	song[17] = "roses";
 	song[18] = "thorns";
+	
+	song[19] = "ugh";
+	song[20] = "guns";
+	song[21] = "stress";
 }

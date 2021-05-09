@@ -1,7 +1,6 @@
 if (global.enemy = 0) instance_destroy();
 if (global.enemy = 5) or (global.enemy = 6) singFrameMulti = 2;
 if (global.enemy = 10) singFrameMulti = 2;
-if (sprite_index != sprIdle) sprite_index = sprIdle;
 image_speed = global.deltaMultiplier;
 
 if (animationTimer > 0) {

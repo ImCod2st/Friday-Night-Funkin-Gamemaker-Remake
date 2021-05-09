@@ -2,12 +2,14 @@ if !(selected) {
 	// the max amount of menu options
 	var menuMax = 3;
 	if (keyboard_check_pressed(vk_down))
+	|| (keyboard_check_pressed(global.downKeybind))
 	|| (gamepad_button_check_pressed(global.controller, gp_padd)) {
 		audio_play_sound(scrollMenu, 0, false);
 		if (menuSelected < menuMax) menuSelected++;
 		else menuSelected = 0;
 	}
 	if (keyboard_check_pressed(vk_up))
+	|| (keyboard_check_pressed(global.upKeybind))
 	|| (gamepad_button_check_pressed(global.controller, gp_padu)) {
 		audio_play_sound(scrollMenu, 0, false);
 		if (menuSelected > 0) menuSelected--;
@@ -15,6 +17,7 @@ if !(selected) {
 	}
 	if ((keyboard_check_pressed(vk_enter)) 
 	|| (keyboard_check_pressed(vk_space))
+	|| (keyboard_check_pressed(global.acceptKeybind))
 	|| (gamepad_button_check_pressed(global.controller, gp_face1))
 	|| (gamepad_button_check_pressed(global.controller, gp_start))) {
 		if (instance_exists(oFade)) exit;

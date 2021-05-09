@@ -48,6 +48,16 @@ function boyfriend_sprites() {
 			scale = 6;
 			isPixel = true;
 		break;
+		
+		case("tankman"):
+			flipped = true;
+			char = "sTankman";
+		break;
+		
+		case("pico"):
+			flipped = false; 
+			char = "sPico";
+		break;
 
 		default:
 			flipped = false;
@@ -74,7 +84,7 @@ function boyfriend_sprites() {
 	sprDown = asset_get_index(char + add + "Down");
 	sprUp = asset_get_index(char + add + "Up");
 	sprRight = asset_get_index(char + add + "Right");
-	
+
 	sprDeath = sBoyfriendDie;
 	if (sprite_exists(asset_get_index(char + add + "Die"))) sprDeath = asset_get_index(char + add + "Die");
 }

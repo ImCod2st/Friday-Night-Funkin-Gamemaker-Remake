@@ -1,12 +1,12 @@
 // when pressing down, move the selected item down
-if ((keyboard_check_pressed(vk_down)) || (gamepad_button_check_pressed(global.controller, gp_padd))) {
+if ((keyboard_check_pressed(vk_down)) || (keyboard_check_pressed(global.downKeybind)) || (gamepad_button_check_pressed(global.controller, gp_padd))) {
 	if (curSelected > 0) curSelected -= 1;
 	else curSelected = array_length(menus) - 1;
 	
 	audio_play_sound(scrollMenu, 10, false);	
 }
 // when pressing up, move the selected item up
-if ((keyboard_check_pressed(vk_up)) || (gamepad_button_check_pressed(global.controller, gp_padu))) {
+if ((keyboard_check_pressed(vk_up)) || (keyboard_check_pressed(global.upKeybind)) || (gamepad_button_check_pressed(global.controller, gp_padu))) {
 	if (curSelected < array_length(menus) - 1) curSelected += 1;
 	else curSelected = 0;
 	
@@ -16,6 +16,7 @@ if ((keyboard_check_pressed(vk_up)) || (gamepad_button_check_pressed(global.cont
 //when enter is pressed run the code for which is selected
 if ((keyboard_check_pressed(vk_enter)) 
 || (keyboard_check_pressed(vk_space))
+|| (keyboard_check_pressed(global.acceptKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_face1))
 || (gamepad_button_check_pressed(global.controller, gp_start))) {
 	switch (curSelected) {

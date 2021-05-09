@@ -10,7 +10,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "Cocoa_Inst.ogg",
+  "soundFile": "Cocoa_Inst.mp3",
   "duration": 115.205,
   "parent": {
     "name": "Cocoa",

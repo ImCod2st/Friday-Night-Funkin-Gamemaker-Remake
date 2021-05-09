@@ -10,7 +10,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "Eggnog_Inst.ogg",
+  "soundFile": "Eggnog_Inst.mp3",
   "duration": 94.013,
   "parent": {
     "name": "Eggnog",

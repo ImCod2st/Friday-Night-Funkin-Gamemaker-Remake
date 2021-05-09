@@ -20,7 +20,7 @@ global.songScore[0] = 0;
 global.nextSong[0] = "n";
 
 // enemy variables
-global.enemy = 0; // 0 - gf, 1 - dad, 2 - spooky, 3 - monster, 4 - pico, 5 - mom, 6/7 - parents & monster, 8/9/10 - senpai
+global.enemy = 0; // 0 - gf, 1 - dad, 2 - spooky, 3 - monster, 4 - pico, 5 - mom, 6/7 - parents & monster, 8/9/10 - senpai, 11 - tankman
 // special enemys 100/101 - whitty, 102 - oxi
 global.turn = true;
 
@@ -58,11 +58,22 @@ global.bSides = false;
 global.offset = 0;
 global.advancedHud = false;
 global.volume = 1;
-global.controller = -1;
+global.controller = 1;
+global.particles = true;
+
+global.customFreeplay = true;
+
+// controls
+global.leftKeybind = 65;
+global.downKeybind = 83;
+global.upKeybind = 87;
+global.rightKeybind = 68;
+global.acceptKeybind = 90;
+global.backKeybind = 88;
 
 // week variables
 global.freeplay = false;
-global.weeks = 6;
+global.weeks = 7;
 for (var i = 0; i < global.weeks + 1; ++i) {
 	global.weekScoreEasy[i] = 0;
 	global.weekScoreNormal[i] = 0;
@@ -95,21 +106,11 @@ timeUntilMoveOn = 0;
 global.useProgramDir = true;
 load_data();
 
-// keyboard maps
-global.kadeInput = false;
-keyboard_set_map(ord("A"), vk_left);
-keyboard_set_map(ord("S"), vk_down);
-keyboard_set_map(ord("W"), vk_up);
-keyboard_set_map(ord("D"), vk_right);
-
-keyboard_set_map(vk_escape, vk_backspace);
-keyboard_set_map(ord("Z"), vk_space);
-
 // basic controller support because I don't think I have the patience to go through the whole project and rewrite it
 // i dont blame you - codist
+//i did it dw - codist 2021-05-08
 
 // delta time
 targetDelta = 1/120;
 actualDelta = delta_time / 1000000;
 global.deltaMultiplier = actualDelta/targetDelta;
-

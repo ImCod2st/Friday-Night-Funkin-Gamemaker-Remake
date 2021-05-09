@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "Eggnog_Voices.ogg",
-  "duration": 94.01969,
+  "soundFile": "Eggnog_Voices.mp3",
+  "duration": 94.0197,
   "parent": {
     "name": "Eggnog",
     "path": "folders/Sounds/Music/Week 5/Eggnog.yy",

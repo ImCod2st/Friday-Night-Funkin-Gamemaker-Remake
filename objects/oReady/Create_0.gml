@@ -44,7 +44,3 @@ global.turn = 1;
 global.musicSync = audio_create_sync_group(false);
 audio_play_in_sync_group(global.musicSync, global.song);
 if (global.voices != "") audio_play_in_sync_group(global.musicSync, global.voices);
-
-// reset bf and gf idle
-oBoyfriend.image_index = 0;
-oGirlfriend.image_index = 0;

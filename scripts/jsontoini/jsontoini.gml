@@ -6,6 +6,8 @@ function jsontoini(){
 	var json_id = file_text_open_read(json_filename);
 	var json_contents = file_text_read_string(json_id);
 	
+	var newFile = show_question("Is this a newer song file?");
+	
 	while (!file_text_eof(json_id)) {
 		var curLine = file_text_readln(json_id);
 		curLine = string_replace_all(curLine, "#", "");
@@ -20,7 +22,8 @@ function jsontoini(){
 	var songJson = json_decoded[? "song"]
 	var notes = songJson[? "notes"]
 	
-	var bpm = ds_list_find_value(notes, ds_list_size(notes) - 1)[? "bpm"];
+	if !(newFile) var bpm = ds_list_find_value(songMain, ds_list_size(notes) - 1)[? "bpm"];
+	else var bpm = songJson[? "bpm"];
 	var bps = bpm/60
 	var noteSpeed = bpm/20
 	var camSpeed = bpm * 2.6

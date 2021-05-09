@@ -5,6 +5,7 @@ function special_icons(enemy){
 	if (enemy = 100) {enem = 0; bf = 0; enemyIconSpr = sIconsSpecial; bfIconSpr = sIcons} // whitty
 	if (enemy = 101) {enem = 1; bf = 0; enemyIconSpr = sIconsSpecial; bfIconSpr = sIcons} // whitty
 	if (enemy = 102) {enem = 3; bf = 3; enemyIconSpr = sIconsSpecial; bfIconSpr = sIconsSpecial;} // codist and oxi
+	if (enemy = 103) {enem = -1; bf = 0; enemyIconSpr = sIconsSpecial; bfIconSpr = sIcons;} // pixel bf
 }
 
 function special_backgrounds(enemy){

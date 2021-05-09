@@ -16,9 +16,11 @@ sprEnemy[7] = "sMonsterChrist";
 sprEnemy[8] = "sSenpai";
 sprEnemy[9] = "sSenpaiMad";
 sprEnemy[10] = "sSpirit";
+sprEnemy[11] = "sTankman";
 sprEnemy[100] = "sWhitty";
 sprEnemy[101] = "sWhittyC";
 sprEnemy[102] = "sOxi";
+sprEnemy[103] = "sBoyfriendPixel";
 
 if (global.enemy = 0) instance_destroy();
 
@@ -29,6 +31,8 @@ sprDown = asset_get_index(sprChosen + "Down");
 sprUp = asset_get_index(sprChosen + "Up");
 sprRight = asset_get_index(sprChosen + "Right");
 
+sprite_index = sprIdle;
+
 if (global.enemy = 6) {
 	sprLeftAlt =	sCParentsMomLeft;
 	sprDownAlt =	sCParentsMomDown;
@@ -37,10 +41,14 @@ if (global.enemy = 6) {
 }
 
 scale = image_yscale;
-if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) scale = 6;
+if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) or (global.enemy = 103) scale = 6;
 
 flipped = false;
-if (global.enemy = 4) flipped = true;
+if (global.enemy = 4) or (global.enemy = 103) flipped = true;
+if (flipped) {
+	var oldLeft = sprLeft; var oldRight = sprRight;
+	sprLeft = oldRight; sprRight = oldLeft;
+}
 
 altUsed = false;
 

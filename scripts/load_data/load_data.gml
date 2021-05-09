@@ -10,9 +10,23 @@ function load_data(){
 	}
 	ini_close();
 	
+	// options
 	ini_open("options.ini");
+	
 	window_set_fullscreen(ini_read_real("Options", "Fullscreen", false));
 	gpu_set_texfilter(ini_read_real("Options", "Smoothing", true));
 	global.advancedHud = ini_read_real("Options", "AdvancedHud", false);
+	global.offset = ini_read_real("Options", "Offset", 0);
+	global.particles = ini_read_real("Options", "Particles", true);
+	
+	// keybinds
+	global.leftKeybind = ini_read_real("Keybinds", "Left", 65);
+	global.downKeybind = ini_read_real("Keybinds", "Down", 83);
+	global.upKeybind = ini_read_real("Keybinds", "Up", 87);
+	global.rightKeybind = ini_read_real("Keybinds", "Right", 68);
+	
+	global.acceptKeybind = ini_read_real("Keybinds", "Accept", 90);
+	global.backKeybind = ini_read_real("Keybinds", "Back", 88);
+	
 	ini_close();
 }

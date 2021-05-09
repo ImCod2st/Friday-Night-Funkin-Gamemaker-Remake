@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "Cocoa_Voices.ogg",
-  "duration": 115.231125,
+  "soundFile": "Cocoa_Voices.mp3",
+  "duration": 115.2311,
   "parent": {
     "name": "Cocoa",
     "path": "folders/Sounds/Music/Week 5/Cocoa.yy",

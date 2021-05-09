@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "High_Voices.ogg",
-  "duration": 105.618057,
+  "soundFile": "High_Voices.mp3",
+  "duration": 105.61805,
   "parent": {
     "name": "High",
     "path": "folders/Sounds/Music/Week 4/High.yy",

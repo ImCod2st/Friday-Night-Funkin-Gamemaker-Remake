@@ -1,8 +1,12 @@
 //setup the backgrounds depending on the enemy being fought
 function background_setup(){
+	// zoom the camera
+	global.camWidth = 1280;
+	global.camHeight = 720;
+	
 	// dad / everyone else
-	if (global.enemy <= 1) or (global.enemy > 10) {
-		if !(global.enemy = 102) { // exceptions for special enemys
+	if (global.enemy <= 1) or (global.enemy > 11) {
+		if !(global.enemy = 102) && !(global.enemy = 103) { // exceptions for special enemys
 			// make layers visible
 			layer_set_visible(bgDad, true);
 			layer_set_visible(bgDadFront, true);
@@ -182,7 +186,7 @@ function background_setup(){
 			layer_set_visible(bgSenpaiSchool, true);
 			layer_set_visible(bgSenpaiSky, true);
 		
-			var spd = ((global.bpm / 60) / 2) * global.deltaMultiplier;
+			var spd = (global.bpm / 60) * global.deltaMultiplier;
 			var freaks = layer_sprite_get_id(bgSenpaiFreaks, "freaks");
 			if (global.enemy = 9) layer_sprite_change(freaks, sWeebFreaksScared);
 			layer_sprite_speed(freaks, spd);
@@ -196,6 +200,45 @@ function background_setup(){
 		bfOffsetX = -15;
 	}
 	// spirit
+	
+	//tankman
+	if (global.enemy = 11) {
+		// make layers visible
+		layer_set_visible(bgTankGround, true);
+		layer_set_visible(bgTankSky, true);
+		layer_set_visible(bgTankMountains, true);
+		layer_set_visible(bgTankRuins, true);
+		layer_set_visible(bgTankSmoke, true);
+		layer_set_visible(bgTankTower, true);
+		if (global.songName = "Stress") layer_set_visible(bgTankPico, true);
+		
+		// apply parallax to the background
+		var camX = camera_get_view_x(view_camera[0]);
+		layer_x(bgTankRuins, (camX * 0.3));
+		layer_x(bgTankSmoke, (camX * 0.5));
+		layer_x(bgTankTower, (camX * 0.55));
+		layer_x(bgTankMountains, (camX * 0.6));
+		layer_x(bgTankClouds, (camX * 0.7));
+		layer_x(bgTankSky, (camX * 0.9) - 340);
+		
+		var spd = ((global.bpm / 60) / 2) * global.deltaMultiplier;
+		var tower = layer_sprite_get_id(bgTankTower, "tower");
+		layer_sprite_speed(tower, spd);
+		
+		// change the bf's position
+		oBoyfriend.x = 1606;
+		oBoyfriend.y = 1045;
+		
+		// change the parents position
+		oEnemy.x = 900;
+		oEnemy.y = 1051;
+		
+		offsetY = 135;
+		bfOffsetY = 25;
+		
+		global.camWidth = 1280;
+		global.camHeight = 720;
+	}
 	
 	// stupid special codist week
 	if (global.enemy = 102) {
@@ -212,5 +255,18 @@ function background_setup(){
 		// change the cameras offset
 		offsetY = 150;
 		offsetX = 100;
+	}
+	
+	// test
+	if (global.enemy = 103) {
+		// make layers visible
+		layer_set_visible(bgTest, true);
+		
+		offsetY = 130;
+		bfOffsetY = 25;
+		
+		// zoom the camera
+		global.camWidth = 1152;
+		global.camHeight = 648;
 	}
 }

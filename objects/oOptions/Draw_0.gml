@@ -25,11 +25,37 @@ function draw_option(_y, num, _string, _tip, _value, _isBool) {
 	}
 }
 
-draw_option(10, 0, "fullscreen", "Switch between fullscreen & windowed mode.", fullscreenOption, true);
-draw_option(80, 1, "anti-aliasing", "Fixes jagged edges around most sprites.", smoothingOption, true);
-draw_option(150, 2, "offset", "Negative Numbers - Late\nPositive Numbers - Early", round(global.offset), false);
-draw_option(220, 3, "advanced hud", "Adds extra information under the health bar.", global.advancedHud, true);
-draw_option(290, 4, "discord", "Shows what song you are playing in discord.\n(Requires Restart)", discord, true);
-draw_option(360, 5, "set keybinds", "Change your keybinds.", "", false);
+// categorys
+function draw_category(_x, _y, _category, _text) {
+	draw_set_halign(fa_center);
+	if (curSelected != 0) draw_set_alpha(0.5);
+	if (category != _category) draw_set_color(c_ltgray);
+	
+	draw_text(_x, _y, _text);
+	
+	draw_set_color(c_white);
+	draw_set_alpha(1);
+	draw_set_halign(fa_left);
+}
+draw_category(320, 10, 0, "options");
+draw_category(960, 10, 1, "keybinds");
+
+if (category = 0) {
+	draw_option(80, 1, "fullscreen", "Switch between fullscreen & windowed mode.", fullscreenOption, true);
+	draw_option(150, 2, "anti-aliasing", "Fixes jagged edges around most sprites.", smoothingOption, true);
+	draw_option(220, 3, "offset", "Negative Numbers - Late\nPositive Numbers - Early\nShift = +5", round(global.offset), false);
+	draw_option(290, 4, "advanced hud", "Adds extra information under the health bar.", global.advancedHud, true);
+	draw_option(360, 5, "discord", "Shows what song you are playing in discord.\n(Requires Restart)", discord, true);
+	draw_option(430, 6, "particles", "Toggle the particles that appear\nwhen you get a SICK.", global.particles, true);
+}
+if (category = 1) {
+	draw_option(80, 1, "left", "", string_lower(chr(global.leftKeybind)), false);
+	draw_option(150, 2, "down", "", string_lower(chr(global.downKeybind)), false);
+	draw_option(220, 3, "up", "", string_lower(chr(global.upKeybind)), false);
+	draw_option(290, 4, "right", "", string_lower(chr(global.rightKeybind)), false);
+	
+	draw_option(430, 5, "accept", "", string_lower(chr(global.acceptKeybind)), false);
+	draw_option(500, 6, "back", "", string_lower(chr(global.backKeybind)), false);
+}
 
 draw_set_font(fntDefault);

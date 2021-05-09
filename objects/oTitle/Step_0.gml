@@ -24,6 +24,7 @@ if (trackPos >= 9.5) {
 
 if ((keyboard_check_pressed(vk_enter))
 || (keyboard_check_pressed(vk_space))
+|| (keyboard_check_pressed(global.acceptKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_face1))
 || (gamepad_button_check_pressed(global.controller, gp_start))) 
 && (timerUntilNextRoom = -1)
@@ -37,6 +38,7 @@ if ((keyboard_check_pressed(vk_enter))
 }
 
 if ((keyboard_check_pressed(vk_enter))
+|| (keyboard_check_pressed(global.acceptKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_start)))
 && (timerUntilNextRoom = -1)
 && (!backgroundHidden) {

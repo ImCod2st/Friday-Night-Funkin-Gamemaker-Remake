@@ -1,13 +1,23 @@
 if !(global.dead) {
-	// make the bf bop to the music
-	if (global.bpm > 100) image_speed = ((global.bpm / 60) / 2) * global.deltaMultiplier; //all enemys
-	else image_speed = (global.bpm / 60) * global.deltaMultiplier; //tutorial
-	
 	// change the idle sprite
 	if !(sprChanged) {
 		sprite_index = sprIdle;
 		sprChanged = true;
 	}
+	
+	// make the bf bop to the music
+	var bpmBopAt = 240;
+	if (global.bpm <= 100) bpmBopAt = 120;
+	
+	bpmTimer += (global.bpm / 60) * global.deltaMultiplier;
+	if (bpmTimer >= bpmBopAt) {
+		bopFrame = 1;
+		bpmTimer = 0 + (bpmTimer - bpmBopAt);
+	}
+	if (bopFrame >= 1) bopFrame += (0.1 * singFrameMulti) * global.deltaMultiplier;;
+	if (bopFrame > image_number) bopFrame = 0;
+	
+	if (sprite_index = sprIdle) image_index = bopFrame;
 }
 else image_speed = global.deltaMultiplier; // if dead change the image speed to 1 (deltaMultiplier should always equal something close to 1 depending on lag)
 
@@ -16,8 +26,8 @@ if !(global.auto) {
 	
 	// check for arrow keys
 	// activate the animation when keys are pressed
-	function noteCheck(key, controllerKey, dir) {
-		if (keyboard_check_pressed(key))
+	function noteCheck(key, altKey, controllerKey, dir) {
+		if (keyboard_check_pressed(key)) || (keyboard_check_pressed(altKey))
 		|| (gamepad_button_check_pressed(global.controller, controllerKey)) {
 			notePlaying = dir;
 			animCount = 45;
@@ -29,10 +39,10 @@ if !(global.auto) {
 	if (animCount > 0) animCount -= 1 * global.deltaMultiplier;
 
 	if !(global.dead) {
-		noteCheck(vk_left, gp_padl, notes.left);
-		noteCheck(vk_down, gp_padd, notes.down);
-		noteCheck(vk_up, gp_padu, notes.up);
-		noteCheck(vk_right, gp_padr, notes.right);
+		noteCheck(vk_left, global.leftKeybind, gp_padl, notes.left);
+		noteCheck(vk_down, global.downKeybind, gp_padd, notes.down);
+		noteCheck(vk_up, global.upKeybind, gp_padu, notes.up);
+		noteCheck(vk_right, global.rightKeybind, gp_padr, notes.right);
 	}
 
 	if !(holdAnimation) {
@@ -61,6 +71,7 @@ if !(global.auto) {
 	
 	if ((keyboard_check_pressed(vk_enter)) 
 	|| (keyboard_check_pressed(vk_space))
+	|| (keyboard_check_pressed(global.acceptKeybind))
 	|| (gamepad_button_check_pressed(global.controller, gp_face1))
 	|| (gamepad_button_check_pressed(global.controller, gp_start))) 
 	&& (global.dead) && (restartTimer <= 0)
@@ -75,6 +86,7 @@ if !(global.auto) {
 	}
 	
 	if ((keyboard_check_pressed(vk_backspace)) 
+	|| (keyboard_check_pressed(global.backKeybind))
 	|| (gamepad_button_check_pressed(global.controller, gp_face2)))
 	&& (!instance_exists(oFade))
 	&& (global.dead) {

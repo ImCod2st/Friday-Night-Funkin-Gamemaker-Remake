@@ -22,3 +22,21 @@ if (volumeDisplay > 0) {
 	draw_set_halign(fa_left);
 	draw_set_alpha(1)
 }
+
+// ranking screen
+if (timeUntilMoveOn >= 420) {
+	var curMiss = oHUD.missCount;
+	var curHit = oHUD.hitCount;
+	var acc = curHit / (curHit + curMiss);
+	show_debug_message(acc);
+	var rank = 0; // ss
+	if (acc > 0) rank = 1; // s
+	if (acc <= 0.05) rank = 2; // a
+	if (acc <= 0.15) rank = 3; // b
+	if (acc <= 0.3) rank = 3; // c
+	if (acc <= 0.5) rank = 4; // d
+	
+	
+	draw_sprite(sRank, rank, 300, 300);
+		
+}

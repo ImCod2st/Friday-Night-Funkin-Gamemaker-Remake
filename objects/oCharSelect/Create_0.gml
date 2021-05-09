@@ -8,6 +8,8 @@ characters[5] = "mom";
 characters[6] = "spooky twins";
 characters[7] = "whitty2";
 characters[8] = "pixel";
+characters[9] = "tankman";
+characters[10] = "pico";
 
 curEnemy = 0;
 

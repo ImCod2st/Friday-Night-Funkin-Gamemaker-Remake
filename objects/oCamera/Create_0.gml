@@ -23,6 +23,8 @@ global.camHeight = 720;
 flashX = 1280 / 2;
 flashY = 255;
 
+rankingScreen = false;
+
 // background variables
 bgDad = layer_get_id("Background_Dad");
 bgDadFront = layer_get_id("Background_Front");
@@ -60,4 +62,14 @@ bgSenpaiSchool = layer_get_id("Assets_SenpaiSchool");
 bgSenpaiSky = layer_get_id("Backgrounds_SenpaiSky");
 bgSpirit = layer_get_id("Backgrounds_EvilSchool");
 
+bgTankGround = layer_get_id("Backgrounds_TankGround");
+bgTankSky = layer_get_id("Backgrounds_TankSky");
+bgTankMountains = layer_get_id("Backgrounds_TankMountains");
+bgTankClouds = layer_get_id("Backgrounds_TankClouds");
+bgTankRuins = layer_get_id("Backgrounds_TankRuins");
+bgTankSmoke = layer_get_id("Backgrounds_TankSmoke");
+bgTankPico = layer_get_id("Backgrounds_TankPico");
+bgTankTower = layer_get_id("Backgrounds_TankTower");
+
 bgCodist = layer_get_id("Background_Codist");
+bgTest = layer_get_id("Background_Test");

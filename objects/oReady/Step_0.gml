@@ -9,5 +9,7 @@ if (image_index >= 4) {
 		noteSpeedAdd = (0.01*noteRangeDetermine)*global.accelnotes;
 		curNoteSpeed = global.noteSpeed + noteSpeedAdd;
 	}
+	oBoyfriend.bpmTimer = 0;
+	oGirlfriend.image_index = 0;
 	instance_destroy();
 }

@@ -1,6 +1,6 @@
 /// @description 
 
-if (room != Title) {
+if (room != Title) && (room != Debug) {
 	if (room != CharacterSelect) {
 		global.roomBefore = room;
 		

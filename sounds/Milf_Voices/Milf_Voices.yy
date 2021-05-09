@@ -10,7 +10,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "Milf_Voices.ogg",
+  "soundFile": "Milf_Voices.mp3",
   "duration": 124.687447,
   "parent": {
     "name": "Milf",

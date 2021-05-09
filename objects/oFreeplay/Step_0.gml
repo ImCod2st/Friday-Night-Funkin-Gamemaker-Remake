@@ -1,4 +1,5 @@
 if (keyboard_check_pressed(vk_down))
+|| (keyboard_check_pressed(global.downKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_padd)) {
 	curSelected -= 1;
 	if (curSelected = -1) curSelected = array_length(songs) - 1;
@@ -7,6 +8,7 @@ if (keyboard_check_pressed(vk_down))
 	iconYOffset = 10;
 }
 if (keyboard_check_pressed(vk_up))
+|| (keyboard_check_pressed(global.upKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_padu)) {
 	curSelected += 1;
 	if (curSelected = array_length(songs)) curSelected = 0;
@@ -16,6 +18,7 @@ if (keyboard_check_pressed(vk_up))
 }
 
 if (keyboard_check_pressed(vk_backspace))
+|| (keyboard_check_pressed(global.backKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_face2)) {
 	if (instance_exists(oFade)) exit;
 
@@ -25,15 +28,18 @@ if (keyboard_check_pressed(vk_backspace))
 }
 
 if ((keyboard_check_pressed(vk_left)) 
+|| (keyboard_check_pressed(global.leftKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_padl))) && (difSelected > 0) 
 	difSelected--;
 	
 if ((keyboard_check_pressed(vk_right)) 
+|| (keyboard_check_pressed(global.rightKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_padr))) && (difSelected < 2) 
 	difSelected++;
 
 if ((keyboard_check_pressed(vk_enter)) 
 || (keyboard_check_pressed(vk_space))
+|| (keyboard_check_pressed(global.acceptKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_face1))
 || (gamepad_button_check_pressed(global.controller, gp_start)))  {
 	if (difSelected != 2) && !(keyboard_check(vk_shift)) or (instance_exists(oFade)) exit;

@@ -47,6 +47,11 @@ with (instance_place(x, y + 85, oArrowButton)) {
 			}
 		}
 		
+		if (enemy) {
+			if (obj.sprite_index = sTankmanUgh) obj.sprite_index = obj.sprIdle;
+			if (obj.sprite_index = sTankmanHey) obj.sprite_index = obj.sprIdle;
+		}
+		
 		sprite_index = sprHit;
 		image_speed = 1;
 		
@@ -101,18 +106,6 @@ if (y < 0 - sliderLength - 10) {
 	if (notRealNote) exit; 
 	if (x < 600) exit;
 	if (global.dead) exit;
-	// WHITTY INPUT STUFF
-	if (global.kadeInput) {
-		audio_play_sound(asset_get_index("missnote" + choose("1", "2", "3")), 10, false);
-		global.curScore -= 10 * global.currentMultiplier;
-		
-		with (oBoyfriend) {
-			notePlaying = other.image_index;
-			missed = true;
-			animCount = 70;
-			singFrame = 0;	
-		}
-	}
 	
 	global.hp -= 3 + sliderLength / 80;
 	if (global.fragile) global.hp = 0;
@@ -122,7 +115,7 @@ if (y < 0 - sliderLength - 10) {
 	
 	oHUD.missCount += 1;
 }
-if (switchTurn) && (y < 200) {
-	instance_destroy();
+if (switchTurn) or (bfHey) {
+	if (y < 200) instance_destroy();
 }
 //if (fadeIn) && (image_alpha < 1) image_alpha += 0.1;

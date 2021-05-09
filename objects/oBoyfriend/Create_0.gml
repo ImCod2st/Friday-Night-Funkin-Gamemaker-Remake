@@ -5,7 +5,6 @@ scale = image_yscale; // the entire scale
 isPixel = false;
 boyfriend_sprites();
 
-
 useMiss = true;
 if !(sprite_exists(asset_get_index(sprite_get_name(sprLeft) + "Miss"))) useMiss = false;
 
@@ -25,6 +24,9 @@ notePlaying = 0; // what direction the animation should be played as
 singFrameMulti = 1; // the multiplier for the animation image speed
 if (global.enemy = 5) singFrameMulti = 2;
 singFrame = 0; // the frame the animation is on
+
+bpmTimer = 0;
+bopFrame = 0;
 
 recAlpha = 0; // death rectangle alpha
 returnTo = -1; // return to the main menu if this is 1

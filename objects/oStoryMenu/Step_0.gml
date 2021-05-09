@@ -10,6 +10,7 @@ if !(selected) {
 
 if (keyboard_check_pressed(vk_enter))
 || (keyboard_check_pressed(vk_space))
+|| (keyboard_check_pressed(global.acceptKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_face1))
 || (gamepad_button_check_pressed(global.controller, gp_start)) {
 	if (selected) exit;
@@ -24,6 +25,7 @@ if (keyboard_check_pressed(vk_enter))
 }
 
 if (keyboard_check_pressed(vk_backspace))
+|| (keyboard_check_pressed(global.backKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_face2)) {
 	if (instance_exists(oFade)) exit;
 
@@ -33,12 +35,14 @@ if (keyboard_check_pressed(vk_backspace))
 }
 
 if ((keyboard_check_pressed(vk_up)) 
+|| (keyboard_check_pressed(global.upKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_padu))) {
 	audio_play_sound(scrollMenu, 10, false);
 	if (selectedWeek > 0) selectedWeek--;
 	else selectedWeek = global.weeks;
 }
 if ((keyboard_check_pressed(vk_down)) 
+|| (keyboard_check_pressed(global.downKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_padd))) {
 	audio_play_sound(scrollMenu, 10, false);
 	if (selectedWeek < global.weeks) selectedWeek++;
@@ -48,12 +52,14 @@ if ((keyboard_check_pressed(vk_down))
 // dif change
 var maxDif = 2;
 if ((keyboard_check_pressed(vk_left)) 
+|| (keyboard_check_pressed(global.leftKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_padl))) {
 	difOffset = -20;
 	if (global.currentDif > 0) global.currentDif--;
 	else global.currentDif = maxDif;
 }
 if ((keyboard_check_pressed(vk_right)) 
+|| (keyboard_check_pressed(global.rightKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_padr))) {
 	difOffset = -20;
 	if (global.currentDif < maxDif) global.currentDif++;
@@ -61,10 +67,12 @@ if ((keyboard_check_pressed(vk_right))
 }
 
 if ((keyboard_check(vk_left)) 
+|| (keyboard_check_pressed(global.leftKeybind))
 || (gamepad_button_check(global.controller, gp_padl))) leftArrowScaleTo = 0.8; 
 	else leftArrowScaleTo = 1;
 	
 if ((keyboard_check(vk_right)) 
+|| (keyboard_check_pressed(global.rightKeybind))
 || (gamepad_button_check(global.controller, gp_padl))) rightArrowScaleTo = 0.8; 
 	else rightArrowScaleTo = 1;
 
@@ -113,6 +121,12 @@ if (selectedTimer = 120) {
 		load_chart("Senpai", global.currentDif);
 		global.nextSong[0] = "Roses";
 		global.nextSong[1] = "Thorns";
+		global.nextSong[2] = "n";
+	}
+	if (selectedWeek = 7) {
+		load_chart("Ugh", global.currentDif);
+		global.nextSong[0] = "Guns";
+		global.nextSong[1] = "Stress";
 		global.nextSong[2] = "n";
 	}
 }

@@ -10,7 +10,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "High_Inst.ogg",
+  "soundFile": "High_Inst.mp3",
   "duration": 105.605,
   "parent": {
     "name": "High",
