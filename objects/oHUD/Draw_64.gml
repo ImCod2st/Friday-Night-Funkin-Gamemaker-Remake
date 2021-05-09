@@ -53,10 +53,14 @@ if (global.advancedHud) or (global.auto) {
 	draw_pie(1242, 675, curTime, leng, c_white, 30, 0.8);
 	
 	draw_set_halign(fa_center);
-	var str = "HP: " + string(round(global.hp)) + "%" + "          " + "MISSES: " + string(missCount) + "          " + "ACCURACY: " + string(round(100 - ((missCount / (hitCount + missCount)) * 100))) + "%" + "          " + string(lastFrameWindow) + "ms";
-	if (global.auto) str = "! AUTO MODE !";
-	draw_text_transformed(640, 680, str, 1, 1, 0);	
+	draw_set_font(fntDefaultOutline);
 	
+	var str = "HP: " + string(round(global.hp)) + "%" + "          " + "MISSES: " + string(missCount) + "          " + "ACCURACY: " + string(round(100 - ((missCount / (hitCount + missCount)) * 100))) + "%";
+	if (global.auto) str = "! AUTO MODE !";
+	draw_text_transformed(640, 670, str, 1, 1, 0);	
+	draw_text_transformed(640, 690, string(lastFrameWindow) + "ms", 1, 1, 0);
+	
+	draw_set_font(fntDefault);
 	draw_set_halign(fa_left);
 }
 

@@ -38,10 +38,11 @@ if !(enemy) && !(global.auto) {
 				
 				var distance = point_distance(x, y, other.x, other.y);
 				var scor = 0;
-
-				if (distance > 25) scor = 1;
-				if (distance > 65) scor = 2;
-				if (distance > 75) scor = 3;
+				
+				// may change hit timings
+				if (distance > 48) scor = 1;
+				if (distance > 73) scor = 2;
+				if (distance > 104) scor = 3;
 				var scoreX = 1259
 				var scoreY = 485;
 				if (instance_exists(oGirlfriend)) {scoreX = oGirlfriend.x + 5; scoreY = oGirlfriend.y - 517};
@@ -68,7 +69,9 @@ if !(enemy) && !(global.auto) {
 				
 				global.combo++;
 				oHUD.hitCount += 1;
-				oHUD.lastFrameWindow = (distance * 120) * 0.001;
+				
+				oHUD.lastFrameWindow = distance;
+				if (y < other.y) oHUD.lastFrameWindow = -oHUD.lastFrameWindow
 			}
 		}
 		
