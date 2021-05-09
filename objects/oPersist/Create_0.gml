@@ -57,10 +57,12 @@ global.bSides = false;
 // settings
 global.offset = 0;
 global.advancedHud = false;
+global.downScroll = false;
+
 global.volume = 1;
 global.controller = 1;
-global.particles = true;
 
+global.particles = true;
 global.customFreeplay = true;
 
 // controls
@@ -83,7 +85,7 @@ global.currentDif = 1;
 
 // fonts
 draw_set_font(fntDefault);
-global.font = font_add_sprite_ext(sMessageFont, "abcdefghijklmnopqrstuvwxyz,_0123456789-.:", true, -2);
+global.font = font_add_sprite_ext(sMessageFont, "abcdefghijklmnopqrstuvwxyz,_0123456789-.:@~", true, -2);
 var comboNumStr = "0123456789-x";
 global.comboNumberFont = font_add_sprite_ext(sComboNumber, comboNumStr, true, -20);
 global.comboNumberFontPixel = font_add_sprite_ext(sComboNumberPixel, comboNumStr, true, -20);

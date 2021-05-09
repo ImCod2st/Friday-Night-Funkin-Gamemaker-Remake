@@ -54,3 +54,5 @@ animationIndex = 0;
 deathAnimCooldown = 0;
 
 spriteUsed = sprLeft;
+
+beforeAA = gpu_get_texfilter();

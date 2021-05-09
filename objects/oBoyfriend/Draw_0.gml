@@ -56,4 +56,4 @@ draw_rectangle(x - 1280, y - 720, x + 1280, y + 720, 0);
 draw_set_color(c_white);
 draw_set_alpha(image_alpha);
 
-if (isPixel) gpu_set_texfilter(true);
+gpu_set_texfilter(beforeAA);

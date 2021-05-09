@@ -16,3 +16,5 @@ if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) {sprite_index
 if (global.enemy = 11) sprite_index = sGirlfriendTankIdle;
 
 if (global.enemy = 102) sprite_index = sGirlfriendCodist;
+
+beforeAA = gpu_get_texfilter();

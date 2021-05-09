@@ -16,6 +16,7 @@ enemyHeld = false;
 yOff = 0;
 sliderLength = 0;
 keyPressedWith = undefined;
+altkeyPressedWith = undefined;
 heldAlready = false;
 beingHeld = false;
 
@@ -33,5 +34,7 @@ if (global.flashlight) image_alpha = 0;
 if (x = 216) or (x = 856) image_index = 1;
 if (x = 330) or (x = 968) image_index = 2;
 if (x = 438) or (x = 1081) image_index = 3;
+
+if (global.downScroll) image_yscale = -image_yscale;
 
 event_inherited();

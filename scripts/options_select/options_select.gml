@@ -6,14 +6,13 @@ function options_select(category, option){
 		switch (option) {
 			case 1: // fullscreen
 				window_set_fullscreen(!fullscreenOption)
+				audio_play_sound(confirmMenu, 0, false);
 				break;
-			case 2: // smoothing
-				gpu_set_texfilter(!smoothingOption)
-				break;
-			case 4: // hud
+			case 3: // hud
 				global.advancedHud = !global.advancedHud;
+				audio_play_sound(confirmMenu, 0, false);
 				break;
-			case 5: // discord
+			case 4: // discord
 				discord = !discord;
 			
 				ini_open("options.ini");
@@ -22,12 +21,31 @@ function options_select(category, option){
 			
 				game_restart();
 				break;
-			case 6:
-				global.particles = !global.particles;
+			case 5: // downscroll
+				global.downScroll = !global.downScroll;
+				audio_play_sound(confirmMenu, 0, false);
 				break;
 		}
-	} else {
+	// graphics
+	} else if (category = 1) {
+		switch (option) {
+			case 1: // smoothing
+				gpu_set_texfilter(!smoothingOption)
+				audio_play_sound(confirmMenu, 0, false);
+				break;
+			case 2: // particles
+				global.particles = !global.particles;
+				audio_play_sound(confirmMenu, 0, false);
+				break;
+			case 3: // particles
+				global.customFreeplay = !global.customFreeplay;
+				audio_play_sound(confirmMenu, 0, false);
+				break;
+		}
+	// keybinds
+	} else if (category = 2) {
 		if (option = 0) exit;
+		audio_play_sound(confirmMenu, 0, false);
 		
 		var changeKey = "left"; var globalToChange = "leftKeybind";
 		if (option = 2) {changeKey = "down"; globalToChange = "downKeybind";}

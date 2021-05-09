@@ -56,3 +56,5 @@ spriteUsed = sprLeft;
 shadowSprite[0] = sprite_index;
 shadowSprite[1] = sprite_index;
 shadowSprite[2] = sprite_index;
+
+beforeAA = gpu_get_texfilter();

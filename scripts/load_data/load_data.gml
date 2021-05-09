@@ -14,11 +14,14 @@ function load_data(){
 	ini_open("options.ini");
 	
 	window_set_fullscreen(ini_read_real("Options", "Fullscreen", false));
-	gpu_set_texfilter(ini_read_real("Options", "Smoothing", true));
 	global.advancedHud = ini_read_real("Options", "AdvancedHud", false);
 	global.offset = ini_read_real("Options", "Offset", 0);
-	global.particles = ini_read_real("Options", "Particles", true);
+	global.downScroll = ini_read_real("Options", "Downscroll", false);
 	
+	global.particles = ini_read_real("Graphics", "Particles", true);
+	gpu_set_texfilter(ini_read_real("Graphics", "Smoothing", true));
+	global.customFreeplay = ini_read_real("Graphics", "CustomFreeplay", true);
+		
 	// keybinds
 	global.leftKeybind = ini_read_real("Keybinds", "Left", 65);
 	global.downKeybind = ini_read_real("Keybinds", "Down", 83);

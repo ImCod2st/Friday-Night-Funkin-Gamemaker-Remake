@@ -76,7 +76,7 @@ if (beingHeld) {
 	with (oArrowButton) if (dir = other.image_index) && (image_index > 4) image_index = 0;
 	oBoyfriend.holdAnimation = true;
 	
-	if (keyboard_check_released(keyPressedWith)) {
+	if (keyboard_check_released(keyPressedWith)) || (keyboard_check_released(altkeyPressedWith)) {
 		beingHeld = false;
 		curNoteSpeed = global.noteSpeed;
 		oBoyfriend.holdAnimation = false;

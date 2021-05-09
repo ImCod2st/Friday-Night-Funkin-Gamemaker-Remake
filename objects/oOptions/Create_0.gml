@@ -1,6 +1,7 @@
 curSelected = 0;
-optionAmount[0] = 6;
-optionAmount[1] = 6;
+optionAmount[0] = 5;
+optionAmount[1] = 3;
+optionAmount[2] = 6;
 
 fullscreenOption = false;
 smoothingOption = false;

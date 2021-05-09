@@ -7,7 +7,6 @@ if !(afterCreate) {
 	afterCreate = true;	
 }
 var controllerKey;
-var altKey;
 switch (key) {
 	case vk_left: controllerKey = gp_padl; altKey = global.leftKeybind; break;
 	case vk_right: controllerKey = gp_padr; altKey = global.rightKeybind; break;
@@ -31,6 +30,7 @@ if !(enemy) && !(global.auto) {
 				else {
 					beingHeld = true;
 					keyPressedWith = other.key;	
+					altkeyPressedWith = other.altKey;	
 				}
 				global.hp += 1;
 				oBoyfriend.missed = false;
@@ -45,6 +45,7 @@ if !(enemy) && !(global.auto) {
 				var scoreX = 1259
 				var scoreY = 485;
 				if (instance_exists(oGirlfriend)) {scoreX = oGirlfriend.x + 5; scoreY = oGirlfriend.y - 517};
+				if (global.downScroll) scoreY += 200;
 				var o = instance_create_depth(scoreX, scoreY, 400 - instance_number(oScoreText), oScoreText);
 				o.image_index = scor;
 				
@@ -67,6 +68,7 @@ if !(enemy) && !(global.auto) {
 				
 				global.combo++;
 				oHUD.hitCount += 1;
+				oHUD.lastFrameWindow = (distance * 120) * 0.001;
 			}
 		}
 		

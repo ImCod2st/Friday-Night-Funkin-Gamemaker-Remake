@@ -37,4 +37,4 @@ if (global.enemy = 10) {
 
 draw_sprite_ext(drawSprite, drawIndex, x, y, image_xscale, image_yscale, 0, c_white, 1);
 
-if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) gpu_set_texfilter(true);
+gpu_set_texfilter(beforeAA);
