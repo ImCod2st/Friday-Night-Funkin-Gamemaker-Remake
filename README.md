@@ -10,8 +10,7 @@ You can find the games download link [here](https://github.com/ImCodist/Friday-N
 I made this out of **love for the original game** and to **improve** my skill in new areas of Gamemaker Studio. As a result I have learned how to work with *higher-res graphics*, and how to make a *ddr style rhythm game work*.
 
 ## Gameplay
-[Week 1: Dadbattle](https://i.imgur.com/ZUDESnT.gifv)
-[Week 3: Blammed](https://i.imgur.com/eEX9KxE.gifv)
+![Week 1: Dadbattle](https://drive.google.com/uc?export=view&id=1cgoDrO8s6O_V1JzMKLg6dfRLVQsY5109)
 
 ## Support
 If you have **issues, or requests**. Use the [Issues page](https://github.com/ImCodist/Friday-Night-Funkin-Gamemaker-Remake/issues), and create a new issue.
