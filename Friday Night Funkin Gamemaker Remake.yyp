@@ -652,6 +652,9 @@
     {"CopyToMask":-1,"filePath":"datafiles/Songs/Songs/Milf","resourceVersion":"1.0","name":"Milf_Hard.ini","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/Songs/Spookeez_bside","resourceVersion":"1.0","name":"Spookeez_bside_Hard.ini","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/Songs/Winter_horrorland","resourceVersion":"1.0","name":"Winter_horrorland_Hard.ini","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/Songs/Ugh","resourceVersion":"1.0","name":"Ugh_Hard.ini","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/Songs/Guns","resourceVersion":"1.0","name":"Guns_Hard.ini","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/Songs/Stress","resourceVersion":"1.0","name":"Stress_Hard.ini","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2.3.2.560",
