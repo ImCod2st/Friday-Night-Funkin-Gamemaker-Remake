@@ -1,4 +1,4 @@
-![Friday Night Funkin: Gamemaker Remake](https://drive.google.com/uc?export=view&id=1qy6LhiULH8JHW7nxvVeVsZnjteoC4L76)![GitHub release](https://img.shields.io/github/v/release/ImCodist/Friday-Night-Funkin-Gamemaker-Remake) ![Downloads](https://img.shields.io/github/downloads/ImCodist/Friday-Night-Funkin-Gamemaker-Remake/total?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/ImCodist/Friday-Night-Funkin-Gamemaker-Remake?style=flat-square)
+![FNF Header final](https://user-images.githubusercontent.com/50346006/124558547-bbfda900-de08-11eb-9efc-62b2f90f4854.png)![GitHub release](https://img.shields.io/github/v/release/ImCodist/Friday-Night-Funkin-Gamemaker-Remake) ![Downloads](https://img.shields.io/github/downloads/ImCodist/Friday-Night-Funkin-Gamemaker-Remake/total?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/ImCodist/Friday-Night-Funkin-Gamemaker-Remake?style=flat-square)
 
 ---
 
