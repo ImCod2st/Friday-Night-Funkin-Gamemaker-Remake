@@ -31,7 +31,7 @@ if !(global.auto) {
 	|| (gamepad_button_check(global.controller, gp_padu)) 
 		singing = true;
 		
-	if (singing) && (singSprite != -1) && !(global.dead) && !(sprite_index = sBoyfriendCheer) or (animCount > 0) && !(global.dead) && !(sprite_index = sBoyfriendCheer) {
+	if (singing) && (singSprite != -1) && !(global.dead) && !(sprite_index = sprCheer) or (animCount > 0) && !(global.dead) && !(sprite_index = sprCheer) {
 		draw_sprite_ext(singSprite, singFrame, x, y, image_xscale, image_yscale, 0, c_white, 1);
 	} else {
 		if (global.dead) draw_rectangle_color(0, 0, 10000, 10000, c_black, c_black, c_black, c_black, false);

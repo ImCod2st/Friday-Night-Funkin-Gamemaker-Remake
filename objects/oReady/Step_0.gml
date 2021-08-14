@@ -5,6 +5,10 @@ if (image_index >= 2) && (image_index < 2.2) {image_alpha = 1; if !(audio_is_pla
 if (image_index >= 3) && (image_index < 3.2) {image_alpha = 1; if !(audio_is_playing(sndGo)) audio_play_sound(sndGo, 10, false);}
 if (image_index >= 4) {
 	audio_start_sync_group(global.musicSync);
+	if (os_browser != browser_not_a_browser) {
+		audio_play_sound(global.song, 100, false);
+		audio_play_sound(global.voices, 100, false);
+	}
 	with (oNote) {
 		noteSpeedAdd = (0.01*noteRangeDetermine)*global.accelnotes;
 		curNoteSpeed = global.noteSpeed + noteSpeedAdd;

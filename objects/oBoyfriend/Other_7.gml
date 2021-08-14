@@ -9,6 +9,6 @@ if (sprite_index = sprDeath3) && (deathAnimCooldown <= 0) {
 	image_index = image_number - 1;
 }
 
-if (sprite_index = sBoyfriendCheer) {
+if (sprite_index = sprCheer) {
 	sprite_index = sprIdle;	
 }

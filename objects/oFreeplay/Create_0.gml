@@ -1,4 +1,4 @@
-load_freeplay(global.specialSongs, global.bSides);
+load_freeplay(global.specialSongs);
 
 curEnemy = 0;
 
@@ -13,6 +13,8 @@ musicPlaying = audio_play_sound(real(musicFree), 10, true);
 
 scorDisplay = 0;
 visibleScore = 0;
+
+addToPath = "";
 
 yOffset = array_create(array_length(songs))
 xOffset = array_create(array_length(songs))

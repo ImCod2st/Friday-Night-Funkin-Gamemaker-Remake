@@ -84,7 +84,9 @@ function boyfriend_sprites() {
 	sprDown = asset_get_index(char + add + "Down");
 	sprUp = asset_get_index(char + add + "Up");
 	sprRight = asset_get_index(char + add + "Right");
-
+	
+	sprCheer = sBoyfriendCheer;
 	sprDeath = sBoyfriendDie;
+	if (global.enemy = 102) or (global.boyfriend == "codist") sprCheer = sBoyfriendCodCheer;
 	if (sprite_exists(asset_get_index(char + add + "Die"))) sprDeath = asset_get_index(char + add + "Die");
 }

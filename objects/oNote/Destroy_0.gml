@@ -14,7 +14,7 @@ if (bfHey) {
 			oEnemy.image_index = 0;	
 		}
 	} else {
-		oBoyfriend.sprite_index = sBoyfriendCheer;
+		oBoyfriend.sprite_index = oBoyfriend.sprCheer;
 		oBoyfriend.image_index = 0;
 	}
 }

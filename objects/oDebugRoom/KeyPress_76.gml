@@ -5,4 +5,4 @@ dif = get_integer("Difficulty (0 - Easy, 1 - Normal, 2 - Hard):", dif);
 if (songName != "") global.songName = songName;
 else exit;
 
-load_chart(global.songName, dif);
+load_chart(global.songName, dif, true);

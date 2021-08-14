@@ -6,8 +6,9 @@ function load_chart(songNam, dif){
 	if (dif = 2) difName = "_Hard";
 	
 	// choose the directory to load in depending on if the game is being run in the ide, or as a released build
-	var directory = songNam + "\\" + songNam + difName + ".ini";
-	if (global.useProgramDir) directory = working_directory + "\\Songs\\" + directory;
+	var directory = "\\Songs\\" + songNam + "\\" + songNam + difName + ".ini";
+	if (global.specialSongs) directory = "\\Custom" + directory;
+	directory = working_directory + directory;
 	
 	// load all of the songs data
 	ini_open(directory);

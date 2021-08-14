@@ -77,8 +77,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Boyfriend",
-    "path": "folders/Sprites/Characters/Boyfriend.yy",
+    "name": "Codist Wtf",
+    "path": "folders/Sprites/Characters/Boyfriend/Codist Wtf.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBoyfriendCodDie3",

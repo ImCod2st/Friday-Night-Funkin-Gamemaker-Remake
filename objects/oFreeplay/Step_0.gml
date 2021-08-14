@@ -92,12 +92,6 @@ if (keyboard_check_pressed(ord("V"))) {
 	room_restart();
 }
 
-if (keyboard_check_pressed(ord("B"))) {
-	global.bSides = !global.bSides;
-	global.specialSongs = false;
-	room_restart();
-}
-
 lastSelected = curSelected;
 
 // small animation variables

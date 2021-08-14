@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "Bopeebo_Inst.ogg",
-  "duration": 76.805,
+  "duration": 76.8,
   "parent": {
     "name": "Bopeebo",
     "path": "folders/Sounds/Music/Week 1/Bopeebo.yy",

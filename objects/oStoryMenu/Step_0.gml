@@ -82,6 +82,8 @@ if (selectedTimer = 120) {
 	o = instance_create_depth(x, 720, -1000, oFade);
 	o.roomTo = MainGame;
 	
+	global.specialSongs = false;
+	
 	// weeks
 	global.songOn = 0;
 	if (selectedWeek = 0) {
