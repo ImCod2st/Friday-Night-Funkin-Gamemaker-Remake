@@ -1,6 +1,8 @@
 if (fadeY > -200) && !(moved) {
 	if (room = roomTo) room_restart();
-	if (room != roomTo) room_goto(roomTo);
+	if (room != roomTo){  
+		load_assets() 
+	}
 	moved = true;
 	instance_activate_all();
 }

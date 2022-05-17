@@ -35,7 +35,7 @@ if !(global.flashlight) {
 	draw_sprite_ext(bfIconSpr,bfIcon + boyHpLow,x - hpWidth, y, -1 + -iconBop, 1 + iconBop, 0, c_white, 1); // boy icon
 }
 
-// score
+ // score
 draw_set_font(global.comboNumberFont);
 if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) draw_set_font(global.comboNumberFontPixel);
 draw_set_halign(fa_right);
@@ -46,22 +46,22 @@ draw_set_halign(fa_left);
 draw_set_font(fntDefault);
 
 if (global.advancedHud) or (global.auto) {
-	// timer
-	var curTime = audio_sync_group_get_track_pos(global.musicSync);
-	var leng = audio_sound_length(global.song) - 0.1;
+    // timer
+    var curTime = audio_sync_group_get_track_pos(global.musicSync);
+    var leng = audio_sound_length(global.song) - 0.1;
 
-	draw_pie(1242, 675, curTime, leng, c_white, 30, 0.8);
-	
-	draw_set_halign(fa_center);
-	draw_set_font(fntDefaultOutline);
-	
-	var str = "HP: " + string(round(global.hp)) + "%" + "          " + "MISSES: " + string(missCount) + "          " + "ACCURACY: " + string(round(100 - ((missCount / (hitCount + missCount)) * 100))) + "%";
-	if (global.auto) str = "! AUTO MODE !";
-	draw_text_transformed(640, 670, str, 1, 1, 0);	
-	draw_text_transformed(640, 690, string(lastFrameWindow) + "ms", 1, 1, 0);
-	
-	draw_set_font(fntDefault);
-	draw_set_halign(fa_left);
+    draw_pie(1242, 675, curTime, leng, c_white, 30, 0.8);
+
+    draw_set_halign(fa_center);
+    draw_set_font(fntDefaultOutline);
+    var str = "HP: " + string(round(global.hp)) + "%" + " | " + "MISSES: " + string(missCount) + " | " + "ACCURACY: " + string(round(100 - ((missCount / (hitCount + missCount)) * 100))) + "%"; 
+    if (global.auto) str = "! AUTO MODE !"; 
+    draw_text_transformed(640, 690, string(lastFrameWindow) + "ms", 1, 1, 0);
+    draw_text_transformed(640, 670, str, 1, 1, 0); 
+	//var side = "SUPER SICKS: " + string(global.ssick) + "\n" + "SICKS:" + string(global.sick) + "\n" + "GOODS: " + string(global.good) + "\n" + "BADS: " + string(global.bad) + "\n" + "SHITS: " + string(global.shit); 
+    draw_set_halign(fa_left); 
+	// draw_text_transformed(0, 200, side, 1, 1, 0); 
+    draw_set_font(fntDefault); 
 }
 
 }

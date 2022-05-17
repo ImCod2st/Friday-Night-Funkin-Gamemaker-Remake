@@ -7,6 +7,7 @@ curNoteSpeed = 0;
 noteSpeedAdd = 0;
 noteRangeDetermine = 0; // the range of the note from the top of the screen
 
+notetypes = ["normal", "cam", "death", "animation", "gml"]; 
 notRealNote = false;
 switchTurn = false;
 bfHey = false;

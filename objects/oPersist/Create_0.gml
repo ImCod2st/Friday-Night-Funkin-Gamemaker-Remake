@@ -1,14 +1,20 @@
-// chart info
+// chart info 
 global.chart = ds_grid_create(8, 16);
 global.song = Tutorial_Inst;
 global.voices = "";
 global.bpm = 100;
 global.noteSpeed = 5;
 global.camSpeed = 360; // BPM * 2.85256410256
-global.songName = "Tutorial";
+global.songName = "Tutorial"; 
+global.stage = "stage"; 
 
 global.boyfriend = "og";
-global.roomBefore = room;
+global.roomBefore = room; 
+global.ssick = 0; 
+global.sick = 0; 
+global.good = 0; 
+global.bad = 0; 
+global.shit = 0; 
 
 // voice muting
 global.playVoice = 1;
@@ -63,7 +69,8 @@ global.volume = 1;
 global.controller = 1;
 
 global.particles = true;
-global.customFreeplay = true;
+global.customFreeplay = true; 
+global.preload = false;
 
 // controls
 global.leftKeybind = 65;

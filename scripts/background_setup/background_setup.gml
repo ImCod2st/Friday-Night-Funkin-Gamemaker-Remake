@@ -5,7 +5,7 @@ function background_setup(){
 	global.camHeight = 720;
 	
 	// dad / everyone else
-	if (global.enemy <= 1) or (global.enemy > 11) {
+	if (global.stage = "stage") {
 		if !(global.enemy = 102) && !(global.enemy = 103) { // exceptions for special enemys
 			// make layers visible
 			layer_set_visible(bgDad, true);
@@ -15,7 +15,7 @@ function background_setup(){
 	}
 	
 	// spooky and monster
-	if (global.enemy = 2) or (global.enemy = 3) {
+	if (global.stage = "spooky") {
 		// make layers visible
 		layer_set_visible(bgSpooky, true);
 	
@@ -28,7 +28,7 @@ function background_setup(){
 	}
 	
 	// go pico
-	if (global.enemy = 4) {
+	if (global.stage = "pico") {
 		// make layers visible
 		layer_set_visible(bgPicoStreet, true);
 		layer_set_visible(bgPicoObjects, true);
@@ -52,7 +52,7 @@ function background_setup(){
 	}
 	
 	// mother
-	if (global.enemy = 5) {
+	if (global.stage = "limo") {
 		// make layers visible
 		layer_set_visible(bgMomBGLimo, true);
 		layer_set_visible(bgMomGF, true);
@@ -98,7 +98,7 @@ function background_setup(){
 	}
 	
 	// parents
-	if (global.enemy = 6) {
+	if (global.stage = "mall") {
 		// make layers visible
 		layer_set_visible(bgChristSanta, true);
 		layer_set_visible(bgChristFGSnow, true);
@@ -144,7 +144,7 @@ function background_setup(){
 		bfOffsetY = -40;
 	}
 	
-	if (global.enemy = 7) {
+	if (global.stage = "mallevil") {
 		// make layers visible
 		layer_set_visible(bgChristEvilSnow, true);
 		layer_set_visible(bgChristEvilTree, true);
@@ -177,8 +177,8 @@ function background_setup(){
 	}
 	
 	// senpai
-	if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) {
-		if (global.enemy != 10) {
+	if (global.stage = "school") or (global.stage = "schoolgross") or (global.stage = "schoolevil") {
+		if (global.stage != "schoolevil") {
 			// make layers visible
 			layer_set_visible(bgSenpaiFreaks, true);
 			layer_set_visible(bgSenpaiStreet, true);
@@ -188,7 +188,7 @@ function background_setup(){
 		
 			var spd = (global.bpm / 60) * global.deltaMultiplier;
 			var freaks = layer_sprite_get_id(bgSenpaiFreaks, "freaks");
-			if (global.enemy = 9) layer_sprite_change(freaks, sWeebFreaksScared);
+			if (global.stage = "schoolgross") layer_sprite_change(freaks, sWeebFreaksScared);
 			layer_sprite_speed(freaks, spd);
 		} else {
 			layer_set_visible(bgSpirit, true);
@@ -202,7 +202,7 @@ function background_setup(){
 	// spirit
 	
 	//tankman
-	if (global.enemy = 11) {
+	if (global.stage = "battlefield") {
 		// make layers visible
 		layer_set_visible(bgTankGround, true);
 		layer_set_visible(bgTankSky, true);

@@ -73,7 +73,7 @@ if (timeUntilMoveOn >= 420) && !(global.dead) {
 		o.roomTo = roomTo;
 	} else {
 		oldCamX = oCamera.x;
-		oldCamY = oCamera.y;
+		oldCamY = oCamera.y; 
 		room_goto(roomTo);	
 		
 	}

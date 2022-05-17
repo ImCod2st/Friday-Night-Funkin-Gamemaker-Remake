@@ -5,7 +5,7 @@ sprHit = asset_get_index(sprite_get_name(spr) + "Hit");
 key = vk_down;
 altKey = global.downKeybind;
 dir = notes.down;
-enemy = false;
+enemy = false; 
 
 botTimer = 0;
 
