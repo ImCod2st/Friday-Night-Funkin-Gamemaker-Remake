@@ -77,13 +77,13 @@ function boyfriend_sprites() {
 		}
 		
 		if (global.enemy = 102) add = "Cod";
-	}
-
+	} 
 	sprIdle = asset_get_index(char + add + "Idle");
 	sprLeft = asset_get_index(char + add + "Left");
 	sprDown = asset_get_index(char + add + "Down");
 	sprUp = asset_get_index(char + add + "Up");
-	sprRight = asset_get_index(char + add + "Right");
+	sprRight = asset_get_index(char + add + "Right"); 
+	global.bfload = [sprIdle, sprLeft, sprDown, sprUp, sprRight];
 	
 	sprCheer = sBoyfriendCheer;
 	sprDeath = sBoyfriendDie;

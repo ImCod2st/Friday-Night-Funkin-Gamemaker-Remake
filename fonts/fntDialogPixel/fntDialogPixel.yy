@@ -3,6 +3,7 @@
   "glyphOperations": 0,
   "interpreter": 0,
   "pointRounding": 0,
+  "applyKerning": 0,
   "fontName": "Pixel Arial 11",
   "styleName": "Bold",
   "size": 20.0,
@@ -20,6 +21,7 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 0,
+  "ascender": 0,
   "glyphs": {
     "32": {"x":2,"y":2,"w":13,"h":37,"character":32,"shift":13,"offset":0,},
     "33": {"x":409,"y":80,"w":7,"h":37,"character":33,"shift":10,"offset":0,},

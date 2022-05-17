@@ -36,11 +36,15 @@ function options_select(category, option){
 			case 2: // particles
 				global.particles = !global.particles;
 				audio_play_sound(confirmMenu, 0, false);
-				break;
+				break; 
 			case 3: // particles
 				global.customFreeplay = !global.customFreeplay;
 				audio_play_sound(confirmMenu, 0, false);
-				break;
+				break; 
+			case 4: 
+				global.preload = !global.preload; 
+				audio_play_sound(confirmMenu, 0, false);
+				break; 
 		}
 	// keybinds
 	} else if (category = 2) {
