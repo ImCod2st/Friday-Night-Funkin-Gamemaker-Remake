@@ -1,5 +1,5 @@
-image_speed = (global.bpm / 60) / 30 * global.deltaMultiplier;
-
+image_speed = (global.bpm / 60) / 30 * global.deltaMultiplier; 
+vidone = true; 
 // changeable 3 2 1
 snd3 = intro3;
 snd2 = intro2;
@@ -30,10 +30,12 @@ audio_stop_all();
 if !(hasDialog or hasVideo) audio_play_sound(snd3, 10, false);
 else if (hasVideo){ 
 	instance_create_depth(x, y, -100000, oVideo);
-	image_speed = 0;
+	image_speed = 0; 
+	vidone = false;
 } else if (hasDialog) {
 	instance_create_depth(x, y, -100000, oDialogBox);
-	image_speed = 0;	
+	image_speed = 0; 
+	vidone = false; 
 }
 
 // death reset
