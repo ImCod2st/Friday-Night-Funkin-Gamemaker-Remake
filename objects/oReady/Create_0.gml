@@ -14,16 +14,24 @@ if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) {
 }
 
 // dialog
-hasDialog = false;
+hasDialog = false; 
+hasVideo = false;
 
 var dialogueFile = global.songName + "\\dialogue.txt";
 if (global.useProgramDir) dialogueFile = working_directory + "\\Songs\\" + dialogueFile;
 if (file_exists(dialogueFile)) hasDialog = true;
-if (global.freeplay) hasDialog = false;
+if (global.freeplay) hasDialog = false; 
+videoFile = global.songName + "\\video.mp4";
+if (global.useProgramDir) videoFile = working_directory + "\\Songs\\" + videoFile;
+if (file_exists(videoFile)) hasVideo = true;
+if (global.freeplay) hasVideo = false;
 
 audio_stop_all();
-if !(hasDialog) audio_play_sound(snd3, 10, false);
-else {
+if !(hasDialog or hasVideo) audio_play_sound(snd3, 10, false);
+else if (hasVideo){ 
+	instance_create_depth(x, y, -100000, oVideo);
+	image_speed = 0;
+} else if (hasDialog) {
 	instance_create_depth(x, y, -100000, oDialogBox);
 	image_speed = 0;	
 }
