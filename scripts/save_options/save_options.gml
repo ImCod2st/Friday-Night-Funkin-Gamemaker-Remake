@@ -10,7 +10,8 @@ function save_options(){
 	
 	ini_write_real("Graphics", "Smoothing", gpu_get_texfilter());
 	ini_write_real("Graphics", "Particles", global.particles);
-	ini_write_real("Graphics", "CustomFreeplay", global.customFreeplay);
+	ini_write_real("Graphics", "CustomFreeplay", global.customFreeplay); 
+	ini_write_real("Graphics", "Preload", global.preload);
 	
 	ini_write_real("Keybinds", "Left", global.leftKeybind);
 	ini_write_real("Keybinds", "Down", global.downKeybind);
