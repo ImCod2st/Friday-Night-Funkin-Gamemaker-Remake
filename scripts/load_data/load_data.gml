@@ -20,8 +20,9 @@ function load_data(){
 	
 	global.particles = ini_read_real("Graphics", "Particles", true);
 	gpu_set_texfilter(ini_read_real("Graphics", "Smoothing", true));
-	global.customFreeplay = ini_read_real("Graphics", "CustomFreeplay", true);
-		
+	global.customFreeplay = ini_read_real("Graphics", "CustomFreeplay", true); 
+	global.preload = ini_read_real("Graphics", "Preload", false); 
+	
 	// keybinds
 	global.leftKeybind = ini_read_real("Keybinds", "Left", 65);
 	global.downKeybind = ini_read_real("Keybinds", "Down", 83);

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Simple",
-    "path": "folders/Scripts/Simple.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "bool_to_string",
+  "name": "enemy_sprites",
   "tags": [],
   "resourceType": "GMScript",
 }

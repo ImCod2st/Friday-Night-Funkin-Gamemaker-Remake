@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Simple",
-    "path": "folders/Scripts/Simple.yy",
+    "name": "Saving & Loading",
+    "path": "folders/Scripts/Saving & Loading.yy",
   },
   "resourceVersion": "1.0",
-  "name": "bool_to_string",
+  "name": "load_assets",
   "tags": [],
   "resourceType": "GMScript",
 }
