@@ -22,7 +22,8 @@ function save_chart(dif){
 	ini_write_real("Song", "Notespeed", global.noteSpeed);
 	ini_write_real("Song", "BPM", global.bpm);
 	ini_write_real("Song", "Camspeed", global.camSpeed);
-	ini_write_real("Song", "Enemy", global.enemy);
+	ini_write_real("Song", "Enemy", global.enemy); 
+	ini_write_string("Song", "Stage", global.stage);
 	
 	ini_write_string("Song", "Notes", ds_grid_write(global.chart));
 	ini_close();

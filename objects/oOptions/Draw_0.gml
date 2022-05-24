@@ -52,7 +52,8 @@ if (category = 0) {
 if (category = 1) {
 	draw_option(80, 1, "anti-aliasing", "Fixes jagged edges around most sprites.", smoothingOption, true);
 	draw_option(150, 2, "particles", "Toggle the particles that appear\nwhen you get a SICK.", global.particles, true);
-	draw_option(220, 3, "custom freeplay", "Toggle the custom freeplay art.\nBy @Im~Lotter on Twitter", global.customFreeplay, true);
+	draw_option(220, 3, "custom freeplay", "Toggle the custom freeplay art.\nBy @Im~Lotter on Twitter", global.customFreeplay, true); 
+	draw_option(290, 4, "preload", "Preload sprites increases loading times decreases lag.", global.preload, true);
 }
 if (category = 2) {
 	draw_option(80, 1, "left", "", string_lower(chr(global.leftKeybind)), false);

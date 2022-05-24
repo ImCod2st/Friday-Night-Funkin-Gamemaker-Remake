@@ -1,4 +1,5 @@
-if (global.dead) exit;
+if (global.dead) exit; 
+if (instance_exists(oVideo)) exit; 
 
 if !(afterCreate) {
 	if (global.enemy = 8) or (global.enemy = 9) or (global.enemy = 10) spr = asset_get_index(sprite_get_name(spr) + "Pixel");
@@ -38,11 +39,12 @@ if !(enemy) && !(global.auto) {
 				
 				var distance = point_distance(x, y, other.x, other.y);
 				var scor = 0;
-				
+				 
 				// may change hit timings
-				if (distance > 48) scor = 1;
-				if (distance > 73) scor = 2;
-				if (distance > 104) scor = 3;
+				if (distance > 20) scor = 1;
+				if (distance > 40) scor = 2;
+				if (distance > 60) scor = 3; 
+				if (distance > 104) scor = 4; 
 				var scoreX = 1259
 				var scoreY = 485;
 				if (instance_exists(oGirlfriend)) {scoreX = oGirlfriend.x + 5; scoreY = oGirlfriend.y - 517};
@@ -51,9 +53,13 @@ if !(enemy) && !(global.auto) {
 				o.image_index = scor;
 				
 				var scoreAdd = 350;
-				if (scor = 1) scoreAdd += 200;
-				if (scor = 2) scoreAdd += 100;
-				if (scor = 3) scoreAdd += 50;
+				if (scor = 1) scoreAdd += 400;
+				if (scor = 2) scoreAdd += 200;
+				if (scor = 3) scoreAdd += 100; 
+				if (scor = 4) scoreAdd += 50;  
+				var scoreX = 1259
+				var scoreY = 485; 
+				
 				global.curScore += scoreAdd * global.currentMultiplier;
 				
 				if (global.particles) && (scor = 0) {

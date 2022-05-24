@@ -31,7 +31,8 @@ if (keyboard_check_pressed(vk_enter))
 || (keyboard_check_pressed(global.acceptKeybind))
 || (gamepad_button_check_pressed(global.controller, gp_start)) {
 	if (instance_exists(oPause)) exit;
-	if (instance_exists(oDialogBox)) exit;
+	if (instance_exists(oDialogBox)) exit; 
+	if (instance_exists(oVideo)) exit;
 	if (global.dead) exit;
 	if (rankingScreen) exit;
 	

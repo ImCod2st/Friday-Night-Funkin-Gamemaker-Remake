@@ -21,7 +21,8 @@ function load_chart(songNam, dif){
 	global.noteSpeed = ini_read_real("Song", "Notespeed", global.noteSpeed);
 	global.bpm = ini_read_real("Song", "BPM", global.bpm);
 	global.camSpeed = ini_read_real("Song", "Camspeed", global.camSpeed);
-	global.enemy = ini_read_real("Song", "Enemy", global.enemy);
+	global.enemy = ini_read_real("Song", "Enemy", global.enemy); 
+	global.stage = ini_read_string("Song", "Stage", global.stage);
 	
 	ds_grid_read(global.chart, ini_read_string("Song", "Notes", ds_grid_create(8, 16)));
 	ini_close();

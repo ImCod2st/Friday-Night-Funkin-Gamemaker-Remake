@@ -1,4 +1,5 @@
-if (instance_exists(oDialogBox)) exit;
+if (instance_exists(oDialogBox)) exit; 
+if (instance_exists(oVideo)) exit; 
 
 if !(surface_exists(global.hudSurface)) exit;
 surface_set_target(global.hudSurface);
