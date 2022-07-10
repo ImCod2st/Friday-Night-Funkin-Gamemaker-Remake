@@ -2,6 +2,10 @@
 
 ---
 
+ARCHIVED CUZ I DONT WANNA WORK ON FNF STUFF ANYMORE LOL
+
+---
+
 The **Friday Night Funkin: Gamemaker Remake** *(FNF: GMS2 Remake)* for short, is a remake of the game titled **Friday Night Funkin** by ninja_muffin99 & friends on itch.io.
 If you have not played the original game, *please* play it [here](https://ninja-muffin24.itch.io/funkin).
 
