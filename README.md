@@ -3,7 +3,7 @@
 ---
 
 **ARCHIVED CUZ I DON'T WORK ON FNF STUFF ANYMORE**<br>
-If you would like to continue the project you have my permission, just make sure I am creditied properly.
+If you would like to continue the project you have my permission, just make sure I am credited properly.
 
 ---
 
